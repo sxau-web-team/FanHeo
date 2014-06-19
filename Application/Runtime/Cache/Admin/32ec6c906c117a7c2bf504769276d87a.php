@@ -2,6 +2,13 @@
 <html>
 <head>
 <title><?php echo ($title); ?></title>
+<script type="text/javascript">
+function check(){
+	alert("登录成功")
+	location.href = "<<?php echo U('Index/index');?>>"	
+	return false;
+}
+</script>
 <style>
 *{
 	padding:0px;
@@ -58,7 +65,7 @@ img{
 
 <body class="b">
 <div class="lg">
-<form action="#" method="POST">
+<form action="#" method="POST" onsubmit="check()">
     <div class="lg_top"></div>
     <div class="lg_main">
         <div class="lg_m_1">

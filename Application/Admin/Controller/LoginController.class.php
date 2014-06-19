@@ -1,4 +1,8 @@
 <?php
+/**  
+ * @author 
+ * @author 
+ */
 namespace Admin\Controller;
 use Think\Controller;
 
@@ -8,6 +12,7 @@ class LoginController extends BaseController {
 		$this->assign('title','饭盒哦订餐平台后台管理系统登录界面');
         $this->display();
     }
+	
 	//登陆判断
 	function loginok(){
 		$db = M('master');
