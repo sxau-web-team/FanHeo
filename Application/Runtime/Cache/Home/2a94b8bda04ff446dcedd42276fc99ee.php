@@ -1,0 +1,215 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FanHe.饭盒-在线订餐－叫外卖,找饭盒</title>
+    <link href="/fanheo/Public/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+  <!--顶部导航 -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">FanHe.饭盒</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+         <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input class="form-control" placeholder="你今天想吃啥.." type="text">
+            </div>
+            <button type="submit" class="btn btn-default">搜外卖</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/fanheo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
+              <strong>我的饭盒</strong>
+			  
+              <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
+      
+              <li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
+              <li><a href="#">注册</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+<br/>
+<br/>
+<br/>
+<!--模态登录框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4><h4 class="text-right text-danger">￥５.00</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<br/>
+    <!-- 主页面 -->
+    <div class="container">
+      <div class="">
+      <!--面包屑导航条-->
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                 <li><a href="#">怡膳园</a></li>
+                 <li class="active">米饭</li>
+            </ol>
+      </div>  
+      <div class="row">
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+            <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p >怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p >怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+             <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-7 col-md-3">
+          <div class="thumbnail">
+            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <div class="caption">
+              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
+              <p>怡膳园</p>
+              <p class="text-right"><a href="#" class="btn btn-warning" role="button">加到饭盒</a> <a href="#" class="btn btn-default" role="button">收藏</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+
+
+<!--页脚部分 -->
+
+<hr>
+    <footer>
+      	<div class="container text-center">
+      		<p><a href="#">  联系我们  </a>|<a href="#">  规章制度  </a>|<a href="#">  技术支持  </a>|<a href="#">  客户端  </a></p>
+        	<p　class="text-center"> &copy; FanHeo.com 2014</p>
+      	</div>	
+    </footer>
+  
+    
+     
+
+
+
+      
+  
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    
+    <script src="/fanheo/Public/js/jquery.js"></script>
+    <script src="/fanheo/Public/js/bootstrap.js"></script>
+    <script src="/fanheo/Public/js/application.js"></script>
+  </body>
+</html>
