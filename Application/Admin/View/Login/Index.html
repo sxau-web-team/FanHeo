@@ -4,66 +4,66 @@
 <title>{$title}</title>
 <script type="text/javascript">
 function check(){
-	$.post("<{:U('loginok')}>",{username:$('#username').val(),password:$('#password').val()},function(data){
-		if(data != 'ok'){
-			alert(登录失败);
-		}else{
-			location.href = "{:U('Index/index')}"
-		}
-	})
-	return false;
+$.post("<{:U('loginok')}>",{username:$('#username').val(),password:$('#password').val()},function(data){
+if(data != 'ok'){
+alert(登录失败);
+}else{
+location.href = "{:U('Index/index')}"
+}
+})
+return false;
 }
 </script>
 <style>
 *{
-	padding:0px;
-	margin:0px;
-	}
+padding:0px;
+margin:0px;
+}
 
 body{
-	font-family:Arial, Helvetica, sans-serif;
-	background:url(__PUBLIC__/image/admin/login/grass.jpg);
-	font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+background:url(__PUBLIC__/image/admin/login/grass.jpg);
+font-size:13px;
     
-	}
+}
 img{
-	border:0;
-	}
+border:0;
+}
 .lg{width:468px; height:468px; margin:100px auto; background:url(__PUBLIC__/image/admin/login/login_bg.png) no-repeat;}
 .lg_top{ height:200px; width:468px;}
 .lg_main{width:400px; height:180px; margin:0 25px;}
 .lg_m_1{
-	width:290px;
-	height:100px;
-	padding:60px 55px 20px 55px;
+width:290px;
+height:100px;
+padding:60px 55px 20px 55px;
 }
 .ur{
-	height:37px;
-	border:0;
-	color:#666;
-	width:236px;
-	margin:4px 28px;
-	background:url(__PUBLIC__/image/admin/login/user.png) no-repeat;
-	padding-left:10px;
-	font-size:16pt;
-	font-family:Arial, Helvetica, sans-serif;
+height:37px;
+border:0;
+color:#666;
+width:236px;
+margin:4px 28px;
+background:url(__PUBLIC__/image/admin/login/user.png) no-repeat;
+padding-left:10px;
+font-size:16pt;
+font-family:Arial, Helvetica, sans-serif;
 }
 .pw{
-	height:37px;
-	border:0;
-	color:#666;
-	width:236px;
-	margin:4px 28px;
-	background:url(__PUBLIC__/image/admin/login/password.png) no-repeat;
-	padding-left:10px;
-	font-size:16pt;
-	font-family:Arial, Helvetica, sans-serif;
+height:37px;
+border:0;
+color:#666;
+width:236px;
+margin:4px 28px;
+background:url(__PUBLIC__/image/admin/login/password.png) no-repeat;
+padding-left:10px;
+font-size:16pt;
+font-family:Arial, Helvetica, sans-serif;
 }
 .bn{width:330px; height:72px; background:url(__PUBLIC__/image/admin/login/enter.png) no-repeat; border:0; display:block; font-size:18px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;}
 .lg_foot{
-	height:80px;
-	width:330px;
-	padding: 6px 68px 0 68px;
+height:80px;
+width:330px;
+padding: 6px 68px 0 68px;
 }
 </style>
 </head>
