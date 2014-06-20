@@ -6,7 +6,7 @@
 </head>
 
 <body>
-admin
+
 <?php echo ($loginstatus); ?>
 
 <button type="button" onclick="window.location='/fanheo/index.php/Admin/Index/../Login/loginout'">Click Me!</button>
