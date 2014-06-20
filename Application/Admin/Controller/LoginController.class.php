@@ -35,7 +35,7 @@ class LoginController extends BaseController {
 			dump(I('post.password','','md5'));
 			$this->error('密码错误！!');
 		}else{
-			echo "<script language=\"JavaScript\">alert(\"成功登录\");</script>"; 
+			$this->success('成功登录');
 		
 			/* $data = array(
 			   'id' => $result['id'],
@@ -48,7 +48,9 @@ class LoginController extends BaseController {
 			$db->save($data); */
 			session('AdminUser',$result['username']);
 			session('AdminName',$result['password']);
+			
 			$this->redirect('Index/index');
+			
 		}
 		
 	}
