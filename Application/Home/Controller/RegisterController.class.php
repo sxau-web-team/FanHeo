@@ -10,7 +10,7 @@ class RegisterController extends Controller {
     public function Register () {
 
     	dump($_POST);
-    	//$this->display('status');
+    	$this->display('status');
     }
 }
 ?>

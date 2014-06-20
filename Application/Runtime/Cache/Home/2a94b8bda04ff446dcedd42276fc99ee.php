@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>FanHe.饭盒-在线订餐－叫外卖,找饭盒</title>
+    <title><?php echo ($title); ?></title>
     <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
@@ -54,39 +54,41 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action="" method="post">
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">UserName:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              <input type="email" class="form-control" name="username" placeholder="用户名/手机号">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
             <div class="col-sm-8">
-              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              <input type="password" class="form-control" name="password" placeholder="密码">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-8">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Remember me
+                  <input type="checkbox"> 下次自动登录
                 </label>
               </div>
             </div>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-8">
-                <button type="submit" class="btn btn-default">Sign in</button>
+              <input class="btn btn-warning btn-block" type="submit" value="登录">
+               
               </div>
             </div>
           
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-warning">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <a href="<?php echo U('Register/index');?>" class="btn btn-warning " role="button">注册</a>
+        
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -206,10 +208,7 @@
           </div>
         </div>
       </div>
-    
-    </div>
-
-
+  </div>
 
 <!--页脚部分 -->
 
@@ -220,21 +219,11 @@
         	<p　class="text-center"> &copy; FanHeo.com 2014</p>
       	</div>	
     </footer>
-  
-    
-     
-
-
-
-      
-  
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
-    
+  
     <script src="/FanHeo/Public/js/jquery.js"></script>
     <script src="/FanHeo/Public/js/bootstrap.js"></script>
     <script src="/FanHeo/Public/js/application.js"></script>

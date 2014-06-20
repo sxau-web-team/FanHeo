@@ -1,4 +1,3 @@
-<?php if (!defined('THINK_PATH')) exit();?>
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
@@ -7,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?php echo ($title); ?></title>
-    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
+    <title>{$title}</title>
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
   <!--顶部导航 -->
@@ -31,14 +30,14 @@
             <button type="submit" class="btn btn-default">搜外卖</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/FanHeo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
+              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='__PUBLIC__/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
               <strong>我的饭盒</strong>
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
       
               <li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
-              <li><a href="<?php echo U('Register/index');?>">注册</a></li>
+              <li><a href="{:U('Register/index')}">注册</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -88,7 +87,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <a href="<?php echo U('Register/index');?>" class="btn btn-warning " role="button">注册</a>
+        <a href="{:U('Register/index')}" class="btn btn-warning " role="button">注册</a>
         
       </div>
     </div><!-- /.modal-content -->
@@ -106,41 +105,3 @@
                  <li class="active">米饭</li>
             </ol>
       </div>  
-
-
-<div class="panel panel-default">
-  <div class="panel-heading"><?php echo $status;?>注册成功！</div>
-  <div class="panel-body">
-    <!--注册状态-->
-
-  <div class="alert alert-success alert-dismissable">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <strong>注册成功！</strong> <br /><br />欢迎你加入到Faneo.饭盒<br/><br/>
-    你的资料还不完整，为了你的方便，快去<a href="#" class="alert-link">完善一下</a>吧！
-    <br/><br/>前往<a href="<?php echo U("/Home",'','','127.0.0.1');?>" class="alert-link">FanHeo.饭盒</a>选餐^_^.
-  </div>
-
-
-  </div>
-
-  </div>
-
-<!--页脚部分 -->
-
-<hr>
-    <footer>
-      	<div class="container text-center">
-      		<p><a href="#">  联系我们  </a>|<a href="#">  规章制度  </a>|<a href="#">  技术支持  </a>|<a href="#">  客户端  </a></p>
-        	<p　class="text-center"> &copy; FanHeo.com 2014</p>
-      	</div>	
-    </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  
-    <script src="/FanHeo/Public/js/jquery.js"></script>
-    <script src="/FanHeo/Public/js/bootstrap.js"></script>
-    <script src="/FanHeo/Public/js/application.js"></script>
-  </body>
-</html>

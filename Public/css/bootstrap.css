@@ -326,13 +326,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #ED9C28;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #474747;
   text-decoration: underline;
 }
 
@@ -4244,7 +4244,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #428bca;
+  background-color: #ED9C28;
 }
 
 .nav-stacked > li {
@@ -5097,7 +5097,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
 .pager .disabled > span {
-  color: #999999;
+  color: #ED9C28;
   cursor: not-allowed;
   background-color: #ffffff;
 }
@@ -5218,7 +5218,7 @@ a.badge:focus {
 
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #428bca;
+  color: #ED9C28;
   background-color: #ffffff;
 }
 

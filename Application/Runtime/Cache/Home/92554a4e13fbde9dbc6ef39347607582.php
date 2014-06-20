@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
+<?php if (!defined('THINK_PATH')) exit();?>      
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
@@ -106,108 +106,26 @@
                  <li class="active">米饭</li>
             </ol>
       </div>  
-
-
 <div class="panel panel-default">
   <div class="panel-heading">加入到 FanHeo.饭盒 </div>
-  <div class="panel-body">
-    <!--注册表单-->
-
-    <form class="form-horizontal" action="<?php echo U("Register/Register/",'','','127.0.0.1');?>" method="post" role="form" accept-charset="utf8">
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">用户名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="username" maxlength="16" placeholder="2~16个字符" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">真实姓名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" placeholder="2~8个字符" required autofocus>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">性别:</label>
-            <div class="col-sm-4">
-            <label>
-              <input type="radio" name="sex"  value="option1" checked>
-    			男
-  			</label>
-  			<label>
-              <input type="radio" name="sex" value="option1" >
-    			女
-  			</label>
-            </div>
-          </div>
-          
-    
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">邮箱:</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" name="emile" placeholder="常用邮箱账号" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label" >手机号:</label>
-            <div class="col-sm-4">
-              <input type="date" class="form-control" name="phone" maxlength="11" placeholder="请输入11位手机号" required autofocus>
-            </div>
-          </div>
-         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
-            <div class="col-sm-4">
-              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="4~24个字符,不要太简单了哦" title="hello" required autofocus >
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
-            <div class="col-sm-4">
-              <input type="password" id="pwd1" class="form-control" name="password2" maxlength="24" placeholder="确认密码" required  onchange="checkPasswords()">
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
-            <div class="col-xs-2">
-              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Register/verify/','','','127.0.0.1');?>" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-4">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" name=""> 我同意FanHeo.饭盒有关条款
-                </label>
-              </div>
-            </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-default">加入到 FanHeo</button>
-              </div>
-            </div>
-          
-        </form>
-
+    <div class="panel-body">
+      <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+        <li class="active">
+          <a href="#">
+            <span class="badge pull-right">42</span>
+            Home
+          </a>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li>
+          <a href="#">
+            <span class="badge pull-right">3</span>
+            Messages
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-<!--验证密码是否一致-->
-<script>  
-        function checkPasswords() {  
-            var passl = document.getElementById("pwd");  
-            var pass2 = document.getElementById("pwd1");  
-            if (passl.value != pass2.value)  
-                pass2.setCustomValidity("两次密码必须输入一致！");  
-            else  
-                pass2.setCustomValidity('');  
-        }  
-  
-        function check() {  
-            document.getElementById('ok').disabled = 'disabled';  
-        }  
-    </script>  
 
   </div>
 
