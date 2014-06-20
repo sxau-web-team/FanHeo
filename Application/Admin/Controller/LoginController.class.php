@@ -35,20 +35,23 @@ class LoginController extends BaseController {
 			dump(I('post.password','','md5'));
 			$this->error('密码错误！!');
 		}else{
-			echo "<script language=\"JavaScript\">alert(\"成功登录\");</script>"; 
+			
 		
-			/* $data = array(
-			   'id' => $result['id'],
+			 $data = array(
+			   'uid' => $result['uid'],
 			   'loginip'    => get_client_ip(),
 			   'lastip'     => $result['loginip'],
 			   'logintime'  => time(),
-			   'lasttime'   => $result['logintime'],
+			   'lastlogintime'   => $result['logintime'],
 			   'num'        => $result['num'] + 1
 			);
-			$db->save($data); */
+			$m_admin->save($data); 
 			session('AdminUser',$result['username']);
-			session('AdminName',$result['password']);
+			session('LoginTime',$result['lastlogintime']);
+			session('LoginIp',$result['loginip']);
+			
 			$this->redirect('Index/index');
+			
 		}
 		
 	}
