@@ -4,8 +4,13 @@
 <title><?php echo ($title); ?></title>
 <script type="text/javascript">
 function check(){
-	alert("登录成功")
-	location.href = "<<?php echo U('Index/index');?>>"	
+	$.post("<<?php echo U('loginok');?>>",{username:$('#username').val(),password:$('#password').val()},function(data){
+		if(data != 'ok'){
+			alert(登录失败);
+		}else{
+			location.href = "<?php echo U('Index/index');?>"
+		}
+	})
 	return false;
 }
 </script>
@@ -17,14 +22,14 @@ function check(){
 
 body{
 	font-family:Arial, Helvetica, sans-serif;
-	background:url(../../../Public/image/admin/login/grass.jpg);
+	background:url(/fanheo/Public/image/admin/login/grass.jpg);
 	font-size:13px;
     
 	}
 img{
 	border:0;
 	}
-.lg{width:468px; height:468px; margin:100px auto; background:url(../../../Public/image/admin/login/login_bg.png) no-repeat;}
+.lg{width:468px; height:468px; margin:100px auto; background:url(/fanheo/Public/image/admin/login/login_bg.png) no-repeat;}
 .lg_top{ height:200px; width:468px;}
 .lg_main{width:400px; height:180px; margin:0 25px;}
 .lg_m_1{
@@ -38,7 +43,7 @@ img{
 	color:#666;
 	width:236px;
 	margin:4px 28px;
-	background:url(../../../Public/image/admin/login/user.png) no-repeat;
+	background:url(/fanheo/Public/image/admin/login/user.png) no-repeat;
 	padding-left:10px;
 	font-size:16pt;
 	font-family:Arial, Helvetica, sans-serif;
@@ -49,12 +54,12 @@ img{
 	color:#666;
 	width:236px;
 	margin:4px 28px;
-	background:url(../../../Public/image/admin/login/password.png) no-repeat;
+	background:url(/fanheo/Public/image/admin/login/password.png) no-repeat;
 	padding-left:10px;
 	font-size:16pt;
 	font-family:Arial, Helvetica, sans-serif;
 }
-.bn{width:330px; height:72px; background:url(../../../Public/image/admin/login/enter.png) no-repeat; border:0; display:block; font-size:18px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;}
+.bn{width:330px; height:72px; background:url(/fanheo/Public/image/admin/login/enter.png) no-repeat; border:0; display:block; font-size:18px; color:#FFF; font-family:Arial, Helvetica, sans-serif; font-weight:bolder;}
 .lg_foot{
 	height:80px;
 	width:330px;
@@ -65,7 +70,8 @@ img{
 
 <body class="b">
 <div class="lg">
-<form action="#" method="POST" onsubmit="check()">
+
+<form action="/fanheo/index.php/Admin/Login/do_login" method="POST" onsubmit="">
     <div class="lg_top"></div>
     <div class="lg_main">
         <div class="lg_m_1">

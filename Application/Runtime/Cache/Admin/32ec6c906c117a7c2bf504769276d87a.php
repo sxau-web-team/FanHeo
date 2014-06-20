@@ -4,8 +4,13 @@
 <title><?php echo ($title); ?></title>
 <script type="text/javascript">
 function check(){
-	alert("登录成功")
-	location.href = "<<?php echo U('Index/index');?>>"	
+	$.post("<<?php echo U('loginok');?>>",{username:$('#username').val(),password:$('#password').val()},function(data){
+		if(data != 'ok'){
+			alert(登录失败);
+		}else{
+			location.href = "<?php echo U('Index/index');?>"
+		}
+	})
 	return false;
 }
 </script>
@@ -65,7 +70,8 @@ img{
 
 <body class="b">
 <div class="lg">
-<form action="#" method="POST" onsubmit="check()">
+
+<form action="/fanheo/index.php/Admin/Login/do_login" method="POST" onsubmit="">
     <div class="lg_top"></div>
     <div class="lg_main">
         <div class="lg_m_1">
