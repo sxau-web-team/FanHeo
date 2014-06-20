@@ -55,11 +55,11 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
-              <input type="email" class="form-control" name="username" placeholder="用户名/手机号">
+              <input type="text" class="form-control" name="username" placeholder="用户名/手机号">
             </div>
           </div>
           <div class="form-group">
@@ -108,107 +108,49 @@
 
 
 <div class="panel panel-default">
-  <div class="panel-heading">加入到 FanHeo.饭盒 </div>
+  <div class="panel-heading">FanHeo.登录</div>
   <div class="panel-body">
     <!--注册表单-->
 
-    <form class="form-horizontal" action="<?php echo U("Register/Register/",'','','127.0.0.1');?>" method="post" role="form" accept-charset="utf8">
+    <form class="form-horizontal" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post" role="form" accept-charset="utf8">
           <div class="form-group">
             <label for="" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-4">
-              <input type="user" class="form-control" name="username" maxlength="16" placeholder="2~16个字符" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">真实姓名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" placeholder="2~8个字符" required autofocus>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">性别:</label>
-            <div class="col-sm-4">
-            <label>
-              <input type="radio" name="sex"  value="1" checked>
-    			男
-  			</label>
-  			<label>
-              <input type="radio" name="sex" value="2" >
-    			女
-  			</label>
-            </div>
-          </div>
-          
-    
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">邮箱:</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" name="email" placeholder="常用邮箱账号" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label" >手机号:</label>
-            <div class="col-sm-4">
-              <input type="date" class="form-control" name="phone" maxlength="11" placeholder="请输入11位手机号" required autofocus>
+              <input type="user" class="form-control" name="username" maxlength="16" placeholder="用户名/手机号" required autofocus>
             </div>
           </div>
          <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
             <div class="col-sm-4">
-              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="4~24个字符,不要太简单了哦" title="hello" required autofocus >
+              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="密码" title="hello" required autofocus >
             </div>
           </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
-            <div class="col-sm-4">
-              <input type="password" id="pwd1" class="form-control" name="password2" maxlength="24" placeholder="确认密码" required  onchange="checkPasswords()">
-            </div>
-          </div>
-          
           <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-xs-2">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Register/verify/','','','127.0.0.1');?>" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
+              <img src="<?php echo U('Login/verify','','','127.0.0.1');?>" id="code"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-4">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" name=""> 我同意FanHeo.饭盒有关条款
-                </label>
-              </div>
-            </div>
-            </div>
+
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-warning btn-block">加入到 FanHeo</button>
+                <button type="submit" class="btn btn-warning btn-block">登录</button>
               </div>
             </div>
           
         </form>
-
+        <script>
+          
+          function change_code(){
+            var verifyURL = '<?php echo U('Login/verify','','','127.0.0.1');?>';
+            $("#code").attr("src",verifyURL + Math.random());
+            return false;
+          }
+        </script>
   </div>
   </div>
-<!--验证密码是否一致-->
-<script>  
-        function checkPasswords() {  
-            var passl = document.getElementById("pwd");  
-            var pass2 = document.getElementById("pwd1");  
-            if (passl.value != pass2.value)  
-                pass2.setCustomValidity("两次密码必须输入一致！");  
-            else  
-                pass2.setCustomValidity('');  
-        }  
-  
-        function check() {  
-            document.getElementById('ok').disabled = 'disabled';  
-        }  
-    </script>  
-
   </div>
 
 <!--页脚部分 -->

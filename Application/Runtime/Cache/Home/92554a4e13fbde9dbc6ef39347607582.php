@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">FanHe.饭盒</a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>">FanHe.饭盒</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
          <form class="navbar-form navbar-left" role="search">
@@ -36,9 +36,10 @@
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
-      
-              <li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
+              <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
+              <?php else: ?>
+              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li><?php endif; ?>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -55,11 +56,11 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
-              <input type="email" class="form-control" name="username" placeholder="用户名/手机号">
+              <input type="text" class="form-control" name="username" placeholder="用户名/手机号">
             </div>
           </div>
           <div class="form-group">
@@ -98,33 +99,44 @@
 <br/>
     <!-- 主页面 -->
     <div class="container">
-      <div class="">
+      <div class="bread" >
       <!--面包屑导航条-->
             <ol class="breadcrumb">
-                <li><a href="#">首页</a></li>
-                 <li><a href="#">怡膳园</a></li>
-                 <li class="active">米饭</li>
+                <li><a href="<?php echo U('Index/Index');?>">首页</a></li>
+                 <li class="active"><?php echo ($stitle); ?></li>
             </ol>
       </div>  
 <div class="panel panel-default">
-  <div class="panel-heading">加入到 FanHeo.饭盒 </div>
+  <div class="panel-heading"><?php echo ($username); ?>的个人中心</div>
     <div class="panel-body">
-      <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+      <ul class="nav nav-pills nav-stacked" style="max-width: 220px;">
         <li class="active">
           <a href="#">
-            <span class="badge pull-right">42</span>
-            Home
+            <span class="badge pull-right">3</span>
+            我的饭盒
           </a>
         </li>
-        <li><a href="#">Profile</a></li>
+        <li><a href="#">我的订单</a></li>
+        <li><a href="#">饭盒故事</a></li>
+        <li><a href="#">资料设置</a></li>
+        <li><a href="#">安全设置</a></li>
+        
         <li>
           <a href="#">
             <span class="badge pull-right">3</span>
-            Messages
+            消息中心
           </a>
         </li>
       </ul>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 
   </div>

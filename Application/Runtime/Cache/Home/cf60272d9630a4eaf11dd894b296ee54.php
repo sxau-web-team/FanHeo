@@ -98,12 +98,11 @@
 <br/>
     <!-- 主页面 -->
     <div class="container">
-      <div class="">
+      <div class="bread" >
       <!--面包屑导航条-->
             <ol class="breadcrumb">
-                <li><a href="#">首页</a></li>
-                 <li><a href="#">怡膳园</a></li>
-                 <li class="active">米饭</li>
+                <li><a href="<?php echo U('Index/Index');?>">首页</a></li>
+                 <li class="active"><?php echo ($stitle); ?></li>
             </ol>
       </div>  
 

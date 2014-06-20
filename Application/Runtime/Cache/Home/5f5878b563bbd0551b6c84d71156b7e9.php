@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">FanHe.饭盒</a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>">FanHe.饭盒</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
          <form class="navbar-form navbar-left" role="search">
@@ -35,9 +35,10 @@
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
-      
-              <li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
+              <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
+              <?php else: ?>
+              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li><?php endif; ?>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
