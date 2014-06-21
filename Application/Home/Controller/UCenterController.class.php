@@ -27,7 +27,22 @@ class UCenterController extends CommonController {
      */
 
     public function show_userinfomation () {
+    	$uid = session('uid');
+    	$mid = session('mid');
+    	if ($uid = $mid) {
 
+    		$memberinfo=M('member')->where(array('user_id' => $mid))->select();
+    		$userinfo=M('user')->where(array('id' => $uid))->select();
+    	}else{
+    		
+    	}
+    	echo '<br/><br/><br/><br/><br/>';
+    	var_dump($memberinfo);
+    	var_dump($userinfo);
+    	$this->minfo = $memberinfo;
+    	$this->uinfo = $userinfo;
+    	$this->display('userinfomation');
+    	
 
     }
 
@@ -98,6 +113,7 @@ class UCenterController extends CommonController {
     /**
      * 盒友动态
      */
+
 
 
 

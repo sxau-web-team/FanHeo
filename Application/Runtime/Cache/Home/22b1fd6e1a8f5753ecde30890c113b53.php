@@ -146,45 +146,96 @@
           </div><!--/span-->
         
         <div class="col-xs-12 col-sm-9">
-
-          
           <div class="jumbotron">
             <h1>Hello, world!</h1>
             <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
           </div>
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-       
+          <div class="panel panel-default">
+  <div class="panel-heading">的个人资料</div>
+  <div class="panel-body">
+    <!--注册表单-->
+<?php if(is_array($uinfo)): foreach($uinfo as $key=>$v): ?><form class="form-horizontal" action="<?php echo U("Register/Register/",'','','127.0.0.1');?>" method="post" role="form" accept-charset="utf8">
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">用户名:</label>
+            <div class="col-sm-4">
+              <input type="user" class="form-control" name="username" maxlength="16" placeholder="<?php echo ($v["username"]); ?>" required autofocus>
+            </div>
+          </div><?php endforeach; endif; ?>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">真实姓名:</label>
+            <div class="col-sm-4">
+              <input type="user" class="form-control" name="realname" maxlength="8" placeholder="2~8个字符" required autofocus>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">性别:</label>
+            <div class="col-sm-4">
+            <label>
+              <input type="radio" name="sex"  value="1" checked>
+          男
+        </label>
+        <label>
+              <input type="radio" name="sex" value="2" >
+          女
+        </label>
+            </div>
+          </div>
+          
+    
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">邮箱:</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" name="email" placeholder="常用邮箱账号" required autofocus>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" >手机号:</label>
+            <div class="col-sm-4">
+              <input type="date" class="form-control" name="phone" maxlength="11" placeholder="请输入11位手机号" required autofocus>
+            </div>
+          </div>
+         <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
+            <div class="col-sm-4">
+              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="4~24个字符,不要太简单了哦" title="hello" required autofocus >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
+            <div class="col-sm-4">
+              <input type="password" id="pwd1" class="form-control" name="password2" maxlength="24" placeholder="确认密码" required  onchange="checkPasswords()">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
+            <div class="col-xs-2">
+              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
+              <img src="<?php echo U('Register/verify/','','','127.0.0.1');?>" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name=""> 我同意FanHeo.饭盒有关条款
+                </label>
+              </div>
+            </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-warning btn-block">加入到 FanHeo</button>
+              </div>
+            </div>
+          
+        </form>
+
+  </div>
+  </div>
+
 
 
       </div><!--/row-->

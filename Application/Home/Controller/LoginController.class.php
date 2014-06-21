@@ -50,7 +50,8 @@ class LoginController extends Controller {
         
         if(M("member")->where(array('user_id' => $member['user_id']))->save($data)){
 
-            session('uid',$member['user_id']);
+            session('uid',$user['id']);
+            session('mid',$member['user_id']);
             session('username',$user['username']);
             session('logintime',$member['last_time']);
             session('loginip',$member['last_ip']);

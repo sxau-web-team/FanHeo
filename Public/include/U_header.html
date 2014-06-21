@@ -100,7 +100,7 @@
 
 <br/>
     <!-- 主页面 -->
-    <div class="container">
+<div class="container">
       <div class="bread" >
       <!--面包屑导航条-->
             <ol class="breadcrumb">
@@ -108,3 +108,42 @@
                  <li class="active">{$stitle}</li>
             </ol>
       </div>  
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+          <div class=" col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#UCenter">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="panel-body collapse navbar-collapse " id="UCenter">
+                  <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
+                    <li><a href="#">饭盒吐槽</a></li>
+                    <li><a href="#">盒友动态</a></li>
+                    <li class="active">
+                    <a href="#">
+                    <span class="badge pull-right">3</span>
+                    我的饭盒
+                    </a>
+                    </li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">饭盒故事</a></li>
+                    <li><a href="{:U('UCenter/show_userinfomation')}">资料设置</a></li>
+                    <li><a href="#">安全设置</a></li>
+                    <li><a href="#">
+                    <span class="badge pull-right">3</span>
+                    消息中心
+                    </a>
+                    </li>
+                  </ul>
+              </div>
+              <br/>
+            </nav>
+          </div><!--/span-->
+        
+        <div class="col-xs-12 col-sm-9">

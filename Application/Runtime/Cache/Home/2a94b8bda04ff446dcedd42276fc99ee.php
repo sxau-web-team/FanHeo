@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?php echo ($title); ?></title>
-    <link href="/fanheo/Public/css/bootstrap.css" rel="stylesheet">
+    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
   <!--顶部导航 -->
@@ -30,7 +30,7 @@
             <button type="submit" class="btn btn-warning">搜外卖</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/fanheo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
+              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/FanHeo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
               <strong>我的饭盒</strong>
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -38,12 +38,8 @@
               <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
               <?php else: ?>
-<<<<<<< HEAD
               <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li>
               <li><a href="<?php echo U('Index/logout');?>">退出</a></li><?php endif; ?>
-=======
-              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li><?php endif; ?>
->>>>>>> 784ef34eda7af75c828d899b72e66b80c12ef072
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -113,7 +109,7 @@
       <div class="row">
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
             <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p >怡膳园</p>
@@ -124,7 +120,7 @@
         
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p >怡膳园</p>
@@ -134,7 +130,7 @@
         </div>
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -144,7 +140,7 @@
         </div>
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -154,7 +150,7 @@
         </div>
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/1.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -164,7 +160,7 @@
         </div>
         <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -174,7 +170,7 @@
         </div>
          <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -184,7 +180,7 @@
         </div>
          <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/4.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -194,7 +190,7 @@
         </div>
          <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/3.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
              <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -204,7 +200,7 @@
         </div>
          <div class="col-md-7 col-md-3">
           <div class="thumbnail">
-            <img src="/fanheo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
+            <img src="/FanHeo/Public/image/index/food/2.jpg" style="width: 240px; height: 160px;" data-src="holder.js/300x200" alt="300x200">
             <div class="caption">
               <h4>红烧排骨</h4><h4 class="text-right text-danger">￥５.00</h4>
               <p>怡膳园</p>
@@ -229,8 +225,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="/fanheo/Public/js/jquery.js"></script>
-    <script src="/fanheo/Public/js/bootstrap.js"></script>
-    <script src="/fanheo/Public/js/application.js"></script>
+    <script src="/FanHeo/Public/js/jquery.js"></script>
+    <script src="/FanHeo/Public/js/bootstrap.js"></script>
+    <script src="/FanHeo/Public/js/application.js"></script>
   </body>
 </html>
