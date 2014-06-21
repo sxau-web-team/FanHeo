@@ -1,9 +1,22 @@
       
-<include file="Public/include/Home_header.html"/>
+<include file="Public/include/U_header.html"/>
 <div class="panel panel-default">
   <div class="panel-heading">{$username}的个人中心</div>
-    <div class="panel-body">
-      <ul class="nav nav-pills nav-stacked" style="max-width: 220px;">
+<nav class=" navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#UCenter">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    
+  </div>
+
+    <div class="panel-body collapse navbar-collapse " id="UCenter">
+      <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
+      <li><a href="#">饭盒吐槽</a></li>
+      <li><a href="#">盒友动态</a></li>
         <li class="active">
           <a href="#">
             <span class="badge pull-right">3</span>
@@ -23,6 +36,7 @@
         </li>
       </ul>
     </div>
+    </nav>
     <br>
     <br>
     <br>
