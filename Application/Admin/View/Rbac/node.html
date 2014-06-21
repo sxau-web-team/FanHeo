@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$title}</title>
+</head>
+<body>
+	<div id='wrap'>
+		<a href="{:U('Admin/Rbac/addNode')}">添加应用</a>
+			<foreach name='node' item='app'>
+				<div class='app'>
+					<p>
+						<strong>{$app.title}</strong>
+							【<a href="{:U('Admin/Rbac/addNode',array('pid' =>$app['id'],'level' =>2))}">添加控制器</a>】
+						</p>
+						</div>
+						</foreach>
+						</div>
+</body>
+</html>
