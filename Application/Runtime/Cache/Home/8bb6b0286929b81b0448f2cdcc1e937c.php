@@ -39,12 +39,8 @@
               <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
               <?php else: ?>
-<<<<<<< HEAD
               <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li>
               <li><a href="<?php echo U('Index/logout');?>">退出</a></li><?php endif; ?>
-=======
-              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li><?php endif; ?>
->>>>>>> 784ef34eda7af75c828d899b72e66b80c12ef072
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -61,7 +57,7 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','');?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
