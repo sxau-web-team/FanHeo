@@ -32,11 +32,7 @@
 
     <div class="container">
 
-<<<<<<< HEAD
-      <form class="form-signin" role="form" action="/FanHeo/index.php/Admin/Login/do_login" method="POST" >
-=======
       <form class="form-signin" role="form" action="/fanheo/index.php/Admin/Login/do_login" method="POST" >
->>>>>>> 7f1ab4182c55a8368ea1a7782d4003036e5100fd
         <h4 class="form-signin-heading">登录到 FanHe.饭盒 后台管理系统</h4>
         <input type="text" class="form-control" placeholder="用户名" name="username" required autofocus>
         <input type="password" class="form-control" placeholder="密码" name="password" required>

@@ -25,9 +25,9 @@
         <div class="navbar-collapse collapse navbar-right">
          <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input class="form-control" placeholder="你今天想吃啥.." type="text">
+              <input class="form-control" placeholder="你今天想吃啥.." type="text" required autofocus>
             </div>
-            <button type="submit" class="btn btn-default">搜外卖</button>
+            <button type="submit" class="btn btn-warning">搜外卖</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/FanHeo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
@@ -56,7 +56,7 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','');?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
