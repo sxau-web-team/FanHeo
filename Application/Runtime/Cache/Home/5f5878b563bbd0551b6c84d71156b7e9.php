@@ -38,7 +38,8 @@
               <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
               <?php else: ?>
-              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li><?php endif; ?>
+              <li><a href="<?php echo U('UCenter/index');?>">个人中心</a></li>
+              <li><a href="<?php echo U('Index/logout');?>">退出</a></li><?php endif; ?>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
