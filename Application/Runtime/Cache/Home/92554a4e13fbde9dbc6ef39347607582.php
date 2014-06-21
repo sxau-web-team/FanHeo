@@ -57,7 +57,7 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login");?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
@@ -122,7 +122,7 @@
               </div>
               <div class="panel-body collapse navbar-collapse " id="UCenter">
                   <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
-                    <li><a href="#">饭盒吐槽</a></li>
+                    <li><a href="<?php echo U('UCenter/fanhetalk');?>">饭盒吐槽</a></li>
                     <li><a href="#">盒友动态</a></li>
                     <li class="active">
                     <a href="#">

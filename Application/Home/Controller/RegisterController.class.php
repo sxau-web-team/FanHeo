@@ -7,11 +7,26 @@ class RegisterController extends Controller {
        $this->assign('stitle','加入FanHeo');
 	   $this->display();
     }
-    
+    /**
+      * 检测输入的验证码是否正确，$code为用户输入的验证码字符串
+      */ 
+    public function check_verify($code, $id = ''){
+        $verify = new \Think\Verify();
+        return $verify->check($code, $id);
+    }
     public function Register () {
     	/**
     	 * 用户注册表单处理
     	 */
+        if (!IS_POST) {
+            halt('页面不存在');
+        }
+
+        
+        $code = I('code');
+        $ver = $this->check_verify($code, $id = '');
+        if(!$ver)
+        $this->error('验证码错误');
     	$user = array(
     		'username' => I('username'),
     		'password' => I('password','','md5'),

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
+<?php if (!defined('THINK_PATH')) exit();?>      
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
+            <div class="form-group form-inline">
               <input class="form-control" placeholder="你今天想吃啥.." type="text" required autofocus>
             </div>
             <button type="submit" class="btn btn-warning">搜外卖</button>
@@ -35,7 +35,7 @@
               <strong>我的饭盒</strong>
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
+              <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  我的饭盒<span class="badge">２</span></a></li>
               <?php if(!isset($_SESSION['uid'])|| !isset($_SESSION['username'])): ?><li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
               <li><a href="<?php echo U('Register/index');?>">注册</a></li>
               <?php else: ?>
@@ -57,7 +57,7 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','');?>" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login");?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
@@ -99,7 +99,7 @@
 
 <br/>
     <!-- 主页面 -->
-    <div class="container">
+<div class="container">
       <div class="bread" >
       <!--面包屑导航条-->
             <ol class="breadcrumb">
@@ -108,55 +108,79 @@
             </ol>
       </div>  
 
+      <div class="row row-offcanvas row-offcanvas-right">
 
-<div class="panel panel-default">
-  <div class="panel-heading">FanHeo.登录</div>
-  <div class="panel-body">
-    <!--登录表单-->
-
-    <form class="form-horizontal" action="<?php echo U("Login/Login/",'','');?>" method="post" role="form" accept-charset="utf8">
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">用户名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="username" maxlength="16" placeholder="用户名/手机号" required autofocus>
-            </div>
-          </div>
-         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
-            <div class="col-sm-4">
-              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="密码" title="hello" required autofocus >
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
-            <div class="col-xs-2">
-              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Login/verify');?>" id="code"/><a href="javascript:change_code()">换一个</a>
-            </div>
-          </div>
-          
-
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-warning btn-block">登录</button>
+          <div class=" col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#UCenter">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
               </div>
-            </div>
+              <div class="panel-body collapse navbar-collapse " id="UCenter">
+                  <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
+                    <li><a href="<?php echo U('UCenter/fanhetalk');?>">饭盒吐槽</a></li>
+                    <li><a href="#">盒友动态</a></li>
+                    <li class="active">
+                    <a href="#">
+                    <span class="badge pull-right">3</span>
+                    我的饭盒
+                    </a>
+                    </li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">饭盒故事</a></li>
+                    <li><a href="<?php echo U('UCenter/show_userinfomation');?>">资料设置</a></li>
+                    <li><a href="#">安全设置</a></li>
+                    <li><a href="#">
+                    <span class="badge pull-right">3</span>
+                    消息中心
+                    </a>
+                    </li>
+                  </ul>
+              </div>
+              <br/>
+            </nav>
+          </div><!--/span-->
+        
+        <div class="col-xs-12 col-sm-9">
           
-        </form>
-        <script>
-          
-          function change_code(){
-            var verifyURL = '<?php echo U('Login/verify','','','127.0.0.1');?>';
-            $("#code").attr("src",verifyURL + Math.random());
-            return false;
-          }
-        </script>
+<div class="panel panel-default">
+         
+  <div class="panel-heading">吐吐糟吧</div>
+  <div class="panel-body">
+    <!--表单
+
+          <foreach name='minfo' item='m'>-->
+
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
+  </a>
+  <div class="media-body">
+      <form class="" action="<?php echo U("UCenter/update_userinfomation");?>" method="post" role="form" >
+        <textarea class="form-control" name="talk" rows="3" required autofocus><?php echo ($m["words"]); ?></textarea>
+        <br/>
+        
+        <button type="submit" class=" pull-right btn btn-warning ">  吐 糟  </button>
+      </form>
+    
   </div>
+</div>
+
+
+    
+
   </div>
   </div>
 
+      </div><!--/row-->
+  </div>
+</div>
 <!--页脚部分 -->
-
 <hr>
     <footer>
       	<div class="container text-center">
@@ -164,11 +188,6 @@
         	<p　class="text-center"> &copy; FanHeo.com 2014</p>
       	</div>	
     </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  
     <script src="/FanHeo/Public/js/jquery.js"></script>
     <script src="/FanHeo/Public/js/bootstrap.js"></script>
     <script src="/FanHeo/Public/js/application.js"></script>

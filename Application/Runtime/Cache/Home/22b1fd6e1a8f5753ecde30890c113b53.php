@@ -57,7 +57,7 @@
         <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login/",'','','127.0.0.1');?>" method="post">
+        <form class="form-horizontal" role="form" action="<?php echo U("Login/Login");?>" method="post">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
@@ -122,7 +122,7 @@
               </div>
               <div class="panel-body collapse navbar-collapse " id="UCenter">
                   <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
-                    <li><a href="#">饭盒吐槽</a></li>
+                    <li><a href="<?php echo U('UCenter/fanhetalk');?>">饭盒吐槽</a></li>
                     <li><a href="#">盒友动态</a></li>
                     <li class="active">
                     <a href="#">
@@ -146,91 +146,109 @@
           </div><!--/span-->
         
         <div class="col-xs-12 col-sm-9">
-          <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
+          
+
+          <?php if($status==1): ?><div class="alert alert-success">
+          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+          修改成功！</div>
+          <?php elseif($status==2): ?><div class="alert alert-info">
+          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>验证码已发送至您的手机！</div>
+          <?php elseif($status==3): ?><div class="alert alert-warning">
+          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>请完善您的信息</div>
+          <?php elseif($status==4): ?><div class="alert alert-danger">
+          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>修改失败！</div>
+          <?php else: endif; ?>
+
           <div class="panel panel-default">
-  <div class="panel-heading">的个人资料</div>
+          <?php if(is_array($uinfo)): foreach($uinfo as $key=>$v): ?><div class="panel-heading">的个人资料</div>
   <div class="panel-body">
-    <!--注册表单-->
-<?php if(is_array($uinfo)): foreach($uinfo as $key=>$v): ?><form class="form-horizontal" action="<?php echo U("Register/Register/",'','','127.0.0.1');?>" method="post" role="form" accept-charset="utf8">
+    <!--表单-->
+
+          <?php if(is_array($minfo)): foreach($minfo as $key=>$m): ?><form class="form-horizontal" action="<?php echo U("UCenter/update_userinfomation");?>" method="post" role="form" accept-charset="utf8">
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label" >头像:</label>
+            <div class="col-sm-4">
+            <a href="#" class="thumbnail ">
+              <img class="img-circle" src="<?php echo ($v["head_ico"]); ?>" width="100px" height="100px">
+            </a>
+            </div>
+          </div>
           <div class="form-group">
             <label for="" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-4">
-              <input type="user" class="form-control" name="username" maxlength="16" placeholder="<?php echo ($v["username"]); ?>" required autofocus>
+              <input type="user" class="form-control" name="username" maxlength="16" value="<?php echo ($v["username"]); ?>" required autofocus>
             </div>
-          </div><?php endforeach; endif; ?>
+          </div>
+          
           <div class="form-group">
             <label for="" class="col-sm-2 control-label">真实姓名:</label>
             <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" placeholder="2~8个字符" required autofocus>
+              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["real_name"]); ?>" required autofocus>
             </div>
           </div>
-          
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">个性签名:</label>
+            <div class="col-sm-4">
+              <textarea class="form-control" name="realname" maxlength="8"  required autofocus><?php echo ($m["words"]); ?></textarea>
+            </div>
+          </div>
           <div class="form-group">
             <label for="" class="col-sm-2 control-label">性别:</label>
             <div class="col-sm-4">
-            <label>
+            
+              <label>
               <input type="radio" name="sex"  value="1" checked>
-          男
-        </label>
-        <label>
+                男
+              </label>
+              <label>
               <input type="radio" name="sex" value="2" >
-          女
-        </label>
+              女
+              </label>
+           
             </div>
           </div>
-          
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">生日:</label>
+            <div class="col-sm-4">
+              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["birthday"]); ?>" required autofocus>
+            </div>
+          </div>
     
           <div class="form-group">
             <label for="" class="col-sm-2 control-label">邮箱:</label>
             <div class="col-sm-4">
-              <input type="email" class="form-control" name="email" placeholder="常用邮箱账号" required autofocus>
+              <input type="email" class="form-control" name="email" value="<?php echo ($v["email"]); ?>" required autofocus>
             </div>
           </div>
           <div class="form-group">
             <label for="" class="col-sm-2 control-label" >手机号:</label>
             <div class="col-sm-4">
-              <input type="date" class="form-control" name="phone" maxlength="11" placeholder="请输入11位手机号" required autofocus>
+              <input type="date" class="form-control" name="phone" maxlength="11" value="<?php echo ($m["phone"]); ?>" required autofocus>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="" class="col-sm-2 control-label">QQ:</label>
+            <div class="col-sm-4">
+              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["qq"]); ?>" required autofocus>
             </div>
           </div>
          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
+            <label for="" class="col-sm-2 control-label">联系地址:</label>
             <div class="col-sm-4">
-              <input type="password" id="pwd" class="form-control" name="password" maxlength="24" placeholder="4~24个字符,不要太简单了哦" title="hello" required autofocus >
+              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["address"]); ?>" required autofocus>
             </div>
           </div>
           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">确认密码:</label>
+            <label for="" class="col-sm-2 control-label">地区:</label>
             <div class="col-sm-4">
-              <input type="password" id="pwd1" class="form-control" name="password2" maxlength="24" placeholder="确认密码" required  onchange="checkPasswords()">
+              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["area"]); ?>" required autofocus>
             </div>
           </div>
-          
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
-            <div class="col-xs-2">
-              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Register/verify/','','','127.0.0.1');?>" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-4">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" name=""> 我同意FanHeo.饭盒有关条款
-                </label>
-              </div>
-            </div>
-            </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-warning btn-block">加入到 FanHeo</button>
+                <button type="submit" class="btn btn-warning btn-block">修改资料</button>
               </div>
-            </div>
-          
+            </div><?php endforeach; endif; endforeach; endif; ?> 
         </form>
 
   </div>

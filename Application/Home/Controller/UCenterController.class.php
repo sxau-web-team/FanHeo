@@ -19,7 +19,23 @@ class UCenterController extends CommonController {
      */
     public function update_userinfomation () {
 
+    	if (1) {
+    		$uid = session('uid');
+	    	$mid = session('mid');
+	    	if ($uid = $mid) {
 
+	    		$memberinfo=M('member')->where(array('user_id' => $mid))->select();
+	    		$userinfo=M('user')->where(array('id' => $uid))->select();
+	    	}else{
+	    		
+	    	}
+	    	
+	    	$this->minfo = $memberinfo;
+	    	$this->uinfo = $userinfo;
+    	
+    		$this->status = 1;
+    		$this->display('userinfomation');
+    	}
     }
 
     /**
@@ -36,11 +52,10 @@ class UCenterController extends CommonController {
     	}else{
     		
     	}
-    	echo '<br/><br/><br/><br/><br/>';
-    	var_dump($memberinfo);
-    	var_dump($userinfo);
+    	
     	$this->minfo = $memberinfo;
     	$this->uinfo = $userinfo;
+    	
     	$this->display('userinfomation');
     	
 
@@ -105,9 +120,14 @@ class UCenterController extends CommonController {
     /**
      * 饭盒吐糟
      */
-    public function send_message () {
+    public function fanhetalk () {
 
-
+    	$this->display('fanhetalk');
+    }
+    public function send_talk () {
+    	if (!IS_POST) {
+            halt('页面不存在');
+        }
     }
 
     /**

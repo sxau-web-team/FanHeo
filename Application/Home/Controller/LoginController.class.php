@@ -13,23 +13,41 @@ class LoginController extends Controller {
      * 调用验证码
      */
     public function verify () {
+        $config = array(
+        'fontSize' => 30, // 验证码字体大小
+        'length' => 4, // 验证码位数
+        'useNoise' => true, // 关闭验证码杂点
+        );
+
+        $Verify = new \Think\Verify($config);
+        $Verify->entry();
 
         //import('ORG.Util.Image'); 此方法失败
-        \Org\Util\Image::buildImageVerify(4,5,'png');
+        //\Org\Util\Image::buildImageVerify(4,5,'png');
+    }
+
+    /**
+      * 检测输入的验证码是否正确，$code为用户输入的验证码字符串
+      */ 
+    public function check_verify($code, $id = ''){
+        $verify = new \Think\Verify();
+        return $verify->check($code, $id);
     }
 
     public function Login () {
     	/**
     	 * 用户登录表单处理
     	 */
-        
-        
+
         if (!IS_POST) {
             halt('页面不存在');
         }
         $username = I('username');
         $pwd = I('password','','md5');
-        
+        $code = I('code');
+        $ver = $this->check_verify($code, $id = '');
+        if(!$ver)
+        $this->error('验证码错误');
         $user = M('user')->where(array('username' => $username))->find();
         $member = M('member')->where(array('user_id' => $user['id']))->find();
         

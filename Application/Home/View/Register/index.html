@@ -65,7 +65,7 @@
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-xs-2">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="{:U('Register/verify/','','','127.0.0.1')}" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
+              <img src="{:U('Login/verify')}" id="code"/><a href="javascript:void(change_code(this));">换一个</a>
             </div>
           </div>
           
@@ -73,7 +73,7 @@
             <div class="col-sm-offset-2 col-sm-4">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" name=""> 我同意FanHeo.饭盒有关条款
+                  <input type="checkbox" name="" required autofocus> 我同意FanHeo.饭盒有关条款
                 </label>
               </div>
             </div>

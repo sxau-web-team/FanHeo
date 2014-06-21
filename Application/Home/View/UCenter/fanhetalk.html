@@ -1,0 +1,33 @@
+      
+<include file="Public/include/U_header.html"/>
+          
+<div class="panel panel-default">
+         
+  <div class="panel-heading">吐吐糟吧</div>
+  <div class="panel-body">
+    <!--表单
+
+          <foreach name='minfo' item='m'>-->
+
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object img-circle" src="__PUBLIC__/image/user/head_icon.png" width="100px" height="100px">
+  </a>
+  <div class="media-body">
+      <form class="" action="{:U("UCenter/update_userinfomation")}" method="post" role="form" >
+        <textarea class="form-control" name="talk" rows="3" required autofocus>{$m.words}</textarea>
+        <br/>
+        
+        <button type="submit" class=" pull-right btn btn-warning ">  吐 糟  </button>
+      </form>
+    
+  </div>
+</div>
+
+
+    
+
+  </div>
+  </div>
+<include file="Public/include/U_footer.html"/>

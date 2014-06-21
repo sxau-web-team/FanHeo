@@ -5,7 +5,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">FanHeo.登录</div>
   <div class="panel-body">
-    <!--注册表单-->
+    <!--登录表单-->
 
     <form class="form-horizontal" action="{:U("Login/Login/",'','')}" method="post" role="form" accept-charset="utf8">
           <div class="form-group">
@@ -24,7 +24,7 @@
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-xs-2">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="{:U('Login/verify','','','127.0.0.1')}" id="code"/><a href="javascript:change_code()">换一个</a>
+              <img src="{:U('Login/verify')}" id="code"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           
