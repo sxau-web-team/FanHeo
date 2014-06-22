@@ -3,6 +3,12 @@ namespace Admin\Controller;
 use Think\Controller;
 
 class RbacController extends BaseController {
+	//用户列表
+	Public function index(){
+		echo 'hello';
+	}
+
+
 	//角色列表
 	Public function role(){
 		$role = M('role')->select();
@@ -11,12 +17,39 @@ class RbacController extends BaseController {
 	}
 	//节点列表
 	Public function node(){
-		$node = M('node')->order('sort')->select();
+		 $field = array('id','name' ,'title','pid');
+		$node = M('node')->field($field)->order('sort')->select();
+		$node = node_merge($node);
 		$this->assign('node',$node);
 		$this->display();
 	}
 	//添加用户
 	Public function addUser(){
+		$this->role = M('role')->select();
+		$this->display();
+	}
+	//添加用户处理
+	Public function addUserhandler(){
+		$user = array('username' => I('username'),
+					'password' => I('password','','md5'),
+					'logintime' => time(),
+					'loginip' => get_client_ip() 
+					);
+		$role = array();
+		if($uid = M('admin')->add($user)){
+			foreach ($_POST['role_id'] as $v) {
+				$role[] = array(
+					'role_id' => $v,'user_id' => $uid);
+
+				# code...
+			}
+			M('role_user')->addAll($role);
+			$this->success('添加成功',U('Admin/Rbac/index'));
+		}
+		else{
+			$this->error('添加失败');
+		}
+		
 	}
 	//添加角色
 	Public function addRole(){
@@ -54,5 +87,43 @@ class RbacController extends BaseController {
 		else{
 			$this->error('添加失败');
 		}
+	}
+	//配置权限
+	Public function access(){
+		$rid = I('rid',1,'intval');
+
+		$field = array('id','name','title','pid');
+		$node = M('node')->order('sort')->select();
+		//$this->node = node_merge($node);
+		//原有权限
+		$access = M('access')->where(array('role_id'=> $rid))->getField('node_id',true);
+		$this->node = node_merge($node,$access);
+
+		$this->rid = $rid;
+		$this->display();
+
+	}
+	//修改权限
+	Public function setAccess(){
+		$rid = I('rid',0,'intval');
+		$db = M('access');
+
+		$db -> where(array('role_id' => $rid ))->delete();
+		$data = array();
+		foreach ($_POST['access'] as $v ) {
+			$tmp = explode('_', $v);
+			$data[] = array('role_id' => $rid ,'node_id' => $tmp[0],'level' => $tmp[1] );
+
+			# code...
+		}
+		if( $db->addAll($data))
+		{
+			$this->success('修改成功',U('Admin/Rbac/role'));
+		}
+		else{
+			$this->error('修改失败');
+		}
+		
+
 	}
 }

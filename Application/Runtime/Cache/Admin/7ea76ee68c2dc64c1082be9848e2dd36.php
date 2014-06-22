@@ -11,7 +11,22 @@
 					<p>
 						<strong><?php echo ($app["title"]); ?></strong>
 							【<a href="<?php echo U('Admin/Rbac/addNode',array('pid' =>$app['id'],'level' =>2));?>">添加控制器</a>】
+							[<a href="">修改</a>]
+							[<a href="">删除</a>]
 						</p>
+						<?php if(is_array($app["child"])): foreach($app["child"] as $key=>$action): ?><dl>
+						<dt>
+						<strong><?php echo ($action["title"]); ?></strong>
+						[<a href="<?php echo U('Admin/Rbac/addNode',array('pid'=>$action['id'],'level' => 3));?>">添加方法</a>]
+						</dt>
+						<?php if(is_array($action["child"])): foreach($action["child"] as $key=>$method): ?><dd>
+							<span><?php echo ($method["title"]); ?></span>
+							[<a href="">修改</a>]
+							[<a href="">删除</a>]
+							</dd><?php endforeach; endif; endforeach; endif; ?>
+						</dl>
+
+
 						</div><?php endforeach; endif; ?>
 						</div>
 </body>

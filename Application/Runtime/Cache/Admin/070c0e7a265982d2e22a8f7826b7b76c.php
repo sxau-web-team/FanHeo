@@ -21,7 +21,7 @@
 					<?php if($v["status"]): ?>开启<?php else: ?>关闭<?php endif; ?>
 				</td>
 				<td>
-					<a href="">配置权限</a>
+					<a href="<?php echo U('Admin/Rbac/access',array('rid' => $v['id']));?>">配置权限</a>
 				</td>
 			</tr><?php endforeach; endif; ?>
 		</table>

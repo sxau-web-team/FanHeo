@@ -62,8 +62,8 @@
 		
 		<tr>
 			<td colspan="2" align="center">
-				<input type="hidden" name='pid' value='0'>
-				<input type="hidden" name='level' value='1'>
+				<input type="hidden" name='pid' value='<?php echo ($pid); ?>'>
+				<input type="hidden" name='level' value='<?php echo ($level); ?>'>
 				<input type="submit" value='保存'/>
 				</td>
 		</tr>
