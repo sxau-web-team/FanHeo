@@ -60,13 +60,20 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" name="username" placeholder="用户名/手机号">
+              <input type="text" class="form-control" name="username" placeholder="用户名/手机号" required autofocus>
             </div>
           </div>
           <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
             <div class="col-sm-8">
-              <input type="password" class="form-control" name="password" placeholder="密码">
+              <input type="password" class="form-control" name="password" placeholder="密码" required autofocus>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
+            <div class="col-sm-5">
+              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
+              <img src="<?php echo U('Login/verify');?>" id="code"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           <div class="form-group">

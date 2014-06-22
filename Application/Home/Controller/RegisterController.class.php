@@ -19,7 +19,7 @@ class RegisterController extends Controller {
     	 * 用户注册表单处理
     	 */
         if (!IS_POST) {
-            halt('页面不存在');
+            $this->halt('页面不存在');
         }
 
         
