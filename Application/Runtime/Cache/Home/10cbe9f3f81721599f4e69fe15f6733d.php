@@ -147,35 +147,49 @@
         
         <div class="col-xs-12 col-sm-9">
           
-<div class="panel panel-default">
-         
+<div class="panel panel-default">       
   <div class="panel-heading">吐吐糟吧</div>
-  <div class="panel-body">
-    <!--表单
-
-          <foreach name='minfo' item='m'>-->
-
-
-<div class="media">
-  <a class="pull-left" href="#">
-    <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
-  </a>
-  <div class="media-body">
-      <form class="" action="<?php echo U("UCenter/update_userinfomation");?>" method="post" role="form" >
-        <textarea class="form-control" name="talk" rows="3" required autofocus><?php echo ($m["words"]); ?></textarea>
-        <br/>
+    <div class="panel-body">
+      <div class="media">
+          <a class="pull-left" href="#">
+          <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
+          </a>
+        <div class="media-body">
+          <form class="" action="<?php echo U('UCenter/send_talk');?>" method="post" role="form" >
+            <textarea class="form-control" name="talk" rows="3" placeholder="<?php echo ($m["words"]); ?>想说点儿啥.." required autofocus></textarea>
+            <br/>
         
-        <button type="submit" class=" pull-right btn btn-warning ">  吐 糟  </button>
-      </form>
-    
+            <button type="submit" data-loading-text="发送中..." class=" pull-right btn btn-warning ">  吐 糟  </button>
+          </form> 
+        </div>
+      </div>
   </div>
 </div>
 
 
-    
 
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  
+    <!-- List group -->
+    <ul class="list-group">
+      <li class="list-group-item"><div class="media">
+          <a class="pull-left" href="#">
+          <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
+          </a>
+        <div class="media-body">
+          <p>Dapibus Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac facilisis in<br/><br/></p>
+        </div>
+      </div></li>
+      <li class="list-group-item"><p>Dapibus Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac facilisis in<br/><br/></p></li>
+      <li class="list-group-item"><p>MorCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odiobi leo risus</p></li>
+      <li class="list-group-item"><p>Porta Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac consectetur ac<br/><br/></p></li>
+      <li class="list-group-item"><p>VestibulCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras <br/><br/>justo odioCras justo odioCras justo odioCras justo odioCras justo odioum at eros</p></li>
+    </ul>
   </div>
-  </div>
+
+
 
       </div><!--/row-->
   </div>

@@ -43,6 +43,8 @@ class UCenterController extends CommonController {
      */
 
     public function show_userinfomation () {
+    	$this->assign('title','FanHeo.个人资料');
+    	$this->assign('stitle','个人资料');
     	$uid = session('uid');
     	$mid = session('mid');
     	if ($uid = $mid) {
@@ -65,6 +67,8 @@ class UCenterController extends CommonController {
      * 显示用户积分信息
      */
     public function view_score () {
+    	$this->assign('title','FanHeo.积分信息');
+    	$this->assign('stitle','积分信息');
 
 
     }
@@ -95,6 +99,8 @@ class UCenterController extends CommonController {
      */
 
     public function view_order () {
+    	$this->assign('title','FanHeo.我的订单');
+    	$this->assign('stitle','我的订单');
 
 
     }
@@ -121,13 +127,22 @@ class UCenterController extends CommonController {
      * 饭盒吐糟
      */
     public function fanhetalk () {
+    	$this->assign('title','FanHeo.饭盒吐糟');
+    	$this->assign('stitle','饭盒吐糟');
 
     	$this->display('fanhetalk');
     }
     public function send_talk () {
+    	$this->assign('title','FanHeo.饭盒吐糟');
+    	$this->assign('stitle','饭盒吐糟');
+
     	if (!IS_POST) {
-            halt('页面不存在');
+            $this->error('页面不存在');
         }
+
+
+        $this->display('fanhetalk');
+
     }
 
     /**
