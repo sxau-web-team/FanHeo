@@ -123,9 +123,9 @@
               <div class="panel-body collapse navbar-collapse " id="UCenter">
                   <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
                     <li><a href="<?php echo U('UCenter/fanhetalk');?>">饭盒吐槽</a></li>
-                    <li><a href="#">盒友动态</a></li>
+                    <li><a href="<?php echo U('UCenter/talks');?>">盒友动态</a></li>
                     <li class="active">
-                    <a href="#">
+                    <a href="<?php echo U('UCenter/view_fanhe');?>">
                     <span class="badge pull-right">3</span>
                     我的饭盒
                     </a>

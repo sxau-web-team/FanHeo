@@ -119,8 +119,8 @@ class UCenterController extends CommonController {
      */
 
     public function message () {
-
-
+        $talk="hello";
+        $this->ajaxReturn($talk);
     }
 
     /**
@@ -129,26 +129,46 @@ class UCenterController extends CommonController {
     public function fanhetalk () {
     	$this->assign('title','FanHeo.饭盒吐糟');
     	$this->assign('stitle','饭盒吐糟');
-
+    	$talk=M("talk");
+    	$rows=$talk->order("id desc")->where(array('user_id'=>session('uid')))->select();
+    	$this->assign("talk",$rows);
     	$this->display('fanhetalk');
     }
     public function send_talk () {
-    	$this->assign('title','FanHeo.饭盒吐糟');
-    	$this->assign('stitle','饭盒吐糟');
 
-    	if (!IS_POST) {
-            $this->error('页面不存在');
-        }
+    	$talk =array(
+    		'user_id'	=>session('uid'),
+    		'content'	=> I('content'),
+    		'time'		=> date('Y-m-d H:i:s'),
+    		
+    		);
+    	if (M('talk')->add($talk))
+    	$this->ajaxReturn($talk);
+    /*
+    	if (M('talk')->add($talk)) {
+    		$this->display('fanhetalk');
+    		
+    	}else{
+    		$this->error('发布失败！','',5);
+    	}
+		*/
 
-
-        $this->display('fanhetalk');
+        
 
     }
 
     /**
      * 盒友动态
      */
+    public function talks () {
 
+            $talk = D("talk");
+            $talk = $talk->relation(true)->order("id desc")->select();
+            $this->assign("talk",$talk);
+            $this->display('fanhetalks');
+
+
+    }
 
 
 

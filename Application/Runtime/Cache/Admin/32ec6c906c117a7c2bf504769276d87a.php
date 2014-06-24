@@ -7,16 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!--标题栏图标-->
-    <link rel="shortcut icon" href="/fanheo/Public/image/ico/Fanheo.png">
+    <link rel="shortcut icon" href="/FanHeo/Public/image/ico/Fanheo.png">
 
     <title><?php echo ($title); ?></title>
 
 
     <!-- Bootstrap core CSS -->
-    <link href="/fanheo/Public/css/bootstrap.css" rel="stylesheet">
+    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/fanheo/Public/css/signin.css" rel="stylesheet">
+    <link href="/FanHeo/Public/css/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -32,7 +32,7 @@
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="/fanheo/index.php/Admin/Login/do_login" method="POST" >
+      <form class="form-signin" role="form" action="/FanHeo/index.php/Admin/Login/do_login" method="POST" >
         <h4 class="form-signin-heading">登录到 FanHe.饭盒 后台管理系统</h4>
         <input type="text" class="form-control" placeholder="用户名" name="username" required autofocus>
         <input type="password" class="form-control" placeholder="密码" name="password" required>

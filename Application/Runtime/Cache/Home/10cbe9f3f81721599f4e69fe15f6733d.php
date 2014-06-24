@@ -123,9 +123,9 @@
               <div class="panel-body collapse navbar-collapse " id="UCenter">
                   <ul class="nav nav-pills nav-stacked " style="max-width: 220px;">
                     <li><a href="<?php echo U('UCenter/fanhetalk');?>">饭盒吐槽</a></li>
-                    <li><a href="#">盒友动态</a></li>
+                    <li><a href="<?php echo U('UCenter/talks');?>">盒友动态</a></li>
                     <li class="active">
-                    <a href="#">
+                    <a href="<?php echo U('UCenter/view_fanhe');?>">
                     <span class="badge pull-right">3</span>
                     我的饭盒
                     </a>
@@ -156,10 +156,10 @@
           </a>
         <div class="media-body">
           <form class="" action="<?php echo U('UCenter/send_talk');?>" method="post" role="form" >
-            <textarea class="form-control" name="talk" rows="3" placeholder="<?php echo ($m["words"]); ?>想说点儿啥.." required autofocus></textarea>
+            <textarea class="form-control" id="content" name="content" rows="3" placeholder="<?php echo ($m["words"]); ?>想说点儿啥.." required autofocus></textarea>
             <br/>
         
-            <button type="submit" data-loading-text="发送中..." class=" pull-right btn btn-warning ">  吐 糟  </button>
+            <button type="submit" data-loading-text="发送中..."  class=" pull-right btn btn-warning ">  吐 糟  </button>
           </form> 
         </div>
       </div>
@@ -167,28 +167,80 @@
 </div>
 
 
-
-<div class="panel panel-default">
+<button type="submit" data-loading-text="发送中..." onclick="post_talk()" class=" pull-right btn btn-warning ">  吐 糟  </button>
+<div class="talk panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Panel heading</div>
   
     <!-- List group -->
-    <ul class="list-group">
-      <li class="list-group-item"><div class="media">
+    <ul class="talklist list-group">
+    <?php if(is_array($talk)): foreach($talk as $key=>$v): ?><li class="list-group-item"><div class="media">
           <a class="pull-left" href="#">
           <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
           </a>
-        <div class="media-body">
-          <p>Dapibus Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac facilisis in<br/><br/></p>
+        <div class="media-body"><div class="pull-left"><?php echo ($user=session('username')); ?></div><div class="pull-right"><?php echo ($v["time"]); ?></div>
+          <p><br/><br/><?php echo ($v["content"]); ?><br/><br/></p>
         </div>
-      </div></li>
-      <li class="list-group-item"><p>Dapibus Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac facilisis in<br/><br/></p></li>
-      <li class="list-group-item"><p>MorCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odiobi leo risus</p></li>
-      <li class="list-group-item"><p>Porta Cras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioac consectetur ac<br/><br/></p></li>
-      <li class="list-group-item"><p>VestibulCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras justo odioCras <br/><br/>justo odioCras justo odioCras justo odioCras justo odioCras justo odioum at eros</p></li>
+      </div></li><?php endforeach; endif; ?>
     </ul>
   </div>
+  
+  <script type="text/javascript" src="http://t.beauty-soft.net/js/jquery.js"></script>
+<script>
+  
+  /*发表动态*/
 
+  function post_talk () {
+
+var aj = $.ajax( {    
+    url:'UCenter/send_talk',// 跳转到 action    
+    data:{    
+             selRollBack : selRollBack,    
+             selOperatorsCode : selOperatorsCode,    
+             PROVINCECODE : PROVINCECODE,    
+             pass2 : pass2    
+    },    
+    type:'post',    
+    cache:false,    
+    dataType:'json',    
+    success:function(data) {    
+        if(data.msg =="true" ){    
+            // view("修改成功！");    
+            alert("修改成功！");    
+            window.location.reload();    
+        }else{    
+            view(data.msg);    
+        }    
+     },    
+     error : function() {    
+          // view("异常！");    
+          alert("异常！");    
+     }    
+});  
+
+   
+      
+  }
+</script>
+<script>
+  
+  function demo(){
+
+    $.ajax({
+      url:'http://127.0.0.1/Fnheo/index.php/Home/UCenter/send_talk/id/1',
+      type:"GET",
+      dataType:"json",
+      cache:false;
+      success:function(data){
+        if(data.status){
+          alert("hello");
+        }else{
+          alert(sorry);
+        }
+      }
+    });
+  }
+</script>
 
 
       </div><!--/row-->

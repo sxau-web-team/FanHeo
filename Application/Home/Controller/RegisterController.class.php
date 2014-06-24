@@ -37,7 +37,7 @@ class RegisterController extends Controller {
     		'real_name'	=> I('realname'),
     		'sex'		=> I('sex'),
     		'phone'		=> I('phone'),
-    		'time'		=> date(),
+    		'time'		=> date('Y-m-d H:i:s'),
     		'register_ip'	=> get_client_ip()
     		);
     	/**

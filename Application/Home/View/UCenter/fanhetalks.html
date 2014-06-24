@@ -1,0 +1,27 @@
+      
+<include file="Public/include/U_header.html"/>
+          
+
+<div class="talk panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">盒友动态</div>
+  
+    <!-- List group -->
+    <ul class="talklist list-group">
+    <foreach name='talk' item='v'>
+      <li class="list-group-item"><div class="media">
+          <a class="pull-left" href="#">
+          <img class="media-object img-circle" src="__PUBLIC__/image/user/head_icon.png" width="100px" height="100px">
+          </a>
+        <div class="media-body"><div class="pull-left">{$v.username}</div><div class="pull-right">{$v.time}</div>
+          <p><br/><br/>{$v.content}<br/><br/></p>
+        </div>
+      </div></li>
+      </foreach>
+    </ul>
+  </div>
+
+ 
+  
+
+<include file="Public/include/U_footer.html"/>

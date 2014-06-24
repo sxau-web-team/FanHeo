@@ -148,112 +148,25 @@
         <div class="col-xs-12 col-sm-9">
           
 
-          <?php if($status==1): ?><div class="alert alert-success">
-          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-          修改成功！</div>
-          <?php elseif($status==2): ?><div class="alert alert-info">
-          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>验证码已发送至您的手机！</div>
-          <?php elseif($status==3): ?><div class="alert alert-warning">
-          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>请完善您的信息</div>
-          <?php elseif($status==4): ?><div class="alert alert-danger">
-          <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>修改失败！</div>
-          <?php else: endif; ?>
-
-          <div class="panel panel-default">
-          <?php if(is_array($uinfo)): foreach($uinfo as $key=>$v): ?><div class="panel-heading">的个人资料</div>
-  <div class="panel-body">
-    <!--表单-->
-
-          <?php if(is_array($minfo)): foreach($minfo as $key=>$m): ?><form class="form-horizontal" action="<?php echo U("UCenter/update_userinfomation");?>" method="post" role="form" accept-charset="utf8">
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label" >头像:</label>
-            <div class="col-sm-4">
-            <a href="#" class="thumbnail ">
-              <img class="img-circle" src="<?php echo ($v["head_ico"]); ?>" width="100px" height="100px">
-            </a>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">用户名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="username" maxlength="16" value="<?php echo ($v["username"]); ?>" required autofocus>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">真实姓名:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["real_name"]); ?>" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">个性签名:</label>
-            <div class="col-sm-4">
-              <textarea class="form-control" name="realname" maxlength="8"  required autofocus><?php echo ($m["words"]); ?></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">性别:</label>
-            <div class="col-sm-4">
-            
-              <label>
-              <input type="radio" name="sex"  value="1" checked>
-                男
-              </label>
-              <label>
-              <input type="radio" name="sex" value="2" >
-              女
-              </label>
-           
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">生日:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["birthday"]); ?>" required autofocus>
-            </div>
-          </div>
-    
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">邮箱:</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" name="email" value="<?php echo ($v["email"]); ?>" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label" >手机号:</label>
-            <div class="col-sm-4">
-              <input type="date" class="form-control" name="phone" maxlength="11" value="<?php echo ($m["phone"]); ?>" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">QQ:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["qq"]); ?>" required autofocus>
-            </div>
-          </div>
-         <div class="form-group">
-            <label for="" class="col-sm-2 control-label">联系地址:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["address"]); ?>" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="" class="col-sm-2 control-label">地区:</label>
-            <div class="col-sm-4">
-              <input type="user" class="form-control" name="realname" maxlength="8" value="<?php echo ($m["area"]); ?>" required autofocus>
-            </div>
-          </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-4">
-                <button type="submit" class="btn btn-warning btn-block">修改资料</button>
-              </div>
-            </div><?php endforeach; endif; endforeach; endif; ?> 
-        </form>
-
-  </div>
+<div class="talk panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">盒友动态</div>
+  
+    <!-- List group -->
+    <ul class="talklist list-group">
+    <?php if(is_array($talk)): foreach($talk as $key=>$v): ?><li class="list-group-item"><div class="media">
+          <a class="pull-left" href="#">
+          <img class="media-object img-circle" src="/FanHeo/Public/image/user/head_icon.png" width="100px" height="100px">
+          </a>
+        <div class="media-body"><div class="pull-left"><?php echo ($v["username"]); ?></div><div class="pull-right"><?php echo ($v["time"]); ?></div>
+          <p><br/><br/><?php echo ($v["content"]); ?><br/><br/></p>
+        </div>
+      </div></li><?php endforeach; endif; ?>
+    </ul>
   </div>
 
+ 
+  
 
 
       </div><!--/row-->

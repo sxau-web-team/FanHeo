@@ -7,16 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!--标题栏图标-->
-    <link rel="shortcut icon" href="/fanheo/Public/image/ico/Fanheo.png">
+    <link rel="shortcut icon" href="/FanHeo/Public/image/ico/Fanheo.png">
 
     <title><?php echo ($title); ?></title>
 
 
     <!-- Bootstrap core CSS -->
-    <link href="/fanheo/Public/css/bootstrap.css" rel="stylesheet">
+    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/fanheo/Public/css/signin.css" rel="stylesheet">
+    <link href="/FanHeo/Public/css/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
