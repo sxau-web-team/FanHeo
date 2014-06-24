@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?php echo ($title); ?></title>
-    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
+    <link href="/fanheo/Public/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
   <!--顶部导航 -->
@@ -31,7 +31,7 @@
             <button type="submit" class="btn btn-warning">搜外卖</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/FanHeo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
+              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/fanheo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
               <strong>我的饭盒</strong>
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -74,7 +74,7 @@
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-sm-5">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Login/verify');?>" id="code"/><a href="javascript:change_code()">换一个</a>
+              <img src="<?php echo U('Login/verify');?>" id="codeimg" onclick="change_code()"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           <div class="form-group">
@@ -103,7 +103,12 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+<script>
+          function change_code(){
+    document.getElementByIdx_x('codeimg').src ='U('Login/verify')'+time;
+}
+        
+        </script>
 <br/>
     <!-- 主页面 -->
     <div class="container">
@@ -138,7 +143,7 @@
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-xs-2">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Login/verify');?>" id="code"/><a href="javascript:change_code()">换一个</a>
+              <img src="<?php echo U('Login/verify');?>" id="codeimg" onclick="change_code()" style="cursor:pointer;" name="code"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           
@@ -150,14 +155,15 @@
             </div>
           
         </form>
-        <script>
-          
-          function change_code(){
-            var verifyURL = '<?php echo U('Login/verify','','','127.0.0.1');?>';
-            $("#code").attr("src",verifyURL + Math.random());
-            return false;
-          }
-        </script>
+      <script language="JavaScript">
+	  document.getElementById("codeimg").onclick=function(){change_code()};
+function change_code(){
+alert("sdjfl");
+var timenow =newDate().getTime();
+ document.write(timenow); 
+document.getElementById('codeimg').src='/fanheo/index.php/Home/Login/verify/'+timenow;
+}
+</script>
   </div>
   </div>
   </div>
@@ -176,8 +182,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="/FanHeo/Public/js/jquery.js"></script>
-    <script src="/FanHeo/Public/js/bootstrap.js"></script>
-    <script src="/FanHeo/Public/js/application.js"></script>
+    <script src="/fanheo/Public/js/jquery.js"></script>
+    <script src="/fanheo/Public/js/bootstrap.js"></script>
+    <script src="/fanheo/Public/js/application.js"></script>
   </body>
 </html>
