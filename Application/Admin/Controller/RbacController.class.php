@@ -5,7 +5,9 @@ use Think\Controller;
 class RbacController extends BaseController {
 	//用户列表
 	Public function index(){
-		echo 'hello';
+		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip'))->relation(true)->select();
+		
+		$this->display();
 	}
 
 
@@ -40,7 +42,6 @@ class RbacController extends BaseController {
 			foreach ($_POST['role_id'] as $v) {
 				$role[] = array(
 					'role_id' => $v,'user_id' => $uid);
-
 				# code...
 			}
 			M('role_user')->addAll($role);

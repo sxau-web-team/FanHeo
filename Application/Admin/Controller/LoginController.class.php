@@ -49,7 +49,17 @@ class LoginController extends BaseController {
 			session('AdminUser',$result['username']);
 			session('LoginTime',$result['lastlogintime']);
 			session('LoginIp',$result['loginip']);
+			session(C('USER_AUTH_KEY'),$result['uid']);
+			//$userid[C('USER_AUTH_KEY')]	=	$result['uid'];
+			 //使用用户名、密码和状态的方式进行认证
+       		//$authInfo = \Org\Util\Rbac::authenticate($result);
+			if($result['username'] == C('RBAC_SUPERADMIN')){
+				session(C('ADMIN_AUTH_KEY'),true);
+			}
+
+			\Org\Util\Rbac::saveAccessList();
 			
+
 			$this->redirect('Index/index');
 			
 		}
