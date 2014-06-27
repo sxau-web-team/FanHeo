@@ -16,10 +16,10 @@ class BaseController extends Controller {
 			$this->redirect('Login/Index');
 		}
 		
-		echo MODULE_NAME;
-		echo ACTION_NAME;
+		//echo MODULE_NAME;
+		//echo ACTION_NAME;
 		$notAuth = in_array(MODULE_NAME,explode(',',C('NOT_AUTH_MODULE'))) || in_array(ACTION_NAME,explode(',',C('NOT_AUTH_ACTION')));
-		dump($notAuth);
+		//dump($notAuth);
 		
 		if(C('USER_AUTH_ON') && !$notAuth){
 			\Org\Util\Rbac::AccessDecision(GROUP_NAME) || $this->error('没有权限');

@@ -73,7 +73,7 @@
             <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
             <div class="col-sm-5">
               <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="<?php echo U('Login/verify');?>" id="codeimg" onclick="change_code()"/><a href="javascript:change_code()">换一个</a>
+              <img src="<?php echo U('Login/verify');?>" id="code"/><a href="javascript:change_code()">换一个</a>
             </div>
           </div>
           <div class="form-group">
@@ -102,12 +102,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<script>
-          function change_code(){
-    document.getElementByIdx_x('codeimg').src ='U('Login/verify')'+time;
-}
-        
-        </script>
+
 <br/>
     <!-- 主页面 -->
     <div class="container">
