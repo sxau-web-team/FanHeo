@@ -66,6 +66,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<link href="/fanheo/Public/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 
+	<link rel="stylesheet" type="text/css" href="/fanheo/Public/css/table.css">
+
 	<!-- END PAGE LEVEL STYLES -->
 
 	<link rel="shortcut icon" href="/fanheo/Public/media/image/favicon.ico" />
@@ -1644,6 +1646,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="#">管理组用户列表</a></li>
 
+							<li style="float:right;padding-right:20px;"><a href="">添加管理用户</a></li>
+
 						</ul>
 
 						<!-- END PAGE TITLE & BREADCRUMB-->
@@ -1655,7 +1659,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table table-striped table-bordered table-condensed">
+				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
 					<th>
@@ -1667,8 +1671,21 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					<th>
 					
 					用户名称
+
 					</th>
 					
+					<th>
+
+						手机
+					
+					</th>
+
+					<th>
+						
+						电话
+
+					</th>
+
 					<th>
 					
 					上一次登录时间
@@ -1686,6 +1703,12 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					用户所属组别
 					
 					</th>
+
+					<th>
+						
+						真实名字
+
+					</th>
 					
 					<th>
 					
@@ -1693,11 +1716,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					
 					</th>
 					
-					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr>
+					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
 							<td><?php echo ($v["uid"]); ?></td>
           
 							<td><?php echo ($v["username"]); ?></td>
+
+							<td><?php echo ($v["mobile"]); ?></td>
+
+							<td><?php echo ($v["phone"]); ?></td>
           
 							<td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
 							
@@ -1716,10 +1743,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 									</ul><?php endif; ?>
 							
 							</td>
+
+							<td>
+								<?php echo ($v["truename"]); ?>
+							</td>
           
 							<td>
 								
-								<a href="">锁定</a>
+								<a href="">详细</a>
 							
 							</td>
 							
@@ -1731,7 +1762,28 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 			</div>
 			
+		<div class="pagination">
+
+									<ul>
+
+										<li><a href="#">«</a></li>
+
+										<li><a href="#">1</a></li>
+
+										<li><a href="#">2</a></li>
+
+										<li><a href="#">3</a></li>
+
+										<li><a href="#">4</a></li>
+
+										<li><a href="#">»</a></li>
+
+									</ul>
+
 		</div>
+
+		</div>
+
 			
 		<!-- BEGIN FOOTER -->
 

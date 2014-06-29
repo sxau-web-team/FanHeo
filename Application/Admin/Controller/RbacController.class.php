@@ -5,8 +5,8 @@ use Think\Controller;
 class RbacController extends BaseController {
 	//用户列表
 	Public function index(){
-		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip'))->relation(true)->select();
-		
+		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip','truename','mobile','phone'))->relation(true)->select();
+		$this->assign('title','饭盒后台管理系统-用户管理-管理组用户列表');
 		$this->display();
 	}
 

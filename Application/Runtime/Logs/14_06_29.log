@@ -1,0 +1,114 @@
+[ 2014-06-29T04:09:10+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+
+[ 2014-06-29T04:53:20+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/ui_buttons.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:ui_buttons
+
+[ 2014-06-29T04:54:18+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/ui_modals.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:ui_modals
+
+[ 2014-06-29T04:54:21+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/ui_tabs_accordions.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+ERR: 非法操作:ui_tabs_accordions
+
+[ 2014-06-29T04:54:26+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/ui_sliders.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:ui_sliders
+
+[ 2014-06-29T04:59:11+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:28+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/loginout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:28+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:47+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/loginout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:47+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:55+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T04:59:55+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:00+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+
+[ 2014-06-29T05:00:00+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:06+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/rbac/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.050003s ]
+
+[ 2014-06-29T05:00:06+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+
+[ 2014-06-29T05:00:12+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:12+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:19+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:19+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T05:00:23+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T05:00:23+08:00 ] 127.0.0.1 /fanheo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+

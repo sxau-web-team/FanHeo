@@ -66,6 +66,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<link href="__PUBLIC__/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/table.css">
+
 	<!-- END PAGE LEVEL STYLES -->
 
 	<link rel="shortcut icon" href="__PUBLIC__/media/image/favicon.ico" />
@@ -238,6 +240,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="#">管理组用户列表</a></li>
 
+							<li style="float:right;padding-right:20px;"><a href="">添加管理用户</a></li>
+
 						</ul>
 
 						<!-- END PAGE TITLE & BREADCRUMB-->
@@ -249,7 +253,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table table-striped table-bordered table-condensed">
+				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
 					<th>
@@ -261,8 +265,21 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					<th>
 					
 					用户名称
+
 					</th>
 					
+					<th>
+
+						手机
+					
+					</th>
+
+					<th>
+						
+						电话
+
+					</th>
+
 					<th>
 					
 					上一次登录时间
@@ -280,6 +297,12 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					用户所属组别
 					
 					</th>
+
+					<th>
+						
+						真实名字
+
+					</th>
 					
 					<th>
 					
@@ -289,11 +312,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					
 					<foreach name='user' item='v'>
 						
-						<tr>
+						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
 							<td>{$v.uid}</td>
           
 							<td>{$v.username}</td>
+
+							<td>{$v.mobile}</td>
+
+							<td>{$v.phone}</td>
           
 							<td>{$v.logintime|date='y-m-d H:i',###}</td>
 							
@@ -320,10 +347,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 								</if>
 							
 							</td>
+
+							<td>
+								{$v.truename}
+							</td>
           
 							<td>
 								
-								<a href="">锁定</a>
+								<a href="">详细</a>
 							
 							</td>
 							
@@ -337,6 +368,27 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 			</div>
 			
+		<div class="pagination">
+
+									<ul>
+
+										<li><a href="#">«</a></li>
+
+										<li><a href="#">1</a></li>
+
+										<li><a href="#">2</a></li>
+
+										<li><a href="#">3</a></li>
+
+										<li><a href="#">4</a></li>
+
+										<li><a href="#">»</a></li>
+
+									</ul>
+
 		</div>
+
+		</div>
+
 			
 		<include file="Public/include/Admin_footer.html"/>
