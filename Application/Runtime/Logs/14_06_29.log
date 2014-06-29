@@ -112,3 +112,289 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 
+[ 2014-06-29T21:16:02+08:00 ] 127.0.0.1 /FanHeo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:16:03+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:16:28+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:16:28+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Login/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-06-29T21:16:35+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2014-06-29T21:51:42+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2014-06-29T21:51:47+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2014-06-29T21:57:12+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:57:12+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:57:46+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:57:58+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/login_soft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:login_soft
+
+[ 2014-06-29T21:58:03+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/login_soft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:login_soft
+
+[ 2014-06-29T21:58:08+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/login_soft.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:login_soft
+
+[ 2014-06-29T21:58:22+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:58:32+08:00 ] 127.0.0.1 /FanHeo/index.php/Admin/Rbac/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-06-29T21:58:40+08:00 ] 127.0.0.1 /FanHeo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:58:40+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-29T21:58:58+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/Login/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fanheo_user` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( `username` = 'guodong' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fanheo_member` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `fanheo_member` WHERE ( `user_id` = 6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `fanheo_member` SET `last_login`='2014-06-29 21:58:58',`last_ip`='127.0.0.1' WHERE ( `user_id` = 6 ) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: last_time D:\www\FanHeo\Application\Home\Controller\LoginController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:59:03+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/UCenter/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:59:09+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/UCenter/fanhetalk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fanheo_talk` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `fanheo_talk` WHERE ( `user_id` = 6 ) ORDER BY id desc  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: m D:\www\FanHeo\Application\Runtime\Cache\Home\10cbe9f3f81721599f4e69fe15f6733d.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2014-06-29T21:59:12+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/UCenter/talks.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fanheo_talk` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `fanheo_talk` ORDER BY id desc  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fanheo_user` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='5' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='5' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='8' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='8' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='8' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `fanheo_user` WHERE ( 1=1 AND id='6' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: title D:\www\FanHeo\Application\Runtime\Cache\Home\881a7b891178d5fa848a6c692b871130.php 第 10 行.
+NOTIC: [8] Undefined variable: stitle D:\www\FanHeo\Application\Runtime\Cache\Home\881a7b891178d5fa848a6c692b871130.php 第 107 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-29T21:59:23+08:00 ] 127.0.0.1 /FanHeo/index.php/Home/UCenter/fanhetalk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fanheo_talk` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `fanheo_talk` WHERE ( `user_id` = 6 ) ORDER BY id desc  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: m D:\www\FanHeo\Application\Runtime\Cache\Home\10cbe9f3f81721599f4e69fe15f6733d.php 第 159 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

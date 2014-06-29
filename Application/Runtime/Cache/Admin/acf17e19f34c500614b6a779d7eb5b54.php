@@ -36,41 +36,41 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="/fanheo/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/FanHeo/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="/fanheo/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES --> 
 
-	<link href="/fanheo/Public/media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/daterangepicker.css" rel="stylesheet" type="text/css" />
+	<link href="/FanHeo/Public/media/css/daterangepicker.css" rel="stylesheet" type="text/css" />
 
-	<link href="/fanheo/Public/media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>
+	<link href="/FanHeo/Public/media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/fanheo/Public/media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="/FanHeo/Public/media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
 
-	<link href="/fanheo/Public/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="/FanHeo/Public/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 
-	<link rel="stylesheet" type="text/css" href="/fanheo/Public/css/table.css">
+	<link rel="stylesheet" type="text/css" href="/FanHeo/Public/css/table.css">
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="/fanheo/Public/media/image/favicon.ico" />
+	<link rel="shortcut icon" href="/FanHeo/Public/media/image/favicon.ico" />
 
 </head>
 
@@ -94,7 +94,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a class="brand" href="index.html">
 
-				<img src="/fanheo/Public/media/image/logo.png" alt="logo"/>
+				<img src="/FanHeo/Public/media/image/logo.png" alt="logo"/>
 
 				</a>
 
@@ -104,7 +104,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 
-				<img src="/fanheo/Public/media/image/menu-toggler.png" alt="" />
+				<img src="/FanHeo/Public/media/image/menu-toggler.png" alt="" />
 
 				</a>          
 
@@ -510,7 +510,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-						<img alt="" src="/fanheo/Public/media/image/avatar1_small.jpg" />
+						<img alt="" src="/FanHeo/Public/media/image/avatar1_small.jpg" />
 
 						<span class="username"><?php echo ($loginname); ?></span>
 
@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/fanheo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -1813,75 +1813,75 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="/fanheo/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="/fanheo/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/FanHeo/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="/fanheo/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="/fanheo/Public/media/js/excanvas.min.js"></script>
+	<script src="/FanHeo/Public/media/js/excanvas.min.js"></script>
 
-	<script src="/fanheo/Public/media/js/respond.min.js"></script>  
+	<script src="/FanHeo/Public/media/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="/fanheo/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/FanHeo/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="/fanheo/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/FanHeo/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.js" type="text/javascript"></script>   
+	<script src="/FanHeo/Public/media/js/jquery.vmap.js" type="text/javascript"></script>   
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.russia.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.vmap.russia.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.world.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.vmap.world.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.europe.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.vmap.europe.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.germany.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.vmap.germany.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.usa.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.vmap.usa.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.vmap.sampledata.js" type="text/javascript"></script>  
+	<script src="/FanHeo/Public/media/js/jquery.vmap.sampledata.js" type="text/javascript"></script>  
 
-	<script src="/fanheo/Public/media/js/jquery.flot.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.flot.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.flot.resize.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.flot.resize.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.pulsate.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.pulsate.min.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/date.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/date.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/daterangepicker.js" type="text/javascript"></script>     
+	<script src="/FanHeo/Public/media/js/daterangepicker.js" type="text/javascript"></script>     
 
-	<script src="/fanheo/Public/media/js/jquery.gritter.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.gritter.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/fullcalendar.min.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/fullcalendar.min.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/jquery.sparkline.min.js" type="text/javascript"></script>  
+	<script src="/FanHeo/Public/media/js/jquery.sparkline.min.js" type="text/javascript"></script>  
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 
-	<script src="/fanheo/Public/media/js/app.js" type="text/javascript"></script>
+	<script src="/FanHeo/Public/media/js/app.js" type="text/javascript"></script>
 
-	<script src="/fanheo/Public/media/js/index.js" type="text/javascript"></script>        
+	<script src="/FanHeo/Public/media/js/index.js" type="text/javascript"></script>        
 
 	<!-- END PAGE LEVEL SCRIPTS -->  
 
