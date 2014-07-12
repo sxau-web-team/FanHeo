@@ -23,15 +23,22 @@ class Page{
     private $url     = ''; //当前链接URL
     private $nowPage = 1;
 
+	protected $config  =    array(
+	'header'=>'条记录',
+	'prev'=>'上一页',
+	'next'=>'下一页',
+	'first'=>'第一页',
+	'last'=>'<span id="lastspan">最后一页</span>',
+	'theme'=>'<ul><li><span> %TOTAL_ROW% %HEADER% %NOW_PAGE%/%TOTAL_PAGE% 页</span></li> <li>%UP_PAGE% %DOWN_PAGE% %FIRST% %LINK_PAGE% %END%</li></ul>');
 	// 分页显示定制
-    private $config  = array(
+    /* private $config  = array(
         'header' => '<span class="rows">共 %TOTAL_ROW% 条记录</span>',
         'prev'   => '<<',
         'next'   => '>>',
         'first'  => '1...',
         'last'   => '...%TOTAL_PAGE%',
         'theme'  => '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%',
-    );
+    ); */
 
     /**
      * 架构函数

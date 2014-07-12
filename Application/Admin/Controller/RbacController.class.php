@@ -5,7 +5,14 @@ use Think\Controller;
 class RbacController extends BaseController {
 	//用户列表
 	Public function index(){
-		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip','truename','mobile','phone'))->relation(true)->select();
+		
+		$count = M('admin')->count();
+		echo $count;
+		$page = new \Think\Page($count,10);
+		$limit = $page->firstRow . ',' . $page->listRows;
+		
+		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip','truename','mobile','phone'))->relation(true)->limit($limit)->select();
+		$this->page = $page->show();
 		$this->assign('title','饭盒后台管理系统-用户管理-管理组用户列表');
 		$this->display();
 	}
