@@ -616,9 +616,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<a href="javascript:;">
 
-					<i class="icon-cogs"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">Layouts</span>
+					<span class="title">商品管理</span>
 
 					<span class="arrow "></span>
 
@@ -630,7 +630,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_horizontal_sidebar_menu.html">
 
-							Horzontal & Sidebar Menu</a>
+							商品列表</a>
 
 						</li>
 
@@ -638,7 +638,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_horizontal_menu1.html">
 
-							Horzontal Menu 1</a>
+							添加商品</a>
 
 						</li>
 
@@ -646,7 +646,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_horizontal_menu2.html">
 
-							Horzontal Menu 2</a>
+							库存管理</a>
 
 						</li>
 
@@ -654,15 +654,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_promo.html">
 
-							Promo Page</a>
+							套餐管理</a>
 
 						</li>
 
 						<li >
 
-							<a href="layout_email.html">
+							<a href="<?php echo U('Admin/Category/index');?>">
 
-							Email Templates</a>
+							商品分类列表</a>
 
 						</li>
 
@@ -670,7 +670,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_ajax.html">
 
-							Content Loading via Ajax</a>
+							添加商品分类</a>
 
 						</li>
 
@@ -678,7 +678,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_sidebar_closed.html">
 
-							Sidebar Closed Page</a>
+							品牌管理</a>
 
 						</li>
 
@@ -686,7 +686,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_blank_page.html">
 
-							Blank Page</a>
+							添加品牌</a>
 
 						</li>
 

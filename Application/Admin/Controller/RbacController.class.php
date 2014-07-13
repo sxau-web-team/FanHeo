@@ -16,8 +16,6 @@ class RbacController extends BaseController {
 		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
-
-
 	//角色列表
 	Public function role(){
 		$count = M('role')->count();
@@ -148,5 +146,12 @@ class RbacController extends BaseController {
 		}
 		
 
+	}
+	//删除用户
+	Public function deluser(){
+		$uid = I('uid',0,'intval');
+		
+		$db = M('admin');
+		$db -> where(array('uid' => $uid ))->delete();
 	}
 }

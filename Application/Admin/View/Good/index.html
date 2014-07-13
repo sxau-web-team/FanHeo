@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							商品分类列表 <small>今日任务：统计在售商户商品的库存</small>
+							商品列表 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -238,9 +238,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							</li>
 
-							<li><a href="#">商品分类列表</a></li>
+							<li><a href="#">商品列表</a></li>
 
-							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Category/addcate')}">添加商品分类</a></li>
+							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Rbac/addUser')}">添加商品</a></li>
 
 						</ul>
 
@@ -253,68 +253,120 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Category/sortCate')}" method="post"> 
-				
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-				
-				<th>ID</th>
-		
-				<th>名称</th>
-			
-				<th>级别</th>
-		
-				<th>排序</th>
-		
-				<th>操作</th>
-				
-				</tr>
+					<th>
 					
-				<foreach name='cate' item='v'>
+					id
+					
+					</th>
+					
+					<th>
+					
+					商品名称
+
+					</th>
+					
+					<th>
+
+						所属分类
+					
+					</th>
+
+					<th>
+						
+						价格
+
+					</th>
+
+					<th>
+					
+					上一次登录时间
+					
+					</th>
+					
+					<th>
+					
+					上一次登录ip
+					
+					</th>
+					
+					<th>
+					
+					用户所属组别
+					
+					</th>
+
+					<th>
+						
+						真实名字
+
+					</th>
+					
+					<th>
+					
+					操作
+					
+					</th>
+					
+					<foreach name='user' item='v'>
+						
+						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+          
+							<td>{$v.uid}</td>
+          
+							<td>{$v.username}</td>
+
+							<td>{$v.mobile}</td>
+
+							<td>{$v.phone}</td>
+          
+							<td>{$v.logintime|date='y-m-d H:i',###}</td>
+							
+							<td>{$v.loginip}</td>
+          
+							<td>
+          
+								<if condition='$v["username"] == C("RBAC_SUPERADMIN")'>
 				
-					<tr>
-					
-						<td>{$v.id}</td>
+								超级管理员
+							
+								<else/>
+							
+									<ul class="unstyled">
+							
+										<foreach name='v.role' item='value'>
+							
+											<li>{$value.name}({$value.remark})</li>
+							
+										</foreach>
+							
+									</ul>
+							
+								</if>
+							
+							</td>
+
+							<td>
+								{$v.truename}
+							</td>
+          
+							<td>
+								
+								<a href="#">修改</a>
+								
+								<a href="{:U('Admin/Rbac/deluser',array('uid' => $v['uid']))}">删除</a>
+							
+							</td>
+							
+						</tr>
 						
-						<td>{$v.html}{$v.name}</td>
-						
-						<td>{$v.level}</td>
-						
-						<td>{$v.sort}</td>
-						
-						<td>
-						
-							<input type="text" name="{$v.id}" class="form-control  input-sm" value="{$v.sort}">
-						
-						</td>
-				
-						<td>
-						
-						[<a href="{:U('Category/addCate',array('pid' => $v['id']),'')}">添加子分类</a>]
-					
-						[<a href="">修改</a>]
-					
-						[<a href="">删除</a>]
-						
-						</td>
-					
-					</tr>
-				
-				</foreach>
+					</foreach>
 					
 				</tr> 
 				
-				<tr>
-				
-					<td colspan="5" align="center">
-						
-						<input type="submit" class="btn btn-default" value="排序"/>
-					
-					</td>
-				</tr>
-				
-				</table>	
+				</table>
 				
 			<div class="pagination">
 
@@ -339,41 +391,3 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		</script>
 			
 		<include file="Public/include/Admin_footer.html"/>
-
-<!-- <form action="{:U('Category/sortCate')}" method="post"> 
-<table class='table'>
-	<tr>
-		<th>ID</th>
-		<th>名称</th>
-		<th>级别</th>
-		<th>排序</th>
-		<th>操作</th>
-	</tr>
-
-	<foreach name='cate' item='v'>
-	<tr>
-		<td>{$v.id}</td>
-		<td>{$v.html}{$v.name}</td>
-		<td>{$v.level}</td>
-		<td>{$v.sort}</td>
-		<td>
-			<input type="text" name="{$v.id}" class="form-control  input-sm" value="{$v.sort}">
-		</td>
-		<td>
-			[<a href="{:U('Category/addCate',array('pid' => $v['id']),'')}">添加子分类</a>]
-			[<a href="">修改</a>]
-			[<a href="">删除</a>]
-		</td>
-	</tr>
-	</foreach>
-	<tr>
-	<tr>
-		<td colspan="5" align="center">
-			<input type="submit" class="btn btn-default" value="排序"/>
-		</td>
-	</tr>
-</table>
-</form>
-
-</div>
-</html> -->
