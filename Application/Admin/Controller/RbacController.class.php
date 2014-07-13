@@ -7,21 +7,29 @@ class RbacController extends BaseController {
 	Public function index(){
 		
 		$count = M('admin')->count();
-		echo $count;
 		$page = new \Think\Page($count,10);
 		$limit = $page->firstRow . ',' . $page->listRows;
 		
 		$this->user = D('AdminRelation')->field(array('uid','username','logintime','loginip','truename','mobile','phone'))->relation(true)->limit($limit)->select();
 		$this->page = $page->show();
 		$this->assign('title','饭盒后台管理系统-用户管理-管理组用户列表');
+		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
 
 
 	//角色列表
 	Public function role(){
-		$role = M('role')->select();
+		$count = M('role')->count();
+		$page = new \Think\Page($count,10);
+		$limit = $page->firstRow . ',' . $page->listRows;
+		
+		$role = M('role')->limit($limit)->select();
+		$this->page = $page->show();
+		
 		$this->assign('role',$role);
+		$this->assign('title','饭盒后台管理系统-用户管理-角色列表');
+		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
 	//节点列表
@@ -35,12 +43,17 @@ class RbacController extends BaseController {
 	//添加用户
 	Public function addUser(){
 		$this->role = M('role')->select();
+		$this->assign('title','饭盒后台管理系统-用户管理-添加管理员用户');
+		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
 	//添加用户处理
 	Public function addUserhandler(){
 		$user = array('username' => I('username'),
 					'password' => I('password','','md5'),
+					'truename' => I('truename'),
+					'phone' => I('phone'),
+					'mobile' => I('mobile'),
 					'logintime' => time(),
 					'loginip' => get_client_ip() 
 					);
@@ -61,6 +74,8 @@ class RbacController extends BaseController {
 	}
 	//添加角色
 	Public function addRole(){
+		$this->assign('title','饭盒后台管理系统-用户管理-添加角色');
+		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
 	//添加角色处理

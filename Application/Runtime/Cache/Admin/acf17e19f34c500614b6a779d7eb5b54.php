@@ -598,7 +598,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="start active ">
+				<li class="">
 
 					<a href="index.html">
 
@@ -1286,7 +1286,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="user">
 
 					<a href="javascript:;">
 
@@ -1302,39 +1302,39 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<li >
 
-							<a href="<?php echo U('Admin/Rbac/index');?>">
+							<a href="">
 
 							用户列表</a>
 
 						</li>
 
-						<li >
+						<li id='userlist'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/index');?>">
 
 							管理组用户列表</a>
 
 						</li>
 						
-						<li >
+						<li id='addUser'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addUser');?>">
 
 							添加管理组用户</a>
 
 						</li>
 						
-						<li >
+						<li id='addRole'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addRole');?>">
 
 							添加角色</a>
 
 						</li>
 						
-						<li >
+						<li id='role'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/role');?>">
 
 							角色列表</a>
 
@@ -1646,7 +1646,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="#">管理组用户列表</a></li>
 
-							<li style="float:right;padding-right:20px;"><a href="">添加管理用户</a></li>
+							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
 
 						</ul>
 
@@ -1750,7 +1750,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           
 							<td>
 								
-								<a href="">详细</a>
+								<a href="#">修改</a>
+								
+								<a href="#">删除</a>
 							
 							</td>
 							
@@ -1770,6 +1772,17 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 		</div>
 
+		<script type="text/javascript">
+
+			document.getElementById('user').className = 'start active '; 
+			
+		</script>
+		
+		<script type="text/javascript">
+
+			document.getElementById('userlist').className = 'active '; 
+			
+		</script>
 			
 		<!-- BEGIN FOOTER -->
 
