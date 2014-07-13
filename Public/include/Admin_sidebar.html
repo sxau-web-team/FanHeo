@@ -42,9 +42,9 @@
 
 				</li>
 
-				<li class="">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="{:U('Admin/index')}">
 
 					<i class="icon-home"></i> 
 
@@ -56,7 +56,7 @@
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
@@ -70,17 +70,17 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="{:U('Admin/Good/index')}">
 
 							商品列表</a>
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="{:U('Admin/Good/addGood')}">
 
 							添加商品</a>
 
@@ -765,6 +765,14 @@
 							<a href="{:U('Admin/Rbac/role')}">
 
 							角色列表</a>
+
+						</li>
+
+						<li id='node'>
+
+							<a href="{:U('Admin/Rbac/role')}">
+
+							用户权限管理</a>
 
 						</li>
 

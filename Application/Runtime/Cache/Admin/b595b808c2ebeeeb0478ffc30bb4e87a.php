@@ -555,9 +555,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="start active ">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="<?php echo U('Admin/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -569,13 +569,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
-					<i class="icon-cogs"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">Layouts</span>
+					<span class="title">商品管理</span>
 
 					<span class="arrow "></span>
 
@@ -583,19 +583,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="<?php echo U('Admin/Good/index');?>">
 
-							Horzontal & Sidebar Menu</a>
+							商品列表</a>
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="<?php echo U('Admin/Good/addGood');?>">
 
-							Horzontal Menu 1</a>
+							添加商品</a>
 
 						</li>
 
@@ -603,7 +603,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_horizontal_menu2.html">
 
-							Horzontal Menu 2</a>
+							库存管理</a>
 
 						</li>
 
@@ -611,23 +611,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_promo.html">
 
-							Promo Page</a>
+							套餐管理</a>
 
 						</li>
 
 						<li >
 
-							<a href="layout_email.html">
+							<a href="<?php echo U('Admin/Category/index');?>">
 
-							Email Templates</a>
+							商品分类列表</a>
 
 						</li>
 
 						<li >
 
-							<a href="layout_ajax.html">
+							<a href="<?php echo U('Admin/Category/addcate');?>">
 
-							Content Loading via Ajax</a>
+							添加商品分类</a>
 
 						</li>
 
@@ -635,7 +635,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_sidebar_closed.html">
 
-							Sidebar Closed Page</a>
+							品牌管理</a>
 
 						</li>
 
@@ -643,23 +643,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_blank_page.html">
 
-							Blank Page</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_page.html">
-
-							Boxed Page</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_not_responsive.html">
-
-							Non-Responsive Boxed Layout</a>
+							添加品牌</a>
 
 						</li>
 
@@ -1243,7 +1227,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="user">
 
 					<a href="javascript:;">
 
@@ -1259,41 +1243,49 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<li >
 
-							<a href="<?php echo U('Admin/Rbac/index');?>">
+							<a href="">
 
 							用户列表</a>
 
 						</li>
 
-						<li >
+						<li id='userlist'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/index');?>">
 
 							管理组用户列表</a>
 
 						</li>
 						
-						<li >
+						<li id='addUser'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addUser');?>">
 
 							添加管理组用户</a>
 
 						</li>
 						
-						<li >
+						<li id='addRole'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addRole');?>">
 
 							添加角色</a>
 
 						</li>
 						
-						<li >
+						<li id='role'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/role');?>">
 
 							角色列表</a>
+
+						</li>
+
+						<li id='node'>
+
+							<a href="<?php echo U('Admin/Rbac/role');?>">
+
+							用户权限管理</a>
 
 						</li>
 
@@ -2825,4 +2817,4 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 <!-- END BODY -->
 
-</html>
+</html>		<script type="text/javascript">			document.getElementById('index').className = 'start active '; 					</script>

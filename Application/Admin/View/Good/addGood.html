@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							商品列表 <small>今日任务：统计在售商户商品的库存</small>
+							添加商品 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,15 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">商品管理</a>
+								<a href="{:U('Admin/Rbac/index')}">商品管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">商品列表</a></li>
-
-							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Rbac/addUser')}">添加商品</a></li>
+							<li><a href="#">添加商品</a></li>
 
 						</ul>
 
@@ -253,128 +251,74 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table hovertable  table-bordered table-condensed">
+				<form action="{:U('Admin/Rbac/addRoleHandler')}" method="post" class="form-horizontal" charset='utf-8'>
 				
-				<tr>
-					<th>
-					
-					id
-					
-					</th>
-					
-					<th>
-					
-					商品名称
+					<div class="control-group">
 
-					</th>
-					
-					<th>
+						<label class="control-label">* 商品名称：</label>
 
-						所属分类
-					
-					</th>
+							<div class="controls">
 
-					<th>
-						
-						价格
+								<input type="text" placeholder="请输入要添加的商品" class="m-wrap medium" name="name"/>
 
-					</th>
+								<span class="help-inline"></span>
 
-					<th>
-					
-					上一次登录时间
-					
-					</th>
-					
-					<th>
-					
-					上一次登录ip
-					
-					</th>
-					
-					<th>
-					
-					用户所属组别
-					
-					</th>
+							</div>
 
-					<th>
-						
-						真实名字
+					</div>
+					
+					<div class="control-group">
 
-					</th>
-					
-					<th>
-					
-					操作
-					
-					</th>
-					
-					<foreach name='user' item='v'>
-						
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
-          
-							<td>{$v.uid}</td>
-          
-							<td>{$v.username}</td>
+						<label class="control-label">* 商品描述：</label>
 
-							<td>{$v.mobile}</td>
+							<div class="controls">
 
-							<td>{$v.phone}</td>
-          
-							<td>{$v.logintime|date='y-m-d H:i',###}</td>
-							
-							<td>{$v.loginip}</td>
-          
-							<td>
-          
-								<if condition='$v["username"] == C("RBAC_SUPERADMIN")'>
+								<input type="text" placeholder="请输入关于该商品的描述" class="m-wrap medium" name="remark"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+					
+					<div class="control-group">
+
+						<label class="control-label">是否开启：</label>
+					
+						<div class="controls">
+
+							<label class="radio">
+
+							<input type="radio" name="status" value="1" checked='checked'/>
+
+							开启
+
+							</label>
+
+							<label class="radio">
+
+							<input type="radio" name="status" value="0" />
+
+							关闭
+
+							</label>  
+
+
+						</div>
+					
+					</div>
 				
-								超级管理员
-							
-								<else/>
-							
-									<ul class="unstyled">
-							
-										<foreach name='v.role' item='value'>
-							
-											<li>{$value.name}({$value.remark})</li>
-							
-										</foreach>
-							
-									</ul>
-							
-								</if>
-							
-							</td>
+					<div class="form-actions" >
+				
+						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
 
-							<td>
-								{$v.truename}
-							</td>
-          
-							<td>
-								
-								<a href="#">修改</a>
-								
-								<a href="{:U('Admin/Rbac/deluser',array('uid' => $v['uid']))}">删除</a>
-							
-							</td>
-							
-						</tr>
-						
-					</foreach>
+						<button type="button" class="btn">返回</button>
 					
-				</tr> 
-				
-				</table>
-				
-			<div class="pagination">
-
-			{$page}
-		
-			</div>	
+					</div>
+						
+				</form>
 			
-		</div>
+			</div>
 
 		</div>
 
@@ -386,7 +330,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		
 		<script type="text/javascript">
 
-			document.getElementById('goodlist').className = 'active '; 
+			document.getElementById('addgood').className = 'active '; 
 			
 		</script>
 			
