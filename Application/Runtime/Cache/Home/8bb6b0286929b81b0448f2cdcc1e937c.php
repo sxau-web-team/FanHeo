@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?php echo ($title); ?></title>
-    <link href="/FanHeo/Public/css/bootstrap.css" rel="stylesheet">
+    <link href="/Fanheo/Public/css/bootstrap.css" rel="stylesheet">
   </head>
   <body>
   <!--顶部导航 -->
@@ -31,7 +31,7 @@
             <button type="submit" class="btn btn-warning">搜外卖</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/FanHeo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
+              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='/Fanheo/Public/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
               <strong>我的饭盒</strong>
 			  
               <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -234,8 +234,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
   
-    <script src="/FanHeo/Public/js/jquery.js"></script>
-    <script src="/FanHeo/Public/js/bootstrap.js"></script>
-    <script src="/FanHeo/Public/js/application.js"></script>
+    <script src="/Fanheo/Public/js/jquery.js"></script>
+    <script src="/Fanheo/Public/js/bootstrap.js"></script>
+    <script src="/Fanheo/Public/js/application.js"></script>
   </body>
 </html>
