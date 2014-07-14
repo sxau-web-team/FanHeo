@@ -256,60 +256,29 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-					<th>
+				
+				<thead>
+				
+					<th>id</th>
 					
-					id
+					<th>用户名称</th>
 					
-					</th>
-					
-					<th>
-					
-					用户名称
+					<th>手机</th>
 
-					</th>
-					
-					<th>
+					<th>电话</th>
 
-						手机
+					<th>上一次登录时间</th>
 					
-					</th>
+					<th>上一次登录ip</th>
+					
+					<th>用户所属组别</th>
 
-					<th>
-						
-						电话
-
-					</th>
-
-					<th>
+					<th>真实名字</th>
 					
-					上一次登录时间
+					<th>操作</th>
 					
-					</th>
-					
-					<th>
-					
-					上一次登录ip
-					
-					</th>
-					
-					<th>
-					
-					用户所属组别
-					
-					</th>
-
-					<th>
-						
-						真实名字
-
-					</th>
-					
-					<th>
-					
-					操作
-					
-					</th>
-					
+				</thead>
+				
 					<foreach name='user' item='v'>
 						
 						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
@@ -354,7 +323,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           
 							<td>
 								
-								<a href="#">修改</a>
+								<a class="edit" href="javascript:;">修改</a>
 								
 								<a href="{:U('Admin/Rbac/deluser',array('uid' => $v['uid']))}">删除</a>
 							
@@ -377,6 +346,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		</div>
 
 		</div>
+		
+		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 

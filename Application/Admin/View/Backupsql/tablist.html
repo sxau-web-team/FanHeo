@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							添加商品管理分类 <small>今日任务：统计在售商户商品的库存</small>
+							数据库表段列表 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,13 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Rbac/index')}">商品管理</a>
+								<a href="{:U('Admin/Rbac/index')}">数据库管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">添加管理分类</a></li>
+							<li><a href="#">数据库表段列表</a></li>
 
 						</ul>
 
@@ -251,177 +251,51 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Category/runAddCate','','')}" method="post" class="form-horizontal" charset='utf-8'>
+				<table class="table hovertable  table-bordered table-condensed">
 				
-					<div class="control-group">
-
-						<label class="control-label">* 分类栏目名称：</label>
-
-							<div class="controls col-xs-3">
-
-								<input type="text" placeholder="请输入要添加的分类栏目" class="m-wrap medium" name="name"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-
-					<div class="control-group">
-
-						<label class="control-label">* 排序：</label>
-
-							<div class="controls col-xs-3">
-
-								<input type="text" placeholder="请输入排序号" class="m-wrap medium" name='sort' value="100"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="col-xs-3">
-									
-						<input type="hidden" name='pid' value='{$pid}'/>
-								
-					</div>
-
-					<div class="form-actions col-xs-3" >
+				<tr>
 				
-						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
-
-						<button type="button" class="btn">返回</button>
+					<th>数据表名称</th>
 					
-					</div>
-
-					<!-- <table class='table'>
+					<th>字段数</th>
 					
-						<tr>
-							
-							<th colspan="2">添加栏目分类</th>
+					<th>创建时间</th>
+					
+					<th>更新时间</th>
+					
+					<th>存储引擎</th>
+					
+					<th>备注</th>
+					
+					<foreach name='list' item='v'>
 						
+						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+          
+							<td>{$v.Name}</td>
+          
+							<td>{$v.Rows}</td>
+
+							<td>{$v.Create_time}</td>
+							
+							<td>{$v.Update_time}</td>
+							
+							<td>{$v.Engine}</td>
+							
+							<td>{$v.Comment}</td>
+
 						</tr>
 						
-						<tr>
-							
-							<td align="right">分类栏目名称:</td>
-							
-							<td>
-								
-								<div class="col-xs-3">
-								
-									<input type="text" class="form-control" name='name'/>
-							
-								</div>
-			
-							</td>
-						
-						</tr>
-						
-						<tr>
-						
-							<td align="right">排序:</td>
-						
-							<td>
-							
-								<div class="col-xs-3">
-								
-									<input type='text' name='sort' class="form-control" valud="100"/>
-								
-								</div>
-							
-							</td>
-						
-						</tr>
-						
-						<tr>
-								
-							<td colspan="2" align="center">
-								
-								<div class="col-xs-3">
-									
-									<input type="hidden" name='pid' value='{$pid}'/>
-								
-								</div>
-								
-								<div class="col-xs-3">
-								
-								<input type="submit" class="btn btn-default" value='保存添加'/>
-								
-								</div>
-							
-							</td>
-						
-						</tr>
+					</foreach>
 					
-						</table> -->
-					
-					<!-- <div class="control-group">
-
-						<label class="control-label">* 角色名称：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入要添加的角色" class="m-wrap medium" name="name"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-					
-					<div class="control-group">
-
-						<label class="control-label">* 角色描述：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-					
-					<div class="control-group">
-
-						<label class="control-label">是否开启：</label>
-					
-						<div class="controls">
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="1" checked='checked'/>
-
-							开启
-
-							</label>
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="0" />
-
-							关闭
-
-							</label>  
-
-
-						</div>
-					
-					</div>
+				</tr> 
 				
-					<div class="form-actions" >
+				</table>
 				
-						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
+			<div class="pagination">
 
-						<button type="button" class="btn">返回</button>
-					
-					</div> -->
-						
-				</form>
+			{$page}
+		
+			</div>	
 			
 			</div>
 
@@ -429,50 +303,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 		<script type="text/javascript">
 
-			document.getElementById('good').className = 'start active '; 
+			document.getElementById('sqlmanage').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('addcategory').className = 'active '; 
+			document.getElementById('tablist').className = 'active '; 
 			
 		</script>
 			
 		<include file="Public/include/Admin_footer.html"/>
-
-<!-- <form method="post" action="{:U('Category/runAddCate','','')}">
-<table class='table'>
-	<tr>
-		<th colspan="2">添加栏目分类</th>
-	</tr>
-	<tr>
-		<td align="right">分类栏目名称:</td>
-		<td>
-			<div class="col-xs-3">
-			<input type="text" class="form-control" name='name'/>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="right">排序:</td>
-		<td>
-			<div class="col-xs-3">
-			<input type='text' name='sort' class="form-control" valud="100"/>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" align="center">
-			<div class="col-xs-3">
-			<input type="hidden" name='pid' value='{$pid}'/>
-			</div>
-			<div class="col-xs-3">
-			<input type="submit" class="btn btn-default" value='保存添加'/>
-			</div>
-		</td>
-	</tr>
-</table>
-</form>
-</div>
-</html> -->

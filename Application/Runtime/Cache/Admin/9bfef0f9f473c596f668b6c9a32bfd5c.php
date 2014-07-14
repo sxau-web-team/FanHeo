@@ -598,9 +598,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="<?php echo U('Admin/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -612,7 +612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
@@ -626,7 +626,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
 							<a href="<?php echo U('Admin/Good/index');?>">
 
@@ -634,9 +634,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="<?php echo U('Admin/Good/addGood');?>">
 
 							添加商品</a>
 
@@ -658,7 +658,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="categorylist">
 
 							<a href="<?php echo U('Admin/Category/index');?>">
 
@@ -666,7 +666,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="addcategory">
 
 							<a href="<?php echo U('Admin/Category/addcate');?>">
 
@@ -1324,6 +1324,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
+						<li id='node'>
+
+							<a href="<?php echo U('Admin/Rbac/role');?>">
+
+							用户权限管理</a>
+
+						</li>
+
 					</ul>
 
 				</li>
@@ -1645,7 +1653,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<form action="<?php echo U('Category/sortCate');?>" method="post"> 
 				
-				<table class="table hovertable  table-bordered table-condensed">
+				<table class="table hovertable  table-bordered table-condensed ">
 				
 				<tr>
 				
@@ -1661,7 +1669,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				</tr>
 					
-				<?php if(is_array($cate)): foreach($cate as $key=>$v): ?><tr>
+				<?php if(is_array($cate)): foreach($cate as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
 					
 						<td><?php echo ($v["id"]); ?></td>
 						
@@ -1714,13 +1722,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('good').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('userlist').className = 'active '; 
+			document.getElementById('categorylist').className = 'active '; 
 			
 		</script>
 			

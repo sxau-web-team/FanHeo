@@ -276,31 +276,31 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<th>
 						
-						价格
+						所属品牌
 
 					</th>
 
 					<th>
 					
-					上一次登录时间
+					价格
 					
 					</th>
 					
 					<th>
 					
-					上一次登录ip
+					状态
 					
 					</th>
 					
 					<th>
 					
-					用户所属组别
+					评价管理
 					
 					</th>
 
 					<th>
 						
-						真实名字
+						缩略图
 
 					</th>
 					
@@ -310,46 +310,30 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 					
 					</th>
 					
-					<foreach name='user' item='v'>
+					<foreach name='goods' item='v'>
 						
 						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
-							<td>{$v.uid}</td>
+							<td>{$v.id}</td>
           
-							<td>{$v.username}</td>
+							<td>{$v.name}</td>
 
-							<td>{$v.mobile}</td>
+							<td>{$v.goods_no}</td>
 
-							<td>{$v.phone}</td>
+							<td>{$v.goods_no}</td>
           
-							<td>{$v.logintime|date='y-m-d H:i',###}</td>
+							<td>{$v.sell_price}</td>
 							
-							<td>{$v.loginip}</td>
+							<td>{$v.goods_no}</td>
           
 							<td>
           
-								<if condition='$v["username"] == C("RBAC_SUPERADMIN")'>
-				
-								超级管理员
-							
-								<else/>
-							
-									<ul class="unstyled">
-							
-										<foreach name='v.role' item='value'>
-							
-											<li>{$value.name}({$value.remark})</li>
-							
-										</foreach>
-							
-									</ul>
-							
-								</if>
+								<a href="#">测试</a>
 							
 							</td>
 
 							<td>
-								{$v.truename}
+								{$v.exp}
 							</td>
           
 							<td>

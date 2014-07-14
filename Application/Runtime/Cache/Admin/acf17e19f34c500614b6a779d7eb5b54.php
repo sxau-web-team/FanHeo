@@ -598,9 +598,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="<?php echo U('Admin/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -612,7 +612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
@@ -626,17 +626,17 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="<?php echo U('Admin/Good/index');?>">
 
 							商品列表</a>
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="<?php echo U('Admin/Good/addGood');?>">
 
 							添加商品</a>
 
@@ -658,7 +658,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="categorylist">
 
 							<a href="<?php echo U('Admin/Category/index');?>">
 
@@ -666,9 +666,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="addcategory">
 
-							<a href="layout_ajax.html">
+							<a href="<?php echo U('Admin/Category/addcate');?>">
 
 							添加商品分类</a>
 
@@ -687,22 +687,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<a href="layout_blank_page.html">
 
 							添加品牌</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_page.html">
-
-							Boxed Page</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_not_responsive.html">
-
-							Non-Responsive Boxed Layout</a>
 
 						</li>
 
@@ -1340,17 +1324,25 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
+						<li id='node'>
+
+							<a href="<?php echo U('Admin/Rbac/role');?>">
+
+							用户权限管理</a>
+
+						</li>
+
 					</ul>
 
 				</li>
 
-				<li class="">
+				<li class="" id="sqlmanage">
 
 					<a href="javascript:;">
 
 					<i class="icon-th"></i> 
 
-					<span class="title">Data Tables</span>
+					<span class="title">数据库管理</span>
 
 					<span class="arrow "></span>
 
@@ -1358,19 +1350,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="backuplist">
 
-							<a href="table_basic.html">
+							<a href="<?php echo U('Admin/Backupsql/index');?>">
 
-							Basic Tables</a>
+							已备份列表</a>
 
 						</li>
 
-						<li >
+						<li id="tablist">
 
-							<a href="table_responsive.html">
+							<a href="<?php echo U('Admin/Backupsql/tablist');?>">
 
-							Responsive Tables</a>
+							数据库表段列表</a>
 
 						</li>
 
@@ -1662,60 +1654,29 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-					<th>
+				
+				<thead>
+				
+					<th>id</th>
 					
-					id
+					<th>用户名称</th>
 					
-					</th>
-					
-					<th>
-					
-					用户名称
+					<th>手机</th>
 
-					</th>
-					
-					<th>
+					<th>电话</th>
 
-						手机
+					<th>上一次登录时间</th>
 					
-					</th>
+					<th>上一次登录ip</th>
+					
+					<th>用户所属组别</th>
 
-					<th>
-						
-						电话
-
-					</th>
-
-					<th>
+					<th>真实名字</th>
 					
-					上一次登录时间
+					<th>操作</th>
 					
-					</th>
-					
-					<th>
-					
-					上一次登录ip
-					
-					</th>
-					
-					<th>
-					
-					用户所属组别
-					
-					</th>
-
-					<th>
-						
-						真实名字
-
-					</th>
-					
-					<th>
-					
-					操作
-					
-					</th>
-					
+				</thead>
+				
 					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
 							<td><?php echo ($v["uid"]); ?></td>
@@ -1750,7 +1711,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           
 							<td>
 								
-								<a href="#">修改</a>
+								<a class="edit" href="javascript:;">修改</a>
 								
 								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
 							
@@ -1771,6 +1732,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		</div>
 
 		</div>
+		
+		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 

@@ -598,9 +598,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="<?php echo U('Admin/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -612,7 +612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
@@ -626,17 +626,17 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="<?php echo U('Admin/Good/index');?>">
 
 							商品列表</a>
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="<?php echo U('Admin/Good/addGood');?>">
 
 							添加商品</a>
 
@@ -658,7 +658,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="categorylist">
 
 							<a href="<?php echo U('Admin/Category/index');?>">
 
@@ -666,9 +666,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
-						<li >
+						<li id="addcategory">
 
-							<a href="layout_ajax.html">
+							<a href="<?php echo U('Admin/Category/addcate');?>">
 
 							添加商品分类</a>
 
@@ -1324,6 +1324,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						</li>
 
+						<li id='node'>
+
+							<a href="<?php echo U('Admin/Rbac/role');?>">
+
+							用户权限管理</a>
+
+						</li>
+
 					</ul>
 
 				</li>
@@ -1643,7 +1651,50 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<form action="<?php echo U('Category/runAddCate','','');?>" method="post" class="form-horizontal" charset='utf-8'>
 				
-					<table class='table'>
+					<div class="control-group">
+
+						<label class="control-label">* 分类栏目名称：</label>
+
+							<div class="controls col-xs-3">
+
+								<input type="text" placeholder="请输入要添加的分类栏目" class="m-wrap medium" name="name"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+
+					<div class="control-group">
+
+						<label class="control-label">* 排序：</label>
+
+							<div class="controls col-xs-3">
+
+								<input type="text" placeholder="请输入排序号" class="m-wrap medium" name='sort' value="100"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="col-xs-3">
+									
+						<input type="hidden" name='pid' value='<?php echo ($pid); ?>'/>
+								
+					</div>
+
+					<div class="form-actions col-xs-3" >
+				
+						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
+
+						<button type="button" class="btn">返回</button>
+					
+					</div>
+
+					<!-- <table class='table'>
 					
 						<tr>
 							
@@ -1703,7 +1754,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						</tr>
 					
-						</table>
+						</table> -->
 					
 					<!-- <div class="control-group">
 
@@ -1776,13 +1827,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('good').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('addRole').className = 'active '; 
+			document.getElementById('addcategory').className = 'active '; 
 			
 		</script>
 			

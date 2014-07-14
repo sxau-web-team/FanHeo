@@ -102,7 +102,7 @@
 
 						</li>
 
-						<li >
+						<li id="categorylist">
 
 							<a href="{:U('Admin/Category/index')}">
 
@@ -110,7 +110,7 @@
 
 						</li>
 
-						<li >
+						<li id="addcategory">
 
 							<a href="{:U('Admin/Category/addcate')}">
 
@@ -780,13 +780,13 @@
 
 				</li>
 
-				<li class="">
+				<li class="" id="sqlmanage">
 
 					<a href="javascript:;">
 
 					<i class="icon-th"></i> 
 
-					<span class="title">Data Tables</span>
+					<span class="title">数据库管理</span>
 
 					<span class="arrow "></span>
 
@@ -794,19 +794,19 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="backuplist">
 
-							<a href="table_basic.html">
+							<a href="{:U('Admin/Backupsql/index')}">
 
-							Basic Tables</a>
+							已备份列表</a>
 
 						</li>
 
-						<li >
+						<li id="tablist">
 
-							<a href="table_responsive.html">
+							<a href="{:U('Admin/Backupsql/tablist')}">
 
-							Responsive Tables</a>
+							数据库表段列表</a>
 
 						</li>
 
