@@ -1336,13 +1336,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="sqlmanage">
 
 					<a href="javascript:;">
 
 					<i class="icon-th"></i> 
 
-					<span class="title">Data Tables</span>
+					<span class="title">数据库管理</span>
 
 					<span class="arrow "></span>
 
@@ -1350,19 +1350,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="backuplist">
 
-							<a href="table_basic.html">
+							<a href="<?php echo U('Admin/Backupsql/index');?>">
 
-							Basic Tables</a>
+							已备份列表</a>
 
 						</li>
 
-						<li >
+						<li id="tablist">
 
-							<a href="table_responsive.html">
+							<a href="<?php echo U('Admin/Backupsql/tablist');?>">
 
-							Responsive Tables</a>
+							数据库表段列表</a>
 
 						</li>
 
@@ -1370,7 +1370,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="table_managed.html">
 
-							Managed Tables</a>
+							备份数据库</a>
 
 						</li>
 
@@ -1378,15 +1378,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="table_editable.html">
 
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
+							还原数据库</a>
 
 						</li>
 

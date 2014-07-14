@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							添加商品 <small>今日任务：统计在售商户商品的库存</small>
+							用户列表 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,13 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Good/index')}">商品管理</a>
+								<a href="{:U('Admin/User/index')}">用户管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">添加商品</a></li>
+							<li><a href="{:U('Admin/User/index')}">用户列表</a></li>
 
 						</ul>
 
@@ -251,142 +251,58 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Admin/Good/addGoodHandler')}" method="post" class="form-horizontal" charset='utf-8'>
+				<table class="table hovertable  table-bordered table-condensed">
 				
-					<div class="control-group">
-
-						<label class="control-label">* 商品名称：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入要添加的商品" class="m-wrap medium" name="name"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
+				<tr>
+					<th>id</th>
 					
-					<div class="control-group">
-
-						<label class="control-label">* 商品描述：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该商品的描述" class="m-wrap medium" name="content"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 商品所属分类：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请选择商品所属分类" class="m-wrap medium" name="keywords"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 商品所属品牌：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请选择商品所属品牌" class="m-wrap medium" name="point"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 商品价格：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该商品的价格" class="m-wrap medium" name="sell_price"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 商品积分数：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该商品的积分数" class="m-wrap medium" name="exp"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-					
-					<div class="control-group">
-
-						<label class="control-label">是否开启：</label>
-					
-						<div class="controls">
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="1" checked='checked'/>
-
-							开启
-
-							</label>
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="0" />
-
-							关闭
-
-							</label>  
-
-
-						</div>
-					
-					</div>
+					<th>头像</th>
 				
-					<div class="form-actions" >
-				
-						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
-
-						<button type="button" class="btn">返回</button>
+					<th>用户名称</th>
 					
-					</div>
+					<th>email</th>
+
+					
+					
+					<foreach name='user' item='v'>
 						
-				</form>
+						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+          
+							<td>{$v.id}</td>
+							
+							<td><img src="{$v.head_ico}" id="imgs" lang="en-us" alt="测试" style="height:50px;weight:50px;"></img></td>
+          
+							<td>{$v.username}</td>
+
+							<td>{$v.email}</td>
+							
+						</tr>
+						
+					</foreach>
+					
+				</tr> 
+				
+				</table>
+				
+			<div class="pagination">
+
+			{$page}
+		
+			</div>	
 			
-			</div>
+		</div>
 
 		</div>
 
 		<script type="text/javascript">
 
-			document.getElementById('good').className = 'start active '; 
+			document.getElementById('user').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('addgood').className = 'active '; 
+			document.getElementById('userslist').className = 'active '; 
 			
 		</script>
 			

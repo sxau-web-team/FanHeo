@@ -22,4 +22,13 @@ class GoodController extends BaseController {
 		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->display();
 	}
+	//添加商品处理
+	Public function addGoodHandler(){
+		if(M('goods')->add($_POST)){
+			$this->success('添加成功',U('Admin/Good/index'));
+		}
+		else{
+			$this->error('添加失败');
+		}
+	}
 }

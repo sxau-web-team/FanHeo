@@ -728,9 +728,9 @@
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id='userslist'>
 
-							<a href="">
+							<a href="{:U('Admin/User/index')}">
 
 							用户列表</a>
 
@@ -776,6 +776,14 @@
 
 						</li>
 
+						<li id='addnode'>
+
+							<a href="{:U('Admin/Rbac/addNode')}">
+
+							添加节点</a>
+
+						</li>
+
 					</ul>
 
 				</li>
@@ -814,7 +822,7 @@
 
 							<a href="table_managed.html">
 
-							Managed Tables</a>
+							备份数据库</a>
 
 						</li>
 
@@ -822,15 +830,7 @@
 
 							<a href="table_editable.html">
 
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
+							还原数据库</a>
 
 						</li>
 
