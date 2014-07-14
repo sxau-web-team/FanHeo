@@ -36,41 +36,41 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
 
-	<link href="/FanHeo/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/style-metro.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/style.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="/fanheo/Public/media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 
-	<link href="/FanHeo/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 
 	<!-- END GLOBAL MANDATORY STYLES -->
 
 	<!-- BEGIN PAGE LEVEL STYLES --> 
 
-	<link href="/FanHeo/Public/media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/jquery.gritter.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/daterangepicker.css" rel="stylesheet" type="text/css" />
+	<link href="/fanheo/Public/media/css/daterangepicker.css" rel="stylesheet" type="text/css" />
 
-	<link href="/FanHeo/Public/media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>
+	<link href="/fanheo/Public/media/css/fullcalendar.css" rel="stylesheet" type="text/css"/>
 
-	<link href="/FanHeo/Public/media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="/fanheo/Public/media/css/jqvmap.css" rel="stylesheet" type="text/css" media="screen"/>
 
-	<link href="/FanHeo/Public/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="/fanheo/Public/media/css/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
 
-	<link rel="stylesheet" type="text/css" href="/FanHeo/Public/css/table.css">
+	<link rel="stylesheet" type="text/css" href="/fanheo/Public/css/table.css">
 
 	<!-- END PAGE LEVEL STYLES -->
 
-	<link rel="shortcut icon" href="/FanHeo/Public/media/image/favicon.ico" />
+	<link rel="shortcut icon" href="/fanheo/Public/media/image/favicon.ico" />
 
 </head>
 
@@ -94,7 +94,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a class="brand" href="index.html">
 
-				<img src="/FanHeo/Public/media/image/logo.png" alt="logo"/>
+				<img src="/fanheo/Public/media/image/logo.png" alt="logo"/>
 
 				</a>
 
@@ -104,7 +104,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
 
-				<img src="/FanHeo/Public/media/image/menu-toggler.png" alt="" />
+				<img src="/fanheo/Public/media/image/menu-toggler.png" alt="" />
 
 				</a>          
 
@@ -510,7 +510,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-						<img alt="" src="/FanHeo/Public/media/image/avatar1_small.jpg" />
+						<img alt="" src="/fanheo/Public/media/image/avatar1_small.jpg" />
 
 						<span class="username"><?php echo ($loginname); ?></span>
 
@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/fanheo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -598,9 +598,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="start active ">
+				<li class="" id="index">
 
-					<a href="index.html">
+					<a href="<?php echo U('Admin/index/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -612,13 +612,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="good">
 
 					<a href="javascript:;">
 
-					<i class="icon-cogs"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">Layouts</span>
+					<span class="title">商品管理</span>
 
 					<span class="arrow "></span>
 
@@ -626,19 +626,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="goodlist">
 
-							<a href="layout_horizontal_sidebar_menu.html">
+							<a href="<?php echo U('Admin/Good/index');?>">
 
-							Horzontal & Sidebar Menu</a>
+							商品列表</a>
 
 						</li>
 
-						<li >
+						<li id="addgood">
 
-							<a href="layout_horizontal_menu1.html">
+							<a href="<?php echo U('Admin/Good/addGood');?>">
 
-							Horzontal Menu 1</a>
+							添加商品</a>
 
 						</li>
 
@@ -646,7 +646,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_horizontal_menu2.html">
 
-							Horzontal Menu 2</a>
+							库存管理</a>
 
 						</li>
 
@@ -654,23 +654,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_promo.html">
 
-							Promo Page</a>
+							套餐管理</a>
 
 						</li>
 
-						<li >
+						<li id="categorylist">
 
-							<a href="layout_email.html">
+							<a href="<?php echo U('Admin/Category/index');?>">
 
-							Email Templates</a>
+							商品分类列表</a>
 
 						</li>
 
-						<li >
+						<li id="addcategory">
 
-							<a href="layout_ajax.html">
+							<a href="<?php echo U('Admin/Category/addcate');?>">
 
-							Content Loading via Ajax</a>
+							添加商品分类</a>
 
 						</li>
 
@@ -678,7 +678,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_sidebar_closed.html">
 
-							Sidebar Closed Page</a>
+							品牌管理</a>
 
 						</li>
 
@@ -686,23 +686,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="layout_blank_page.html">
 
-							Blank Page</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_page.html">
-
-							Boxed Page</a>
-
-						</li>
-
-						<li >
-
-							<a href="layout_boxed_not_responsive.html">
-
-							Non-Responsive Boxed Layout</a>
+							添加品牌</a>
 
 						</li>
 
@@ -714,9 +698,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<a href="javascript:;">
 
-					<i class="icon-bookmark-empty"></i> 
+					<i class="icon-file-text"></i> 
 
-					<span class="title">UI Features</span>
+					<span class="title">订单管理</span>
 
 					<span class="arrow "></span>
 
@@ -728,7 +712,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_general.html">
 
-							General</a>
+							已付款订单</a>
 
 						</li>
 
@@ -736,7 +720,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_buttons.html">
 
-							Buttons</a>
+							已发货订单</a>
 
 						</li>
 
@@ -744,7 +728,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_modals.html">
 
-							Enhanced Modals</a>
+							未发货订单</a>
 
 						</li>
 
@@ -752,7 +736,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_tabs_accordions.html">
 
-							Tabs & Accordions</a>
+							未付款订单</a>
 
 						</li>
 
@@ -760,7 +744,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_jqueryui.html">
 
-							jQuery UI Components</a>
+							退货订单</a>
 
 						</li>
 
@@ -768,39 +752,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_sliders.html">
 
-							Sliders</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tiles.html">
-
-							Tiles</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_typography.html">
-
-							Typography</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tree.html">
-
-							Tree View</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_nestable.html">
-
-							Nestable List</a>
+							订单统计</a>
 
 						</li>
 
@@ -1286,7 +1238,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="user">
 
 					<a href="javascript:;">
 
@@ -1300,43 +1252,59 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id='userslist'>
 
-							<a href="<?php echo U('Admin/Rbac/index');?>">
+							<a href="<?php echo U('Admin/User/index');?>">
 
 							用户列表</a>
 
 						</li>
 
-						<li >
+						<li id='userlist'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/index');?>">
 
 							管理组用户列表</a>
 
 						</li>
 						
-						<li >
+						<li id='addUser'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addUser');?>">
 
 							添加管理组用户</a>
 
 						</li>
 						
-						<li >
+						<li id='addRole'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/addRole');?>">
 
 							添加角色</a>
 
 						</li>
 						
-						<li >
+						<li id='role'>
 
-							<a href="login_soft.html">
+							<a href="<?php echo U('Admin/Rbac/role');?>">
 
 							角色列表</a>
+
+						</li>
+
+						<li id='node'>
+
+							<a href="<?php echo U('Admin/Rbac/role');?>">
+
+							用户权限管理</a>
+
+						</li>
+
+						<li id='addnode'>
+
+							<a href="<?php echo U('Admin/Rbac/addNode');?>">
+
+							添加节点</a>
 
 						</li>
 
@@ -1344,13 +1312,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="sqlmanage">
 
 					<a href="javascript:;">
 
 					<i class="icon-th"></i> 
 
-					<span class="title">Data Tables</span>
+					<span class="title">数据库管理</span>
 
 					<span class="arrow "></span>
 
@@ -1358,19 +1326,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id="backuplist">
 
-							<a href="table_basic.html">
+							<a href="<?php echo U('Admin/Backupsql/index');?>">
 
-							Basic Tables</a>
+							已备份列表</a>
 
 						</li>
 
-						<li >
+						<li id="tablist">
 
-							<a href="table_responsive.html">
+							<a href="<?php echo U('Admin/Backupsql/tablist');?>">
 
-							Responsive Tables</a>
+							数据库表段列表</a>
 
 						</li>
 
@@ -1378,7 +1346,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="table_managed.html">
 
-							Managed Tables</a>
+							备份数据库</a>
 
 						</li>
 
@@ -1386,15 +1354,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="table_editable.html">
 
-							Editable Tables</a>
-
-						</li>
-
-						<li >
-
-							<a href="table_advanced.html">
-
-							Advanced Tables</a>
+							还原数据库</a>
 
 						</li>
 
@@ -1402,13 +1362,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="setting">
 
 					<a href="javascript:;">
 
-					<i class="icon-file-text"></i> 
+					<i class="icon-cogs"></i>
 
-					<span class="title">Portlets</span>
+					<span class="title">系统设置</span>
 
 					<span class="arrow "></span>
 
@@ -1420,7 +1380,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="portlet_general.html">
 
-							General Portlets</a>
+							系统设置</a>
+
+						</li>
+
+						<li id="email">
+
+							<a href="<?php echo U('Admin/Setting/email');?>">
+
+							邮箱设置</a>
+
+						</li>
+
+						<li id="operation">
+
+							<a href="<?php echo U('Admin/Setting/operation');?>">
+
+							管理员操作记录</a>
 
 						</li>
 
@@ -1428,7 +1404,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="portlet_draggable.html">
 
-							Draggable Portlets</a>
+							用户操作记录</a>
+
+						</li>
+
+						<li >
+
+							<a href="portlet_draggable.html">
+
+							积分记录</a>
 
 						</li>
 
@@ -1646,7 +1630,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="#">管理组用户列表</a></li>
 
-							<li style="float:right;padding-right:20px;"><a href="">添加管理用户</a></li>
+							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
 
 						</ul>
 
@@ -1662,60 +1646,29 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-					<th>
+				
+				<thead>
+				
+					<th>id</th>
 					
-					id
+					<th>用户名称</th>
 					
-					</th>
-					
-					<th>
-					
-					用户名称
+					<th>手机</th>
 
-					</th>
-					
-					<th>
+					<th>电话</th>
 
-						手机
+					<th>上一次登录时间</th>
 					
-					</th>
+					<th>上一次登录ip</th>
+					
+					<th>用户所属组别</th>
 
-					<th>
-						
-						电话
-
-					</th>
-
-					<th>
+					<th>真实名字</th>
 					
-					上一次登录时间
+					<th>操作</th>
 					
-					</th>
-					
-					<th>
-					
-					上一次登录ip
-					
-					</th>
-					
-					<th>
-					
-					用户所属组别
-					
-					</th>
-
-					<th>
-						
-						真实名字
-
-					</th>
-					
-					<th>
-					
-					操作
-					
-					</th>
-					
+				</thead>
+				
 					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
 							<td><?php echo ($v["uid"]); ?></td>
@@ -1750,7 +1703,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           
 							<td>
 								
-								<a href="">详细</a>
+								<a class="edit" href="javascript:;">修改</a>
+								
+								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
 							
 							</td>
 							
@@ -1760,30 +1715,29 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				</table>
 				
-			</div>
+			<div class="pagination">
+
+			<?php echo ($page); ?>
+		
+			</div>	
 			
-		<div class="pagination">
-
-									<ul>
-
-										<li><a href="#">«</a></li>
-
-										<li><a href="#">1</a></li>
-
-										<li><a href="#">2</a></li>
-
-										<li><a href="#">3</a></li>
-
-										<li><a href="#">4</a></li>
-
-										<li><a href="#">»</a></li>
-
-									</ul>
-
 		</div>
 
 		</div>
+		
+		<script src="media/js/table-editable.js"></script>
 
+		<script type="text/javascript">
+
+			document.getElementById('user').className = 'start active '; 
+			
+		</script>
+		
+		<script type="text/javascript">
+
+			document.getElementById('userlist').className = 'active '; 
+			
+		</script>
 			
 		<!-- BEGIN FOOTER -->
 
@@ -1813,75 +1767,75 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 	<!-- BEGIN CORE PLUGINS -->
 
-	<script src="/FanHeo/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="/FanHeo/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+	<script src="/fanheo/Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
 
-	<script src="/FanHeo/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<!--[if lt IE 9]>
 
-	<script src="/FanHeo/Public/media/js/excanvas.min.js"></script>
+	<script src="/fanheo/Public/media/js/excanvas.min.js"></script>
 
-	<script src="/FanHeo/Public/media/js/respond.min.js"></script>  
+	<script src="/fanheo/Public/media/js/respond.min.js"></script>  
 
 	<![endif]-->   
 
-	<script src="/FanHeo/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+	<script src="/fanheo/Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
 
-	<script src="/FanHeo/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+	<script src="/fanheo/Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
 
 	<!-- END CORE PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.js" type="text/javascript"></script>   
+	<script src="/fanheo/Public/media/js/jquery.vmap.js" type="text/javascript"></script>   
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.russia.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.vmap.russia.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.world.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.vmap.world.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.europe.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.vmap.europe.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.germany.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.vmap.germany.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.usa.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.vmap.usa.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.vmap.sampledata.js" type="text/javascript"></script>  
+	<script src="/fanheo/Public/media/js/jquery.vmap.sampledata.js" type="text/javascript"></script>  
 
-	<script src="/FanHeo/Public/media/js/jquery.flot.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.flot.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.flot.resize.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.flot.resize.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.pulsate.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.pulsate.min.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/date.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/date.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/daterangepicker.js" type="text/javascript"></script>     
+	<script src="/fanheo/Public/media/js/daterangepicker.js" type="text/javascript"></script>     
 
-	<script src="/FanHeo/Public/media/js/jquery.gritter.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.gritter.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/fullcalendar.min.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/fullcalendar.min.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/jquery.easy-pie-chart.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/jquery.sparkline.min.js" type="text/javascript"></script>  
+	<script src="/fanheo/Public/media/js/jquery.sparkline.min.js" type="text/javascript"></script>  
 
 	<!-- END PAGE LEVEL PLUGINS -->
 
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 
-	<script src="/FanHeo/Public/media/js/app.js" type="text/javascript"></script>
+	<script src="/fanheo/Public/media/js/app.js" type="text/javascript"></script>
 
-	<script src="/FanHeo/Public/media/js/index.js" type="text/javascript"></script>        
+	<script src="/fanheo/Public/media/js/index.js" type="text/javascript"></script>        
 
 	<!-- END PAGE LEVEL SCRIPTS -->  
 
