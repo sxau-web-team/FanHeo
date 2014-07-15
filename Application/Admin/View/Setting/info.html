@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							邮箱设置 <small>今日任务：统计在售商户商品的库存</small>
+							服务器信息 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,13 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Rbac/index')}">系统设置</a>
+								<a href="#">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">邮箱设置</a></li>
+							<li><a href="#">服务器信息</a></li>
 
 						</ul>
 
@@ -251,102 +251,337 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Admin/Rbac/addRoleHandler')}" method="post" class="form-horizontal" charset='utf-8'>
-				
-					<div class="control-group">
+				<div class="portlet-body">
 
-						<label class="control-label">* SMTP服务器：</label>
+						<table class="table sliders table-striped">
 
-							<div class="controls">
+							<tbody>
 
-								<input type="text" placeholder="请输入要添加的角色" class="m-wrap medium" name="name"/>
+								<tr>
 
-								<span class="help-inline"></span>
+									<td style="width:15%">操作系统：</td>
 
-							</div>
+									<td>
+
+										<div class="slider-value">
+
+											{$info['操作系统']}
+
+											<span id="slider-snap-inc-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>运行环境：</td>
+
+									<td>
+
+										<div id="slider-snap-inc" class="slider bg-green"></div>
+
+										<div class="slider-value">
+
+											{$info['运行环境']}
+
+											<span id="slider-snap-inc-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>PHP运行方式：</td>
+
+									<td>
+
+										<div id="slider-range" class="slider bg-blue"></div>
+
+										<div class="slider-value">
+
+											{$info['PHP运行方式']}
+
+											<span id="slider-range-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>版本：</td>
+
+									<td>
+
+										<div id="slider-range-max" class="slider bg-purple"></div>
+
+										<div class="slider-value">
+
+											{$info['版本']}
+
+											<span id="slider-range-max-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>上传附件限制：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['上传附件限制']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>执行时间限制：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['执行时间限制']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器时间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['服务器时间']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>北京时间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['北京时间']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器域名/ip：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['服务器域名/ip']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>剩余空间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['剩余空间']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>客户端IP：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['客户端IP']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>php版本：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['php版本']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器cpu数量：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['服务器cpu数量']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>register_globals:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['register_globals']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>magic_quotes_gpc:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['magic_quotes_gpc']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>magic_quotes_runtime:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											{$info['magic_quotes_runtime']}
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
 
 					</div>
-					
-					<div class="control-group">
-
-						<label class="control-label">* 发件人：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-					
-					<div class="control-group">
-
-						<label class="control-label">SMTP服务器是否需要验证：</label>
-					
-						<div class="controls">
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="1" checked='checked'/>
-
-							开启
-
-							</label>
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="0" />
-
-							关闭
-
-							</label>  
-
-
-						</div>
-					
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 邮箱地址：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 邮箱密码：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-				
-					<div class="form-actions" >
-				
-						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
-
-						<button type="button" class="btn">返回</button>
-					
-					</div>
-						
-				</form>
 			
-			</div>
+			</div> 
 
 		</div>
 
@@ -358,7 +593,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		
 		<script type="text/javascript">
 
-			document.getElementById('email').className = 'active '; 
+			document.getElementById('serverinfo').className = 'active '; 
 			
 		</script>
 			

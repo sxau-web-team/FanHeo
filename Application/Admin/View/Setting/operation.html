@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							邮箱设置 <small>今日任务：统计在售商户商品的库存</small>
+							管理员操作记录 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,13 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Rbac/index')}">系统设置</a>
+								<a href="#">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">邮箱设置</a></li>
+							<li><a href="#">管理员操作记录</a></li>
 
 						</ul>
 
@@ -251,102 +251,52 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Admin/Rbac/addRoleHandler')}" method="post" class="form-horizontal" charset='utf-8'>
+				<table class="table hovertable  table-bordered table-condensed">
 				
-					<div class="control-group">
-
-						<label class="control-label">* SMTP服务器：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入要添加的角色" class="m-wrap medium" name="name"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
+				<tr>
+					<th>ID</th>
 					
-					<div class="control-group">
-
-						<label class="control-label">* 发件人：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
+					<th>操作者名称</th>
 					
-					<div class="control-group">
+					<th>操作页面</th>
 
-						<label class="control-label">SMTP服务器是否需要验证：</label>
-					
-						<div class="controls">
+					<th>操作类型</th>
 
-							<label class="radio">
+					<th>操作IP</th>
 
-							<input type="radio" name="status" value="1" checked='checked'/>
-
-							开启
-
-							</label>
-
-							<label class="radio">
-
-							<input type="radio" name="status" value="0" />
-
-							关闭
-
-							</label>  
-
-
-						</div>
-					
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 邮箱地址：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
-
-					<div class="control-group">
-
-						<label class="control-label">* 邮箱密码：</label>
-
-							<div class="controls">
-
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
-
-								<span class="help-inline"></span>
-
-							</div>
-
-					</div>
+					<th>操作时间</th>
 				
-					<div class="form-actions" >
-				
-						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
-
-						<button type="button" class="btn">返回</button>
-					
-					</div>
+					<foreach name='list' item='v'>
 						
-				</form>
+						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+          
+							<td>{$v.id}</td>
+          
+							<td>{$v.name}</td>
+
+							<td>{$v.page}</td>
+
+							<td>{$v.type}</td>
+          
+							<td>{$v.ip}</td>
+
+							<td>{$v.time|date='y-m-d H:i',###}</td>
+						
+						</tr>
+						
+					</foreach>
+					
+				</tr> 
+				
+				</table>
+				
+			<div class="pagination">
+
+			{$page}
+		
+			</div>	
 			
-			</div>
+		</div>
 
 		</div>
 
@@ -358,7 +308,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		
 		<script type="text/javascript">
 
-			document.getElementById('email').className = 'active '; 
+			document.getElementById('operation').className = 'active '; 
 			
 		</script>
 			

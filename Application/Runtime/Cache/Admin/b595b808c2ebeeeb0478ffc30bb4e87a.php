@@ -557,7 +557,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<li class="" id="index">
 
-					<a href="<?php echo U('Admin/index');?>">
+					<a href="<?php echo U('Admin/index/index');?>">
 
 					<i class="icon-home"></i> 
 
@@ -655,9 +655,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<a href="javascript:;">
 
-					<i class="icon-bookmark-empty"></i> 
+					<i class="icon-file-text"></i> 
 
-					<span class="title">UI Features</span>
+					<span class="title">订单管理</span>
 
 					<span class="arrow "></span>
 
@@ -669,7 +669,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_general.html">
 
-							General</a>
+							已付款订单</a>
 
 						</li>
 
@@ -677,7 +677,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_buttons.html">
 
-							Buttons</a>
+							已发货订单</a>
 
 						</li>
 
@@ -685,7 +685,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_modals.html">
 
-							Enhanced Modals</a>
+							未发货订单</a>
 
 						</li>
 
@@ -693,7 +693,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_tabs_accordions.html">
 
-							Tabs & Accordions</a>
+							未付款订单</a>
 
 						</li>
 
@@ -701,7 +701,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_jqueryui.html">
 
-							jQuery UI Components</a>
+							退货订单</a>
 
 						</li>
 
@@ -709,39 +709,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="ui_sliders.html">
 
-							Sliders</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tiles.html">
-
-							Tiles</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_typography.html">
-
-							Typography</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_tree.html">
-
-							Tree View</a>
-
-						</li>
-
-						<li >
-
-							<a href="ui_nestable.html">
-
-							Nestable List</a>
+							订单统计</a>
 
 						</li>
 
@@ -1241,9 +1209,9 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<ul class="sub-menu">
 
-						<li >
+						<li id='userslist'>
 
-							<a href="">
+							<a href="<?php echo U('Admin/User/index');?>">
 
 							用户列表</a>
 
@@ -1286,6 +1254,14 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<a href="<?php echo U('Admin/Rbac/role');?>">
 
 							用户权限管理</a>
+
+						</li>
+
+						<li id='addnode'>
+
+							<a href="<?php echo U('Admin/Rbac/addNode');?>">
+
+							添加节点</a>
 
 						</li>
 
@@ -1343,13 +1319,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				</li>
 
-				<li class="">
+				<li class="" id="setting">
 
 					<a href="javascript:;">
 
-					<i class="icon-file-text"></i> 
+					<i class="icon-cogs"></i>
 
-					<span class="title">Portlets</span>
+					<span class="title">系统设置</span>
 
 					<span class="arrow "></span>
 
@@ -1361,7 +1337,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="portlet_general.html">
 
-							General Portlets</a>
+							系统设置</a>
+
+						</li>
+
+						<li id="email">
+
+							<a href="<?php echo U('Admin/Setting/email');?>">
+
+							邮箱设置</a>
+
+						</li>
+
+						<li id="operation">
+
+							<a href="<?php echo U('Admin/Setting/operation');?>">
+
+							管理员操作记录</a>
 
 						</li>
 
@@ -1369,7 +1361,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<a href="portlet_draggable.html">
 
-							Draggable Portlets</a>
+							用户操作记录</a>
+
+						</li>
+
+						<li >
+
+							<a href="portlet_draggable.html">
+
+							积分记录</a>
 
 						</li>
 
