@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/FanHeo/index.php/Admin/Setting/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -1612,7 +1612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							管理组用户列表 <small>今日任务：统计在售商户商品的库存</small>
+							服务器信息 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -1630,15 +1630,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">用户管理</a>
+								<a href="#">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">管理组用户列表</a></li>
-
-							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
+							<li><a href="#">服务器信息</a></li>
 
 						</ul>
 
@@ -1651,99 +1649,349 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table hovertable  table-bordered table-condensed">
-				
-				<tr>
-				
-				<thead>
-				
-					<th>id</th>
-					
-					<th>用户名称</th>
-					
-					<th>手机</th>
+				<div class="portlet-body">
 
-					<th>电话</th>
+						<table class="table sliders table-striped">
 
-					<th>上一次登录时间</th>
-					
-					<th>上一次登录ip</th>
-					
-					<th>用户所属组别</th>
+							<tbody>
 
-					<th>真实名字</th>
-					
-					<th>操作</th>
-					
-				</thead>
-				
-					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
-          
-							<td><?php echo ($v["uid"]); ?></td>
-          
-							<td><?php echo ($v["username"]); ?></td>
+								<tr>
 
-							<td><?php echo ($v["mobile"]); ?></td>
+									<td style="width:15%">操作系统：</td>
 
-							<td><?php echo ($v["phone"]); ?></td>
-          
-							<td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
-							
-							<td><?php echo ($v["loginip"]); ?></td>
-          
-							<td>
-          
-								<?php if($v["username"] == C("RBAC_SUPERADMIN")): ?>超级管理员
-							
-								<?php else: ?>
-							
-									<ul class="unstyled">
-							
-										<?php if(is_array($v["role"])): foreach($v["role"] as $key=>$value): ?><li><?php echo ($value["name"]); ?>(<?php echo ($value["remark"]); ?>)</li><?php endforeach; endif; ?>
-							
-									</ul><?php endif; ?>
-							
-							</td>
+									<td>
 
-							<td>
-								<?php echo ($v["truename"]); ?>
-							</td>
-          
-							<td>
-								
-								<a class="edit" href="javascript:;">修改</a>
-								
-								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
-							
-							</td>
-							
-						</tr><?php endforeach; endif; ?>
-					
-				</tr> 
-				
-				</table>
-				
-			<div class="pagination">
+										<div class="slider-value">
 
-			<?php echo ($page); ?>
-		
-			</div>	
+											<?php echo ($info['操作系统']); ?>
+
+											<span id="slider-snap-inc-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>运行环境：</td>
+
+									<td>
+
+										<div id="slider-snap-inc" class="slider bg-green"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['运行环境']); ?>
+
+											<span id="slider-snap-inc-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>PHP运行方式：</td>
+
+									<td>
+
+										<div id="slider-range" class="slider bg-blue"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['PHP运行方式']); ?>
+
+											<span id="slider-range-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>版本：</td>
+
+									<td>
+
+										<div id="slider-range-max" class="slider bg-purple"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['版本']); ?>
+
+											<span id="slider-range-max-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>上传附件限制：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['上传附件限制']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>执行时间限制：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['执行时间限制']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器时间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['服务器时间']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>北京时间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['北京时间']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器域名/ip：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['服务器域名/ip']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>剩余空间：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['剩余空间']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>客户端IP：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['客户端IP']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>php版本：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['php版本']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>服务器cpu数量：</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['服务器cpu数量']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>register_globals:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['register_globals']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>magic_quotes_gpc:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['magic_quotes_gpc']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>magic_quotes_runtime:</td>
+
+									<td>
+
+										<div id="slider-range-min" class="slider bg-yellow"></div>
+
+										<div class="slider-value">
+
+											<?php echo ($info['magic_quotes_runtime']); ?>
+
+											<span class="slider-value" id="slider-range-min-amount"></span>
+
+										</div>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</div>
 			
-		</div>
+			</div> 
 
 		</div>
-		
-		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('setting').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('userlist').className = 'active '; 
+			document.getElementById('serverinfo').className = 'active '; 
 			
 		</script>
 			

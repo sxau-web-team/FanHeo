@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/FanHeo/index.php/Admin/Backupsql/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -1612,7 +1612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							管理组用户列表 <small>今日任务：统计在售商户商品的库存</small>
+							数据库表段列表 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -1630,15 +1630,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">用户管理</a>
+								<a href="<?php echo U('Admin/Rbac/index');?>">数据库管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">管理组用户列表</a></li>
-
-							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
+							<li><a href="#">数据库表段列表</a></li>
 
 						</ul>
 
@@ -1655,68 +1653,32 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<tr>
 				
-				<thead>
-				
-					<th>id</th>
+					<th>数据表名称</th>
 					
-					<th>用户名称</th>
+					<th>字段数</th>
 					
-					<th>手机</th>
-
-					<th>电话</th>
-
-					<th>上一次登录时间</th>
+					<th>创建时间</th>
 					
-					<th>上一次登录ip</th>
+					<th>更新时间</th>
 					
-					<th>用户所属组别</th>
-
-					<th>真实名字</th>
+					<th>存储引擎</th>
 					
-					<th>操作</th>
+					<th>备注</th>
 					
-				</thead>
-				
-					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+					<?php if(is_array($list)): foreach($list as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
-							<td><?php echo ($v["uid"]); ?></td>
+							<td><?php echo ($v["Name"]); ?></td>
           
-							<td><?php echo ($v["username"]); ?></td>
+							<td><?php echo ($v["Rows"]); ?></td>
 
-							<td><?php echo ($v["mobile"]); ?></td>
+							<td><?php echo ($v["Create_time"]); ?></td>
+							
+							<td><?php echo ($v["Update_time"]); ?></td>
+							
+							<td><?php echo ($v["Engine"]); ?></td>
+							
+							<td><?php echo ($v["Comment"]); ?></td>
 
-							<td><?php echo ($v["phone"]); ?></td>
-          
-							<td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
-							
-							<td><?php echo ($v["loginip"]); ?></td>
-          
-							<td>
-          
-								<?php if($v["username"] == C("RBAC_SUPERADMIN")): ?>超级管理员
-							
-								<?php else: ?>
-							
-									<ul class="unstyled">
-							
-										<?php if(is_array($v["role"])): foreach($v["role"] as $key=>$value): ?><li><?php echo ($value["name"]); ?>(<?php echo ($value["remark"]); ?>)</li><?php endforeach; endif; ?>
-							
-									</ul><?php endif; ?>
-							
-							</td>
-
-							<td>
-								<?php echo ($v["truename"]); ?>
-							</td>
-          
-							<td>
-								
-								<a class="edit" href="javascript:;">修改</a>
-								
-								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
-							
-							</td>
-							
 						</tr><?php endforeach; endif; ?>
 					
 				</tr> 
@@ -1729,21 +1691,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		
 			</div>	
 			
-		</div>
+			</div>
 
 		</div>
-		
-		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('sqlmanage').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('userlist').className = 'active '; 
+			document.getElementById('tablist').className = 'active '; 
 			
 		</script>
 			

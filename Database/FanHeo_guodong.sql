@@ -161,24 +161,24 @@ DROP TABLE IF EXISTS `fanheo_goods`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fanheo_goods` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `goods_no` varchar(20) NOT NULL,
-  `sell_price` decimal(15,2) NOT NULL,
-  `old_price` decimal(15,2) DEFAULT NULL,
-  `up_time` datetime DEFAULT NULL,
-  `down_time` datetime DEFAULT NULL,
-  `create_time` datetime NOT NULL,
-  `img` varchar(255) DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0',
-  `content` text,
-  `keywords` varchar(255) DEFAULT NULL,
-  `search_words` text,
-  `point` int(11) NOT NULL DEFAULT '0',
-  `list_img` varchar(255) DEFAULT NULL,
-  `small_img` varchar(255) DEFAULT NULL,
-  `exp` int(11) DEFAULT '0',
-  `cid` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `name` varchar(50) NOT NULL COMMENT '商品名称',
+  `goods_no` varchar(20) NOT NULL COMMENT '商品编号',
+  `sell_price` decimal(15,2) NOT NULL COMMENT '商品售价',
+  `old_price` decimal(15,2) DEFAULT NULL COMMENT '商平原价',
+  `up_time` datetime DEFAULT NULL COMMENT '上架时间',
+  `down_time` datetime DEFAULT NULL COMMENT '下架时间',
+  `create_time` datetime NOT NULL COMMENT '添加时间',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '商品状态:0:下架，1：上架，2：删除',
+  `content` text COMMENT '商品详情页',
+  `keywords` varchar(255) DEFAULT NULL COMMENT '关键字',
+  `search_words` text COMMENT '查询关键字',
+  `point` int(11) NOT NULL DEFAULT '0' COMMENT '积分值',
+  `list_img` varchar(255) DEFAULT NULL COMMENT '列表图片',
+  `small_img` varchar(255) DEFAULT NULL COMMENT '缩略图',
+  `exp` int(11) DEFAULT '0' COMMENT '经验值',
+  `cid` int(11) NOT NULL DEFAULT '0' COMMENT '分类Id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -239,24 +239,24 @@ DROP TABLE IF EXISTS `fanheo_order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fanheo_order` (
-  `id` int(11) unsigned NOT NULL,
-  `order_no` varchar(20) NOT NULL,
-  `user_id` int(11) unsigned NOT NULL,
-  `pay_type` int(11) unsigned NOT NULL,
-  `distribution` int(11) DEFAULT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1',
-  `pay_status` tinyint(1) NOT NULL DEFAULT '0',
-  `distribution_status` tinyint(1) NOT NULL DEFAULT '0',
-  `user_name` varchar(45) NOT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `address` varchar(250) DEFAULT NULL,
-  `amount` decimal(15,2) DEFAULT '0.00',
-  `send_time` datetime DEFAULT NULL,
-  `creat_time` datetime DEFAULT NULL,
-  `completion_time` datetime DEFAULT NULL,
-  `note` text,
-  `postscript` varchar(255) DEFAULT NULL,
-  `if_print` tinyint(1) NOT NULL DEFAULT '0',
+  `id` int(11) unsigned NOT NULL COMMENT '订单ID',
+  `order_no` varchar(20) NOT NULL COMMENT '订单编号',
+  `user_id` int(11) unsigned NOT NULL COMMENT '用户Id',
+  `pay_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '支付类型：0：货到付款，1：在线支付',
+  `distribution` int(11) DEFAULT NULL COMMENT '发货编号',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '订单状态：0：取消订单，1：确认订单，2：已完成订单',
+  `pay_status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '支付状态：0：未支付，1：已支付',
+  `distribution_status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '发货状态：0：未发货，1：已发货',
+  `user_name` varchar(45) NOT NULL COMMENT '用户姓名',
+  `phone` varchar(20) DEFAULT NULL COMMENT '电话' ,
+  `address` varchar(250) DEFAULT NULL COMMENT '地址',
+  `amount` decimal(15,2) DEFAULT '0.00' COMMENT '产品数量',
+  `send_time` datetime DEFAULT NULL COMMENT '发货时间',
+  `creat_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `completion_time` datetime DEFAULT NULL 完成时间,
+  `note` text COMMENT '备注',
+  `postscript` varchar(255) DEFAULT NULL COMMENT '用户备注',
+  `if_print` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否打印：0：不打印，1：打印',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -279,10 +279,10 @@ DROP TABLE IF EXISTS `fanheo_order_goods`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fanheo_order_goods` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) unsigned NOT NULL,
-  `goods_id` int(11) unsigned DEFAULT NULL,
-  `goods_price` decimal(15,2) NOT NULL DEFAULT '0.00',
-  `goods_num` int(11) NOT NULL DEFAULT '1',
+  `order_id` int(11) unsigned NOT NULL COMMENT '订单Id',
+  `goods_id` int(11) unsigned DEFAULT NULL COMMENT '商品Id',
+  `goods_price` decimal(15,2) NOT NULL DEFAULT COMMENT '商品价格',
+  `goods_num` int(11) NOT NULL DEFAULT '1' COMMENT '商品编号',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;

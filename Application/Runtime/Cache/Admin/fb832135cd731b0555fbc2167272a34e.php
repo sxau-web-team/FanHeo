@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/FanHeo/index.php/Admin/Good/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -1612,7 +1612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							管理组用户列表 <small>今日任务：统计在售商户商品的库存</small>
+							商品列表 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -1622,7 +1622,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 								<i class="icon-home"></i>
 
-								<a href="index.html">首页</a> 
+								<a href="<?php echo U('Admin/index/index');?>">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
@@ -1630,15 +1630,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">用户管理</a>
+								<a href="<?php echo U('Admin/Good/index');?>">商品管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">管理组用户列表</a></li>
+							<li><a href="<?php echo U('Admin/Good/index');?>">商品列表</a></li>
 
-							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
+							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Good/addGood');?>">添加商品</a></li>
 
 						</ul>
 
@@ -1654,64 +1654,87 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-				
-				<thead>
-				
-					<th>id</th>
+					<th>
 					
-					<th>用户名称</th>
+					id
 					
-					<th>手机</th>
+					</th>
+					
+					<th>
+					
+					商品名称
 
-					<th>电话</th>
+					</th>
+					
+					<th>
 
-					<th>上一次登录时间</th>
+						所属分类
 					
-					<th>上一次登录ip</th>
-					
-					<th>用户所属组别</th>
+					</th>
 
-					<th>真实名字</th>
+					<th>
+						
+						所属品牌
+
+					</th>
+
+					<th>
 					
-					<th>操作</th>
+					价格
 					
-				</thead>
-				
-					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
+					</th>
+					
+					<th>
+					
+					状态
+					
+					</th>
+					
+					<th>
+					
+					评价管理
+					
+					</th>
+
+					<th>
+						
+						缩略图
+
+					</th>
+					
+					<th>
+					
+					操作
+					
+					</th>
+					
+					<?php if(is_array($goods)): foreach($goods as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
-							<td><?php echo ($v["uid"]); ?></td>
+							<td><?php echo ($v["id"]); ?></td>
           
-							<td><?php echo ($v["username"]); ?></td>
+							<td><?php echo ($v["name"]); ?></td>
 
-							<td><?php echo ($v["mobile"]); ?></td>
+							<td><?php echo ($v["goods_no"]); ?></td>
 
-							<td><?php echo ($v["phone"]); ?></td>
+							<td><?php echo ($v["goods_no"]); ?></td>
           
-							<td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
+							<td><?php echo ($v["sell_price"]); ?></td>
 							
-							<td><?php echo ($v["loginip"]); ?></td>
+							<td><?php echo ($v["goods_no"]); ?></td>
           
 							<td>
           
-								<?php if($v["username"] == C("RBAC_SUPERADMIN")): ?>超级管理员
-							
-								<?php else: ?>
-							
-									<ul class="unstyled">
-							
-										<?php if(is_array($v["role"])): foreach($v["role"] as $key=>$value): ?><li><?php echo ($value["name"]); ?>(<?php echo ($value["remark"]); ?>)</li><?php endforeach; endif; ?>
-							
-									</ul><?php endif; ?>
+								<a href="#">测试</a>
 							
 							</td>
 
 							<td>
-								<?php echo ($v["truename"]); ?>
+								<?php echo ($v["exp"]); ?>
 							</td>
           
 							<td>
 								
-								<a class="edit" href="javascript:;">修改</a>
+								<a href="#">修改</a>
 								
 								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
 							
@@ -1732,18 +1755,16 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		</div>
 
 		</div>
-		
-		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('good').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('userlist').className = 'active '; 
+			document.getElementById('goodlist').className = 'active '; 
 			
 		</script>
 			

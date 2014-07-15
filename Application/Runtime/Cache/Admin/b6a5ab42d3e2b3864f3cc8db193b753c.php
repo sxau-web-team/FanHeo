@@ -532,7 +532,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li><a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen</a></li>
 
-							<li><a href="/FanHeo/index.php/Admin/Rbac/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
+							<li><a href="/FanHeo/index.php/Admin/Setting/../Login/loginout"><i class="icon-key"></i> Log Out</a></li>
 
 						</ul>
 
@@ -1612,7 +1612,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							管理组用户列表 <small>今日任务：统计在售商户商品的库存</small>
+							邮箱设置 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -1630,15 +1630,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">用户管理</a>
+								<a href="<?php echo U('Admin/Rbac/index');?>">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">管理组用户列表</a></li>
-
-							<li style="float:right;padding-right:20px;"><a href="<?php echo U('Admin/Rbac/addUser');?>">添加管理用户</a></li>
+							<li><a href="#">邮箱设置</a></li>
 
 						</ul>
 
@@ -1651,99 +1649,114 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table hovertable  table-bordered table-condensed">
+				<form action="<?php echo U('Admin/Rbac/addRoleHandler');?>" method="post" class="form-horizontal" charset='utf-8'>
 				
-				<tr>
+					<div class="control-group">
+
+						<label class="control-label">* SMTP服务器：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入要添加的角色" class="m-wrap medium" name="name"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+					
+					<div class="control-group">
+
+						<label class="control-label">* 发件人：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+					
+					<div class="control-group">
+
+						<label class="control-label">SMTP服务器是否需要验证：</label>
+					
+						<div class="controls">
+
+							<label class="radio">
+
+							<input type="radio" name="status" value="1" checked='checked'/>
+
+							开启
+
+							</label>
+
+							<label class="radio">
+
+							<input type="radio" name="status" value="0" />
+
+							关闭
+
+							</label>  
+
+
+						</div>
+					
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 邮箱地址：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 邮箱密码：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
 				
-				<thead>
+					<div class="form-actions" >
 				
-					<th>id</th>
-					
-					<th>用户名称</th>
-					
-					<th>手机</th>
+						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
 
-					<th>电话</th>
-
-					<th>上一次登录时间</th>
+						<button type="button" class="btn">返回</button>
 					
-					<th>上一次登录ip</th>
-					
-					<th>用户所属组别</th>
-
-					<th>真实名字</th>
-					
-					<th>操作</th>
-					
-				</thead>
-				
-					<?php if(is_array($user)): foreach($user as $key=>$v): ?><tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
-          
-							<td><?php echo ($v["uid"]); ?></td>
-          
-							<td><?php echo ($v["username"]); ?></td>
-
-							<td><?php echo ($v["mobile"]); ?></td>
-
-							<td><?php echo ($v["phone"]); ?></td>
-          
-							<td><?php echo (date('y-m-d H:i',$v["logintime"])); ?></td>
-							
-							<td><?php echo ($v["loginip"]); ?></td>
-          
-							<td>
-          
-								<?php if($v["username"] == C("RBAC_SUPERADMIN")): ?>超级管理员
-							
-								<?php else: ?>
-							
-									<ul class="unstyled">
-							
-										<?php if(is_array($v["role"])): foreach($v["role"] as $key=>$value): ?><li><?php echo ($value["name"]); ?>(<?php echo ($value["remark"]); ?>)</li><?php endforeach; endif; ?>
-							
-									</ul><?php endif; ?>
-							
-							</td>
-
-							<td>
-								<?php echo ($v["truename"]); ?>
-							</td>
-          
-							<td>
-								
-								<a class="edit" href="javascript:;">修改</a>
-								
-								<a href="<?php echo U('Admin/Rbac/deluser',array('uid' => $v['uid']));?>">删除</a>
-							
-							</td>
-							
-						</tr><?php endforeach; endif; ?>
-					
-				</tr> 
-				
-				</table>
-				
-			<div class="pagination">
-
-			<?php echo ($page); ?>
-		
-			</div>	
+					</div>
+						
+				</form>
 			
-		</div>
+			</div>
 
 		</div>
-		
-		<script src="media/js/table-editable.js"></script>
 
 		<script type="text/javascript">
 
-			document.getElementById('user').className = 'start active '; 
+			document.getElementById('setting').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('userlist').className = 'active '; 
+			document.getElementById('email').className = 'active '; 
 			
 		</script>
 			
