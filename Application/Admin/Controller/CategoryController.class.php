@@ -6,7 +6,7 @@ class CategoryController extends BaseController {
 	//分类列表视图
 	public function index () {
 		//import('Org.Util.Category');
-		$cate = M('article_category')->order('sort ASC')->select();
+		$cate = M('category')->order('sort ASC')->select();
 		//getChildId
 		//$cate = \Org\Util\Category::getParents($cate,12);
 		//$cate = \Org\Util\Category::getChildId($cate,1);
@@ -25,7 +25,7 @@ class CategoryController extends BaseController {
 
 	}
 	public function runAddCate (){
-		if (M('article_category')->add($_POST)) {
+		if (M('category')->add($_POST)) {
 			$this->success('添加成功',U('Category/index'));
 
 		}else{
@@ -33,7 +33,7 @@ class CategoryController extends BaseController {
 		}
 	}
 	public function sortCate () {
-		$db = M('article_category');
+		$db = M('category');
 		foreach ($_POST as $id => $sort) {
 			$db->where(array('id' => $id))->setField('sort',$sort);
 		}

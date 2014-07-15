@@ -14,7 +14,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Colors
 blue:  #4b8df8
 light blue: #bfd5fa
-red: #e02222
+red: #EF8D3F
 yellow: #ffb848
 green: #35aa47
 purple: #852b99
@@ -74,7 +74,7 @@ General backgrounds
 
 .bg-red {
   background-image: none !important;
-  background-color: #e02222 !important;
+  background-color: #EF8D3F !important;
 }
 
 .bg-yellow {
@@ -438,7 +438,7 @@ Header and header elements.
   right: 24px;
   text-align: center;
   height: 14px;
-  background-color: #e02222;
+  background-color: #EF8D3F;
   padding: 2px 6px 2px 6px;
   -webkit-border-radius: 12px !important;
      -moz-border-radius: 12px !important;
@@ -964,7 +964,7 @@ Dashboard date range panel
   padding-bottom: 7px;
   cursor: pointer;
   color: #fff;
-  background-color: #e02222;
+  background-color: #EF8D3F;
 }
 
 .page-content .breadcrumb .dashboard-date-range span {
@@ -1369,7 +1369,7 @@ Portlets
 }
 
 .portlet-body.red, .portlet.red {
-  background-color: #e02222 !important;
+  background-color: #EF8D3F !important;
 }
 
 .portlet-body.yellow, .portlet.yellow {
@@ -1548,7 +1548,7 @@ Box portlet
 }
 
 .portlet.box.red .portlet-title {
-  background-color: #e02222;
+  background-color: #EF8D3F;
 } 
 
 .portlet.box.red {  
@@ -2217,7 +2217,7 @@ textarea.placeholder {
 }
 
 .control-label .required {
-  color: #e02222;
+  color: #EF8D3F;
   font-size: 12px;
   padding-left: 2px;
 }
@@ -4269,7 +4269,7 @@ div.tagsinput span.tag a {
 div.tagsinput .not_valid {
   color: #fff !important;
   padding: 3px 6px !important;
-  background-color: #e02222 !important;
+  background-color: #EF8D3F !important;
 }
 
 /***
@@ -4592,7 +4592,7 @@ jQuery UI Dialogs(new in v1.2.4)
 
 .ui-dialog.ui-dialog-red .ui-dialog-titlebar {
   color: #fff !important;
-  background-color: #e02222 !important;
+  background-color: #EF8D3F !important;
 }
 
 .ui-dialog.ui-dialog-red .ui-dialog-titlebar-close {
@@ -4684,7 +4684,7 @@ Horezantal Menu(new in v1.2)
 
 .header .hor-menu ul.nav li.active > a,
 .header .hor-menu ul.nav li.active > a:hover {
-  background: #e02222 !important; 
+  background: #EF8D3F !important; 
 }
 
 .ie8 .header .hor-menu ul.nav li.active > a {
@@ -4703,7 +4703,7 @@ Horezantal Menu(new in v1.2)
   position: absolute;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #e02222;
+  border-top: 6px solid #EF8D3F;
   display: inline-block;
   margin: 0;
   width: 0px;
@@ -4765,7 +4765,7 @@ Horezantal Menu(new in v1.2)
 .header .hor-menu .dropdown-menu li.active > a {
     color: #fff;
     filter:none !important;
-    background: #e02222 !important;
+    background: #EF8D3F !important;
 }
 
 .header .hor-menu .nav > li > .dropdown-menu:after,

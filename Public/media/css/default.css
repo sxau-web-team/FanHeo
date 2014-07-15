@@ -47,7 +47,7 @@ ul.page-sidebar-menu > li:hover > a {
   background: #303030;
 }
 ul.page-sidebar-menu > li.active > a {
-  background: #e02222 !important;
+  background: #EF8D3F !important;
   border-top-color: transparent !important;
   color: #ffffff;
 }
