@@ -94,7 +94,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a class="brand" href="index.html">
 
-				<img src="/FanHeo/Public/media/image/logo.png" alt="logo"/>
+				<img src="/FanHeo/Public/image/fanheo_logo.png" alt="logo"/>
 
 				</a>
 
@@ -1681,11 +1681,43 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<div class="control-group">
 
-						<label class="control-label">* 商品所属分类：</label>
+						<label class="control-label">* 商品编号：</label>
 
 							<div class="controls">
 
-								<input type="text" placeholder="请选择商品所属分类" class="m-wrap medium" name="keywords"/>
+								<input type="text" placeholder="请输入该商品的编号" class="m-wrap medium" name="goods_no"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 所属分类：</label>
+
+						<div class="controls">
+
+							<select class="medium m-wrap" tabindex="1" name="cid">
+
+								<option value="">请选择分类</option>
+	
+								<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v['id']); ?>"><?php echo ($v["name"]); ?>(<?php echo ($v["pid"]); ?>)</option><?php endforeach; endif; ?>
+
+							</select>
+
+						</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 商品关键字：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="商品关键字" class="m-wrap medium" name="keywords"/>
 
 								<span class="help-inline"></span>
 
@@ -1699,7 +1731,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<div class="controls">
 
-								<input type="text" placeholder="请选择商品所属品牌" class="m-wrap medium" name="point"/>
+								<input type="text" placeholder="请选择商品所属品牌" class="m-wrap medium" name=""/>
 
 								<span class="help-inline"></span>
 
@@ -1709,11 +1741,11 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<div class="control-group">
 
-						<label class="control-label">* 商品价格：</label>
+						<label class="control-label">* 商品售价：</label>
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入关于该商品的价格" class="m-wrap medium" name="sell_price"/>
+								<input type="text" placeholder="请输入关于该商品的在售价格" class="m-wrap medium" name="sell_price"/>
 
 								<span class="help-inline"></span>
 
@@ -1723,11 +1755,39 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<div class="control-group">
 
-						<label class="control-label">* 商品积分数：</label>
+						<label class="control-label">* 商品原价：</label>
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入关于该商品的积分数" class="m-wrap medium" name="exp"/>
+								<input type="text" placeholder="请输入关于该商品的在售价格" class="m-wrap medium" name="old_price"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 商品积分：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入关于该商品的积分" class="m-wrap medium" name="point"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 商品经验值：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="请输入关于该商品的经验值" class="m-wrap medium" name="exp"/>
 
 								<span class="help-inline"></span>
 

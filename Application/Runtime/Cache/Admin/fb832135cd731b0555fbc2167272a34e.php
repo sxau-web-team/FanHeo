@@ -94,7 +94,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a class="brand" href="index.html">
 
-				<img src="/FanHeo/Public/media/image/logo.png" alt="logo"/>
+				<img src="/FanHeo/Public/image/fanheo_logo.png" alt="logo"/>
 
 				</a>
 
@@ -1701,6 +1701,8 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						缩略图
 
 					</th>
+
+					<th>库存</th>
 					
 					<th>
 					
@@ -1714,23 +1716,19 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
           
 							<td><?php echo ($v["name"]); ?></td>
 
-							<td><?php echo ($v["goods_no"]); ?></td>
+							<td><?php echo ($v["cid"]); ?></td>
 
 							<td><?php echo ($v["goods_no"]); ?></td>
           
 							<td><?php echo ($v["sell_price"]); ?></td>
 							
-							<td><?php echo ($v["goods_no"]); ?></td>
+							<td><?php echo ($v["status"]); ?></td>
           
-							<td>
-          
-								<a href="#">测试</a>
-							
-							</td>
+							<td><a href="#">测试</a></td>
 
-							<td>
-								<?php echo ($v["exp"]); ?>
-							</td>
+							<td><?php echo ($v["img"]); ?></td>
+
+							<td><?php echo ($v["amount"]); ?></td>
           
 							<td>
 								

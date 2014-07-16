@@ -94,7 +94,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 				<a class="brand" href="index.html">
 
-				<img src="/FanHeo/Public/media/image/logo.png" alt="logo"/>
+				<img src="/FanHeo/Public/image/fanheo_logo.png" alt="logo"/>
 
 				</a>
 
