@@ -6,12 +6,14 @@
 namespace Admin\Controller;
 use Think\Controller;
 
-class SettingController extends Controller{
+class SettingController extends BaseController{
     //系统设置读取
      public function system(){
         $System = M('system');
         $list = $System->order('`id` asc')->select();
         $this->assign('list',$list);
+                $this->assign('title','饭盒后台管理系统-系统设置-系统设置');
+        $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
     public function info(){
@@ -34,32 +36,35 @@ class SettingController extends Controller{
             'php版本'     =>PHP_VERSION,
             );
         $this->info=$info;
+        $this->assign('title','饭盒后台管理系统-系统设置-服务器信息');
+        $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
 	//邮箱管理
 	public function email(){
-
         $email = M('smtp');
         $list = $email->select();
         $this->assign('vo',$list);
+        $this->assign('title','饭盒后台管理系统-系统设置-邮箱设置');
+        $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
     //邮箱保存
     public function email_send(){
             $system=D('Smtp');
-			if($system->create()){
-				  $result = $system->save();
-				 if($result){
-					 $this->Record('SMTP修改成功');//后台操作
-					 $this->success('修改成功', '__URL__/email');
-					
-				 }else{
-					 $this->Record('SMTP修改失败');//后台操作
-					$this->error("修改失败");
-				 }			 			
-			}else{
-				 $this->error($system->getError());
-			}
+            if($system->create()){
+                  $result = $system->save();
+                 if($result){
+                     $this->Record('SMTP修改成功');//后台操作
+                     $this->success('修改成功', U('Admin/Setting/email'));
+                    
+                 }else{
+                    $this->Record('SMTP修改失败');//后台操作
+                    $this->error("修改失败");
+                 }                      
+            }else{
+                 $this->error($system->getError());
+            }
     }
     //管理员操作记录
     public function operation(){
@@ -71,6 +76,8 @@ class SettingController extends Controller{
         $list = $Operation->limit($Page->firstRow.','.$Page->listRows)->order('time DESC')->select();
         $this->assign('page',$show);// 赋值分页输出
         $this->assign('list',$list);
+        $this->assign('title','饭盒后台管理系统-系统设置-管理员操作记录');
+        $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
 

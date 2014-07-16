@@ -232,7 +232,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Rbac/index')}">系统设置</a>
+								<a href="{:U('Admin/Setting/index')}">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
@@ -251,7 +251,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<form action="{:U('Admin/Rbac/addRoleHandler')}" method="post" class="form-horizontal" charset='utf-8'>
+				<form action="{:U('Admin/Setting/email_send')}" method="post" class="form-horizontal" charset='utf-8'>
 				
 					<div class="control-group">
 
@@ -259,9 +259,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入要添加的角色" class="m-wrap medium" name="name"/>
+								<input type="text" placeholder="" class="m-wrap medium" name="smtp" value="{$vo.0.smtp}"/>
 
 								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* SMTP服务器端口：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="smtp_port" value="{$vo.0.smtp_port}"/>
+
+								<span class="help-inline">默认为465</span>
 
 							</div>
 
@@ -273,7 +287,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+								<input type="text" placeholder="" class="m-wrap medium" name="addresser" value="{$vo.0.addresser}" />
 
 								<span class="help-inline"></span>
 
@@ -289,7 +303,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<label class="radio">
 
-							<input type="radio" name="status" value="1" checked='checked'/>
+							<input type="radio" name="validation" value="1" checked='checked'/>
 
 							开启
 
@@ -297,7 +311,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<label class="radio">
 
-							<input type="radio" name="status" value="0" />
+							<input type="radio" name="validation" value="0" />
 
 							关闭
 
@@ -314,7 +328,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+								<input type="text" placeholder="" class="m-wrap medium" name="send_email" value="{$vo.0.send_email}"/>
 
 								<span class="help-inline"></span>
 
@@ -328,13 +342,71 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<div class="controls">
 
-								<input type="text" placeholder="请输入关于该角色的描述" class="m-wrap medium" name="remark"/>
+								<input type="password" placeholder="" class="m-wrap medium" name="password" value="{$vo.0.password}"/>
 
 								<span class="help-inline"></span>
 
 							</div>
 
 					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 发件人地址：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="from_email" value="{$vo.0.from_email}"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 发件人名字：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="from_name" value="{$vo.0.from_name}"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 回复邮件地址：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="reply_email" value="{$vo.0.reply_email}"/>
+
+								<span class="help-inline">回复EMAIL（留空则为发件人EMAIL）</span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">* 回复邮件名字：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="reply_name" value="{$vo.0.reply_name}"/>
+
+								<span class="help-inline">回复名称（留空则为发件人名称）</span>
+
+							</div>
+
+					</div>
+
+					<input name="id" type="hidden" value="1" />
 				
 					<div class="form-actions" >
 				

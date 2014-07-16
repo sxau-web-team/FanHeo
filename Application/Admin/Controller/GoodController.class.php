@@ -20,6 +20,8 @@ class GoodController extends BaseController {
 	Public function addGood(){
 		$this->assign('title','饭盒后台管理系统-商品管理-添加商品');
 		$this->assign('loginname',$_SESSION['AdminUser']);
+		$this->category = M('category')->select();
+
 		$this->display();
 	}
 	//添加商品处理
