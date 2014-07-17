@@ -16,6 +16,7 @@ class SettingController extends BaseController{
         $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
+    //服务器信息
     public function info(){
         $info = array(
             '操作系统'=>php_uname(),
@@ -72,7 +73,6 @@ class SettingController extends BaseController{
         $count      = $Operation->count();// 查询满足要求的总记录数
         $Page       = new \Think\Page($count,30);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
-        // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
         $list = $Operation->limit($Page->firstRow.','.$Page->listRows)->order('time DESC')->select();
         $this->assign('page',$show);// 赋值分页输出
         $this->assign('list',$list);
@@ -80,5 +80,18 @@ class SettingController extends BaseController{
         $this->assign('loginname',$_SESSION['AdminUser']);
         $this->display();
     }
-
+    //用户记录
+     public function userlog(){
+            $Operation = D("Userlog");
+            //import('ORG.Util.Page');// 导入分页类
+            $count      = $Operation->count();// 查询满足要求的总记录数
+            $Page       = new \Think\Page($count,30);// 实例化分页类 
+            $show       = $Page->show();// 分页显示输出
+            $list = $Operation->relation(true)->limit($Page->firstRow.','.$Page->listRows)->order('time DESC')->select();
+            $this->assign('page',$show);// 赋值分页输出
+            $this->assign('list',$list);
+            $this->assign('title','饭盒后台管理系统-系统设置-管理员操作记录');
+            $this->assign('loginname',$_SESSION['AdminUser']);
+            $this->display();
+    }
 }

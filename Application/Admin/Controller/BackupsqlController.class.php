@@ -128,7 +128,9 @@ class BackupsqlController extends BaseController{
 			//file_put_contents(TEMP_PATH.$filename.'.sql',trim($sql));
 			copy(TEMP_PATH.$filename.'.sql',
       "Database/" . $filename.'.sql');
+			$this->Record('数据库备份成功');
 			$this->success('备份成功');
+			
 			//\Org\Net\Http::download (TEMP_PATH.$filename.'.sql');
 		}else{
 			/*echo TEMP_PATH.$filename.'.zip';
@@ -143,7 +145,9 @@ class BackupsqlController extends BaseController{
 			$zip->close();
 			copy(TEMP_PATH.$filename.'.zip',
       "Database/" . $filename.'.zip');
+			$this->Record('数据库备份成功');
 			$this->success('备份成功');
+			
 			//\Org\Net\Http::download (TEMP_PATH.$filename.'.zip');
 		}
 	}

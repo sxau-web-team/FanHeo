@@ -73,6 +73,9 @@ class LoginController extends Controller {
             session('username',$user['username']);
             session('logintime',$member['last_time']);
             session('loginip',$member['last_ip']);
+
+            userLog('会员登陆',$_SESSION['mid']); //会员记录
+            
             //注意！以后搬到服务器后记得改跳转地址
             $this->success('登录成功，跳转到个人中心','/FanHeo/index.php/Home/UCenter/index',5);
     	

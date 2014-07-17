@@ -39,4 +39,24 @@
         }
         return $mail->Send() ? true : $mail->ErrorInfo;
     }
-    ?>
+    /**
+    *
+    * @会员操作记录
+    * @arr      记录说明
+    * @uid      用户ID
+    * @作者       shop猫
+    * @版权       宁波天发网络
+    * @官网       http://www.tifaweb.com http://www.dswjcms.com
+    *
+    */
+    function userLog($arr,$uid){
+            $models = M();
+            $array['uid']       = $uid?$uid:$this->$_SESSION('user_id');
+            $array['actionname']= $arr;
+            $array['page']      = $_SERVER['PHP_SELF'];
+            $array['ip']        = get_client_ip();
+            $array['time']      = time();
+            return $models->table('fanheo_userlog')->add($array);
+    }
+    
+?>
