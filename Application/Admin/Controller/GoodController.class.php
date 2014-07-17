@@ -29,7 +29,7 @@ class GoodController extends BaseController {
 		$goods =array(
     		'name'	=> I('name'),
     		'goods_no'		=> I('goods_no'),
-    		'sell_price'		=> I('sell_price'),
+    		'sell_price'	=> I('sell_price'),
     		'old_price'		=> I('old_price'),
     		'up_time'		=> date('Y-m-d H:i:s'),
     		'create_time'	=> date('Y-m-d H:i:s'),

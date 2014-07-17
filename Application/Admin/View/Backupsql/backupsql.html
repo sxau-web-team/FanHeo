@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							已备份列表 <small>今日任务：统计在售商户商品的库存</small>
+							备份数据库 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -232,13 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Rbac/index')}">数据库管理</a>
+								<a href="{:U('Admin/Backupsql/backupsql')}">数据库管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">备份列表</a></li>
+							<li><a href="#">备份数据库</a></li>
 
 						</ul>
 
@@ -250,57 +250,148 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<!-- END PAGE HEADER-->
 				
 				<!-- BEGIN PAGE CONTENT-->
+				<div class="tabbable tabbable-custom">
+
+				<ul class="nav nav-tabs">
+
+					<li class="active"><a href="#tab_1_1" data-toggle="tab">数据表备份</a></li>
+
+					<li><a href="#tab_1_2" data-toggle="tab">数据库备份</a></li>
+
+				</ul>
 				
-				<table class="table hovertable  table-bordered table-condensed">
-				
-				<tr>
+				<div class="tab-content">
 
-					<th>
+					<div class="tab-pane active" id="tab_1_1">
 					
-					id
+					<h3>数据表:</h3>    
 					
-					</th>
-					
-					<th>
-					
-					用户名称
+					<form id="upload" METHOD=POST action="{:U('Backupsql/outputData')}"  >
 
-					</th>
-					
-					<th>
+						<table class="nostyle">
+  	
+  							<tr>
+	
+							<td style="width:120px;">数据表:</td>
+							
+							<td><select NAME="tableName[]" id="tableName" class="medium" size="12" multiple >
+							
+							<volist name="tables" id="table" >
+							
+							<option value="{$table}" <in name="table|strtolower" value="$Think.get.table">selected</in>>{$table}</option>  
+							
+							</volist>
+							
+							</select></td>
+							
+							</tr>
+ 							
+ 							 <tr>
+							
+							<td style="width:120px;">导出格式:</td>
+							
+							<td><select name="type" class="small" >
 
-						手机
-					
-					</th>
-					
-					<foreach name='list' item='v'>
-						
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
-          
-							<td>{$v.name}</td>
-          
-							<td>{$v.time}</td>
+    						<option value="SQL" > SQL </option>
+    
+    						<option value="CSV" > CSV </option>
+   							
+   							</select></td>
+							
+							</tr>
+							
+							  <tr>
+								
+								<td style="width:120px;">是否zip压缩:</td>
+								
+								<td><select name="zip" class="small">
+							    
+							    <option value="0" >无压缩 </option>
+							    
+							    <option value="1" >压缩 </option>
+							   
+							   </select><span class="help-inline">   压缩需配置好ZipArchive</span></td>
 
-							<td>{$v.size}</td>
 
+							
+							</tr>
+							
+							<tr>
+							
+									<td colspan="2" class="t-right">
+							
+									  <button type="submit" class="btn blue" ><i class="icon-ok"></i> 备份</button>
+
+							
+							        </td>
+							
+								</tr>
+							
+							            </table>
+							
+							            </form>
+							            
+							             </div>
+
+
+					<div class="tab-pane" id="tab_1_2">
+
+					<h3>数据库:</h3>
+
+					<form id="upload" METHOD=POST action="{:U('Backupsql/outputData')}">
+
+					<table class="nostyle">
+
+					  <tr>
+					
+						<td style="width:120px;">导出格式:</td>
+					
+						<td><select name="type" class="small" >
+					
+					    <option value="SQL" > SQL </option>
+					
+					   </select></td>
+					
+					</tr>
+					
+					  <tr>
+					
+						<td style="width:120px;">是否zip压缩:</td>
+					
+						<td><select name="zip" class="small">
+					    
+					    <option value="0" >无压缩 </option>
+					    
+					    <option value="1" >压缩 </option>
+					   
+					   </select><span class="help-inline">   压缩需配置好ZipArchive</span></td>
+					
+					</tr>
+					
+					 <tr>
+					
+							<td colspan="2" class="t-right">
+					
+							 <button type="submit" class="btn blue" ><i class="icon-ok"></i> 备份</button>
+
+					
+					        </td>
+					
 						</tr>
-						
-					</foreach>
 					
-				</tr> 
-				
-				</table>
-				
-			<div class="pagination">
+					            </table>
+					
+					            </form>
+					</div>
 
-			{$page}
-		
-			</div>	
-			
+				</div>
+
 			</div>
 
 		</div>
 
+	</div>
+	
 		<script type="text/javascript">
 
 			document.getElementById('sqlmanage').className = 'start active '; 
@@ -309,7 +400,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 		
 		<script type="text/javascript">
 
-			document.getElementById('backuplist').className = 'active '; 
+			document.getElementById('sqlbackup').className = 'active '; 
 			
 		</script>
 			
