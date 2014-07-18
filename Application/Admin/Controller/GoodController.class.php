@@ -24,6 +24,7 @@ class GoodController extends BaseController {
 
 		$this->display();
 	}
+
 	//添加商品处理
 	Public function addGoodHandler(){
 		$goods =array(
@@ -49,4 +50,5 @@ class GoodController extends BaseController {
 			$this->error('添加失败');
 		}
 	}
+	    
 }

@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							商品列表 <small>今日任务：统计在售商户商品的库存</small>
+							编辑友情链接 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -224,7 +224,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 								<i class="icon-home"></i>
 
-								<a href="{:U('Admin/index/index')}">首页</a> 
+								<a href="index.html">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
@@ -232,15 +232,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="{:U('Admin/Good/index')}">商品管理</a>
+								<a href="{:U('Admin/Setting/index')}">系统设置</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="{:U('Admin/Good/index')}">商品列表</a></li>
-
-							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Good/addGood')}">添加商品</a></li>
+							<li><a href="#">编辑友情链接</a></li>
 
 						</ul>
 
@@ -253,122 +251,134 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				
 				<!-- BEGIN PAGE CONTENT-->
 				
-				<table class="table hovertable  table-bordered table-condensed">
+				<form action="{:U('Admin/Setting/editlinkHandler')}" method="post" class="form-horizontal" charset='utf-8'>
+
+				 <volist name="edlist" id="ed">
+
+					<div class="control-group">
+
+						<label class="control-label">* 友情链接名称：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="title" value="{$ed.title}"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+					
+					<div class="control-group">
+
+						<label class="control-label">* 友情链接地址：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="url" value="{$ed.url}"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+					
+					<div class="control-group">
+
+						<label class="control-label">* 缩略图地址：</label>
+
+							<div class="controls">
+
+								<input type="text" placeholder="" class="m-wrap medium" name="img" value="{$ed.img}"/>
+
+								<span class="help-inline"></span>
+
+							</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<if condition="$ed.state eq 1">
+
+						<label class="control-label">是否开启：</label>
+					
+						<div class="controls">
+
+							<label class="radio">
+
+							<input type="radio" name="state" value="1" checked='checked'/>
+
+							开启
+
+							</label>
+
+							<label class="radio">
+
+							<input type="radio" name="state" value="0" />
+
+							关闭
+
+							</label>  
+
+							<else />
+
+							<label class="control-label">是否开启：</label>
+					
+						<div class="controls">
+
+							<label class="radio">
+
+							<input type="radio" name="state" value="1" />
+
+							开启
+
+							</label>
+
+							<label class="radio">
+
+							<input type="radio" name="state" value="0" checked='checked'/>
+
+							关闭
+
+							</label>  
+
+							</if>
+
+
+
+
+						</div>
+					
+					</div>
+
+					<input name="id" type="hidden" value="{$ed.id}" />
 				
-				<tr>
-					<th>
-					
-					id
-					
-					</th>
-					
-					<th>
-					
-					商品名称
-
-					</th>
-					
-					<th>
-
-						所属分类
-					
-					</th>
-
-					<th>
-						
-						所属品牌
-
-					</th>
-
-					<th>
-					
-					价格
-					
-					</th>
-					
-					<th>
-					
-					状态
-					
-					</th>
-					
-					<th>
-					
-					评价管理
-					
-					</th>
-
-					<th>
-						
-						缩略图
-
-					</th>
-
-					<th>库存</th>
-					
-					<th>
-					
-					操作
-					
-					</th>
-					
-					<foreach name='goods' item='v'>
-						
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
-          
-							<td>{$v.id}</td>
-          
-							<td>{$v.name}</td>
-
-							<td>{$v.cid}</td>
-
-							<td>{$v.goods_no}</td>
-          
-							<td>{$v.sell_price}</td>
-							
-							<td>{$v.status}</td>
-          
-							<td><a href="#">测试</a></td>
-
-							<td>{$v.img}</td>
-
-							<td>{$v.amount}</td>
-          
-							<td>
-								
-								<a href="#">修改</a>
-								
-								<a href="{:U('Admin/Good/delgood',array('id' => $v['id']))}">删除</a>
-							
-							</td>
-							
-						</tr>
-						
-					</foreach>
-					
-				</tr> 
+					<div class="form-actions" >
 				
-				</table>
-				
-			<div class="pagination">
+						<button type="submit" class="btn blue" ><i class="icon-ok"></i> 保存</button>
 
-			{$page}
-		
-			</div>	
+						<button type="button" class="btn">返回</button>
+					
+					</div>
+
+					 </volist>
+						
+				</form>
 			
-		</div>
+			</div>
 
 		</div>
 
 		<script type="text/javascript">
 
-			document.getElementById('good').className = 'start active '; 
+			document.getElementById('setting').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('goodlist').className = 'active '; 
+			document.getElementById('links').className = 'active '; 
 			
 		</script>
 			

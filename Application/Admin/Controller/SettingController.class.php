@@ -94,4 +94,73 @@ class SettingController extends BaseController{
             $this->assign('loginname',$_SESSION['AdminUser']);
             $this->display();
     }
+    //友情链接
+    public function links(){
+        $shuff = M('links');
+        $list = $shuff->select();
+        $this->assign('list',$list);
+        $this->assign('title','饭盒后台管理系统-系统设置-友情链接管理');
+        $this->assign('loginname',$_SESSION['AdminUser']);
+        $this->display();
+    }
+    //添加友情链接
+    Public function addlink(){
+        $this->assign('title','饭盒后台管理系统-系统设置-添加友情链接');
+        $this->assign('loginname',$_SESSION['AdminUser']);
+        $this->display();
+    }
+    //添加友情链接处理
+    public function addlinkhandler(){
+            $Shuff=D('Links');
+            if(!$Shuff->create()){
+                    $this->error($Shuff->getError());
+            }
+            $Shuff->time=time();
+            $last=$Shuff->add();
+            if($last){
+                $this->Record('添加友情链接成功');//后台操作
+                $this->success('添加成功', U('Admin/Setting/links'));
+            }else{
+                $this->Record('添加友情链接失败');//后台操作
+                $this->error('友情链接添加失败');
+            }
+    }
+    //友情链接编辑页
+    public function editlink(){
+            $Shuff = M('links');
+            $id = I('id',1,'intval');
+            $edlist = $Shuff->where('id='.$id)->select();
+            $this->assign('edlist',$edlist);
+            $this->assign('title','饭盒后台管理系统-系统设置-修改友情链接');
+            $this->assign('loginname',$_SESSION['AdminUser']);
+            $this->display();
+    }
+    //友情链接编辑页保存
+    public function editlinkhandler(){
+            $Shuff=D('links');
+            if($Shuff->create()){
+                  $result = $Shuff->save();
+                 if($result){
+                     $this->Record('友情链接修改成功');//后台操作
+                     $this->success('修改成功',  U('Admin/Setting/links'));
+                    
+                 }else{
+                    $this->Record('友情链接修改失败');//后台操作
+                    $this->error("修改失败");
+                 }                      
+            }else{
+                 $this->error($Shuff->getError());
+            }
+    }
+    //友情链接删除
+    public function delelink(){
+            $Shuff=M('links');
+
+            $id = I('id',1,'intval');
+
+            $Shuff->where('id='.$id)->delete();
+            $this->Record('友情链接删除成功');//后台操作
+            $this->success('删除成功', U('Admin/Setting/links'));
+    }
+
 }
