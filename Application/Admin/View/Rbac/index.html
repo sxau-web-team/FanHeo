@@ -325,7 +325,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 								
 								<a class="edit" href="javascript:;">修改</a>
 								
-								<a href="{:U('Admin/Rbac/deluser',array('uid' => $v['uid']))}">删除</a>
+								<a onclick="if(confirm('是否要删除？'))window.location.href='{:U('Admin/Rbac/deluser',array('id' => $v['id']))}'">删除</a>
 							
 							</td>
 							

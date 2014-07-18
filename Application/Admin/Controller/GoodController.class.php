@@ -21,7 +21,7 @@ class GoodController extends BaseController {
 		$this->assign('title','饭盒后台管理系统-商品管理-添加商品');
 		$this->assign('loginname',$_SESSION['AdminUser']);
 		$this->category = M('category')->select();
-
+		$this->brand = M('brand')->select();
 		$this->display();
 	}
 

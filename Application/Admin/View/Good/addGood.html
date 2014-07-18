@@ -305,15 +305,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 					<div class="control-group">
 
-						<label class="control-label">* 商品所属品牌：</label>
+						<label class="control-label">* 所属品牌：</label>
 
-							<div class="controls">
+						<div class="controls">
 
-								<input type="text" placeholder="请选择商品所属品牌" class="m-wrap medium" name=""/>
+							<select class="medium m-wrap" tabindex="1" name="">
 
-								<span class="help-inline"></span>
+								<option value="">请选择品牌</option>
+	
+								<foreach name='brand' item='b'>
+							
+								<option value="{$b['id']}">{$b.name}({$b.description})</option>
+							
+								</foreach>
 
-							</div>
+							</select>
+
+						</div>
 
 					</div>
 

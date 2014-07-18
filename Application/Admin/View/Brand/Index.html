@@ -214,7 +214,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 						
 						<h3 class="page-title">
 
-							友情链接 <small>今日任务：统计在售商户商品的库存</small>
+							品牌管理 <small>今日任务：统计在售商户商品的库存</small>
 
 						</h3>
 						
@@ -224,7 +224,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 								<i class="icon-home"></i>
 
-								<a href="index.html">首页</a> 
+								<a href="{:U('Admin/index/index')}">首页</a> 
 
 								<i class="icon-angle-right"></i>
 
@@ -232,15 +232,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 							<li>
 
-								<a href="#">系统设置</a>
+								<a href="{:U('Admin/Good/index')}">产品管理</a>
 
 								<i class="icon-angle-right"></i>
 
 							</li>
 
-							<li><a href="#">友情链接</a></li>
+							<li><a href="#">品牌列表</a></li>
 
-							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Setting/addlink')}">添加友情链接</a></li>
+							<li style="float:right;padding-right:20px;"><a href="{:U('Admin/Brand/addbrand')}">添加品牌</a></li>
 
 						</ul>
 
@@ -256,38 +256,50 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<table class="table hovertable  table-bordered table-condensed">
 				
 				<tr>
-					<th>ID</th>
+					<th>id</th>
 					
-					<th>名称</th>
+					<th>品牌名称</th>
+				
+					<th>分类</th>
 					
-					<th>链接</th>
-
-					<th>添加时间</th>
-
 					<th>缩略图</th>
+
+					<th>品牌详情</th>
+
+					<th>品牌关键字</th>
+
+					<th>添加日期</th>
+
+					<th>品牌描述</th>
 
 					<th>状态</th>
 
 					<th>操作</th>
-				
-					<foreach name='list' item='v'>
+					
+					<foreach name='brand' item='v'>
 						
 						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFF5EE';">
           
 							<td>{$v.id}</td>
+							
+							<td>{$v.name}</td>
           
-							<td>{$v.title}</td>
+							<td>{$v.sort}</td>
 
-							<td>{$v.url}</td>
+							<td>{$v.imgurl}</td>
 
-							<td>{$v.time|date='y-m-d H:i',###}</td>
-          
-							<td>{$v.img}</td>
+							<td>{$v.content}</td>
 
-							<td><if condition='$v["state"]'>开启<else/>关闭</if></td>
+							<td>{$v.keywords}</td>
 
-							<td><a href="{:U('Admin/Setting/editlink',array('id' => $v['id']))}">修改</a> <a onclick="if(confirm('是否要删除？'))window.location.href='{:U('Admin/Setting/delelink',array('id' => $v['id']))}'">删除</a> </td>
-						
+							<td>{$v.dateline|date='y-m-d H:i',###}</td>
+
+							<td>{$v.description}</td>
+
+							<td><if condition='$v["status"]'>开启<else/>关闭</if></td>
+
+							<td><a href="{:U('Admin/Brand/editbrand',array('id' => $v['id']))}">修改</a> <a onclick="if(confirm('是否要删除？'))window.location.href='{:U('Admin/Brand/delbrand',array('id' => $v['id']))}'">删除</a></td>
+							
 						</tr>
 						
 					</foreach>
@@ -295,6 +307,12 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				</tr> 
 				
 				</table>
+				
+			<div class="pagination">
+
+			{$page}
+		
+			</div>	
 			
 		</div>
 
@@ -302,13 +320,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 
 		<script type="text/javascript">
 
-			document.getElementById('setting').className = 'start active '; 
+			document.getElementById('good').className = 'start active '; 
 			
 		</script>
 		
 		<script type="text/javascript">
 
-			document.getElementById('links').className = 'active '; 
+			document.getElementById('brandlist').className = 'active '; 
 			
 		</script>
 			
