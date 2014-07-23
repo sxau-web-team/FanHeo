@@ -1,118 +1,51 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>{$title}</title>
-    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
-    <link href="__PUBLIC__/css/fanheo.css" rel="stylesheet">
-  </head>
-  <body>
-  <!--顶部导航 -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{:U('Index/Index')}">FanHe.饭盒</a>
-        </div>
-        <div class="navbar-collapse collapse navbar-right">
-         <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input class="form-control" placeholder="你今天想吃啥.." type="text" required autofocus>
-            </div>
-            <button type="submit" class="btn btn-warning">搜外卖</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-              <li><a href="#" title="" data-original-title=""  data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<img src='__PUBLIC__/image/index/food/1.jpg' style='width: 80px; height: 70px;'  >
-              <strong>我的饭盒</strong>
-			  
-              <p> Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p class='text-right'><button type='button' href='#' class='btn btn-danger btn-sm' >结算</button></p>"><span class="glyphicon glyphicon-th-large"></span>  饭盒<span class="badge">２</span></a></li>
-              <if condition="!isset($_SESSION['uid'])|| !isset($_SESSION['username'])">
-              <li><a href="#" data-toggle="modal" data-target="#myModal" >登录</a></li>
-              <li><a href="{:U('Register/index')}">注册</a></li>
-              <else />
-              <li><a href="{:U('UCenter/index')}">个人中心</a></li>
-              <li><a href="{:U('Index/logout')}">退出</a></li>
-              </if>
-          </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-<br/>
-<br/>
-<br/>
-<!--模态登录框 -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">登录到FanHe-饭盒</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal" role="form" action="{:U("Login/Login/",'','')}" method="post">
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">用户名:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" name="username" placeholder="用户名/手机号" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
-            <div class="col-sm-8">
-              <input type="password" class="form-control" name="password" placeholder="密码" required autofocus>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">验证码:</label>
-            <div class="col-sm-5">
-              <input type="code" id="code" class="form-control" name="code" maxlength="6" placeholder="输入验证码" required  onchange="checkPasswords()">
-              <img src="{:U('Login/verify')}" id="code"/><a href="javascript:change_code()">换一个</a>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-8">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> 下次自动登录
-                </label>
-              </div>
-            </div>
-            </div>
-            <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-8">
-              <input class="btn btn-warning btn-block" type="submit" value="登录">
-               
-              </div>
-            </div>
-          
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <a href="{:U('Register/index')}" class="btn btn-warning " role="button">注册</a>
-        
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<br/>
-    <!-- 主页面 -->
-    <div class="container">
-      <div class="bread" >
-      <!--面包屑导航条-->
-            <ol class="breadcrumb">
-                <li><a href="{:U('Index/Index')}">首页</a></li>
-                 <li class="active">{$stitle}</li>
-            </ol>
-      </div>  
+ <body class="projects projects-index"> 
+  <!--[if lte IE 7]>
+<p class="notice-failure">你似乎在使用一款 <strong>过时的</strong> 浏览器. 请 <a href="http://browsehappy.com/">更新它</a> 或是使用 <a href="http://www.google.com/chromeframe/?redirect=true">Chrome Frame</a> 来增强你的体验。</p>
+<![endif]--> 
+  <div class="header"> 
+   <div class="c1"> 
+    <a href="127.0.0.1/Fanheo"><img src="__PUBLIC__/image/fanheo_logo.png" class="logo" /></a> 
+    <ul class="c2"> 
+     <li><a href="{:U('Index/Index')}">首页</a></li> 
+     <li><a href="http://127.0.0.1/Faheo/goods">商品</a></li> 
+     <li><a href="http://127.0.0.1/Fanheo">店铺</a></li> 
+     <li><a href="">社区</a></li> 
+    </ul> 
+    <form action="/search" method="get"> 
+     <input name="q" class="head-search-l" autocomplete="off" placeholder="你今天想吃啥.." /> 
+     <input class="sub-button" type="submit" /> 
+    </form> 
+    <ul class="c6"> 
+     <li class="c3 c12"><a href="#">我的饭盒</a> 
+      <ul class="c4"> 
+       <li class="c5"></li> 
+       <li><a href="http://www.demohour.com/projects/created">待处理(0)</a></li> 
+       <li><a href="http://www.demohour.com/projects/backed">已完成(0)</a></li> 
+       <li><a href="http://www.demohour.com/projects/liked">收藏的(1)</a></li> 
+       <li class="c41"></li> 
+      </ul> </li> 
+     <if condition="!isset($_SESSION['uid'])|| !isset($_SESSION['username'])"> 
+      <li><a href="{:U('Login/index')}">登录</a></li> 
+      <li><a href="{:U('Register/index')}">注册</a></li> 
+      <else /> 
+      <li class="c3"><a href="#">消息</a> 
+       <ul class="c4"> 
+        <li class="c5"></li> 
+        <li><a href="http://www.demohour.com/comments">我的评论</a></li> 
+        <li><a href="http://www.demohour.com/tickets">我的客服</a></li> 
+        <li><a href="http://www.demohour.com/notifications">站内通知</a></li> 
+        <li class="c41"></li> 
+       </ul> </li> 
+      <li class="c3 c13"><a href="#"><img src="" /></a><a href="#" class="c14">{$username}</a> 
+       <ul class="c4"> 
+        <li class="c5"></li> 
+        <li><a href="http://www.demohour.com/orders">我的订单</a></li> 
+        <li><a href="http://www.demohour.com/settings">账号设置</a></li> 
+        <li><a href="http://www.demohour.com/1236527">个人主页</a></li> 
+        <li class="c41"></li> 
+       </ul> </li> 
+      <li><a href="{:U('Index/logout')}">登出</a></li> 
+     </if>
+    </ul>  
+   </div> 
+  </div>
